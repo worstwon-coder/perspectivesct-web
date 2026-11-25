@@ -1,0 +1,432 @@
+/* ==========================================================================
+   PERSPECTIVE SCT — AWWWARDS EDITORIAL + PLAYFUL CYBER-FACTORY STYLESHEET
+   Inspiración dinámica: paranice.co (bloque continuo vivo, pedestales, mascotas)
+   Identidad: Art Deco / Bauhaus + Prisma Cósmico + 80s Daft Punk Luxury Tech
+   ========================================================================== */
+
+:root {
+  --bg-stage-1: #16132b; /* Cosmic Indigo-Violet (Paranice-inspired tech base) */
+  --bg-stage-2: #1e183b; /* Living Prism Lab */
+  --bg-stage-3: #131b36; /* Deep Cyber Blueprint */
+  --bg-stage-4: #1b1433; /* Royal Violet Calculator Stage */
+  --bg-stage-5: #0d0b1a; /* Obsidian Gold Executive Footer */
+
+  --gold-light: #f6d365;
+  --gold-main: #d4af37;
+  --gold-bronze: #9c7a2c;
+
+  --neon-cyan: #00f0ff;
+  --neon-magenta: #ff2a85;
+  --neon-violet: #8b5cf6;
+  --neon-lime: #34d399;
+  --neon-amber: #fbbf24;
+
+  --card-cream: #f8f7ff;
+  --card-lavender: #ede9fe;
+  --ink-dark: #141129;
+}
+
+/* Smooth Base & Typography */
+html {
+  scroll-behavior: auto; /* Managed by Lenis when active */
+  background-color: var(--bg-stage-1);
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-stage-1);
+  transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow-x: hidden;
+  selection-background-color: #8b5cf6;
+}
+
+::selection {
+  background: rgba(255, 42, 133, 0.35);
+  color: #ffffff;
+}
+
+.font-display {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-tech {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0c20;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37, #8b5cf6, #00f0ff);
+  border-radius: 999px;
+  border: 2px solid #0f0c20;
+}
+
+/* Background Prism Canvas */
+#prism-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+/* Subtle Art-Deco Geometric Grid Overlay */
+.deco-grid-overlay {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(212, 175, 55, 0.12) 1px, transparent 0);
+  background-size: 36px 36px;
+}
+
+/* Logo Blend Helper (Eliminates black JPG background seamlessly!) */
+.logo-screen-blend {
+  mix-blend-mode: screen;
+  filter: contrast(1.08) brightness(1.05);
+}
+
+/* Floating Pill Navbar (Paranice-inspired Capsule Architecture) */
+.nav-pill-glass {
+  background: rgba(248, 247, 255, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1.5px solid rgba(212, 175, 55, 0.35);
+  box-shadow:
+    0 12px 32px -8px rgba(10, 8, 26, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  color: var(--ink-dark);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+header.is-scrolled .nav-pill-glass {
+  background: rgba(22, 19, 43, 0.88);
+  color: #f8fafc;
+  border-color: rgba(0, 240, 255, 0.3);
+  box-shadow:
+    0 14px 36px -8px rgba(0, 0, 0, 0.65),
+    0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+header.is-scrolled .nav-link-item {
+  color: #e2e8f0;
+}
+header.is-scrolled .nav-link-item:hover,
+header.is-scrolled .nav-link-item.active {
+  color: #00f0ff;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.nav-link-item {
+  color: #1e1b4b;
+  font-weight: 700;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+.nav-link-item:hover,
+.nav-link-item.active {
+  background: rgba(139, 92, 246, 0.14);
+  color: #5b21b6;
+}
+
+/* Prism Spectrum Gradient Text & Borders */
+.text-prism {
+  background: linear-gradient(95deg, #f6d365 0%, #ff2a85 32%, #8b5cf6 65%, #00f0ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gold-deco {
+  background: linear-gradient(135deg, #fff3c4 0%, #d4af37 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.prism-border-glow {
+  position: relative;
+}
+.prism-border-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(212,175,55,0.8), rgba(255,42,133,0.6), rgba(0,240,255,0.8));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   PARANICE-INSPIRED ORGANIC CLOUD / PEDESTAL PRODUCT CARDS
+   ========================================================================== */
+.pedestal-card {
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.pedestal-card:hover {
+  transform: translateY(-10px);
+}
+
+.pedestal-backdrop {
+  border-radius: 36px 36px 28px 28px;
+  transition: all 0.35s ease;
+}
+
+.pedestal-cloud-body {
+  position: relative;
+  background: #fdfcff;
+  color: var(--ink-dark);
+  border-radius: 32px;
+  box-shadow:
+    0 18px 40px -12px rgba(11, 8, 28, 0.45),
+    inset 0 -4px 0 rgba(139, 92, 246, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Playful Cloud Ears on Pedestal Body (Paranice signature look!) */
+.pedestal-cloud-body::before,
+.pedestal-cloud-body::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 68px;
+  background: #fdfcff;
+  border-radius: 999px;
+  z-index: 0;
+}
+.pedestal-cloud-body::before {
+  left: -12px;
+}
+.pedestal-cloud-body::after {
+  right: -12px;
+}
+
+.pedestal-cta-btn {
+  background: #18123b;
+  color: #ffffff;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 24px -6px rgba(24, 18, 59, 0.65);
+  transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.pedestal-cta-btn:hover {
+  background: linear-gradient(90deg, #ff2a85, #7c3aed, #06b6d4);
+  transform: scale(1.04);
+  box-shadow: 0 14px 28px -6px rgba(124, 58, 237, 0.65);
+}
+
+/* ==========================================================================
+   ILLUSTRATED CYBER-FACTORY ANIMATIONS (HERO & CHARACTERS)
+   ========================================================================== */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1.5deg); }
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(9px) rotate(-1.5deg); }
+}
+
+@keyframes spinGearSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinGearReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes conveyorDash {
+  to { stroke-dashoffset: -48; }
+}
+
+@keyframes pulsePrism {
+  0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.5)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 24px rgba(255, 42, 133, 0.8)); }
+}
+
+@keyframes mascotBounce {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  45% { transform: translateY(-7px) scaleY(1.03); }
+  55% { transform: translateY(-7px) scaleY(1.03); }
+}
+
+@keyframes blinkEyes {
+  0%, 92%, 100% { transform: scaleY(1); }
+  96% { transform: scaleY(0.1); }
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.anim-float { animation: floatSlow 5.5s ease-in-out infinite; }
+.anim-float-delay { animation: floatReverse 6.2s ease-in-out infinite; }
+.anim-gear { transform-origin: center; animation: spinGearSlow 28s linear infinite; }
+.anim-gear-rev { transform-origin: center; animation: spinGearReverse 20s linear infinite; }
+.anim-conveyor { animation: conveyorDash 1.6s linear infinite; }
+.anim-prism { animation: pulsePrism 3.5s ease-in-out infinite; }
+.anim-mascot { animation: mascotBounce 3.2s ease-in-out infinite; }
+.anim-blink { transform-origin: center; animation: blinkEyes 4.5s infinite; }
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 34s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Organic Continuous Section Wave Dividers */
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: auto;
+  line-height: 0;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  pointer-events: none;
+}
+
+/* Interactive Bento Cards (18 Verticals & UVP) */
+.bento-tech-card {
+  background: rgba(25, 21, 52, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 26px;
+  transition: all 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.bento-tech-card:hover {
+  transform: translateY(-6px);
+  background: rgba(34, 28, 71, 0.9);
+  border-color: rgba(0, 240, 255, 0.45);
+  box-shadow:
+    0 20px 40px -15px rgba(0, 0, 0, 0.65),
+    0 0 28px -6px rgba(139, 92, 246, 0.35);
+}
+
+/* Custom Range Sliders for ROI & Bag Configurator */
+input[type="range"].prism-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(15, 12, 32, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  outline: none;
+  cursor: pointer;
+}
+input[type="range"].prism-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f6d365, #ff2a85, #00f0ff);
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 240, 255, 0.55);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+input[type="range"].prism-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+}
+
+/* Hide Horizontal Scrollbar on Product Carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Corner Floating CRT Mascot Assistant (Paranice Bottom-Right Homage!) */
+.crt-assistant-btn {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+  filter: drop-shadow(0 14px 24px rgba(8, 6, 22, 0.65));
+}
+.crt-assistant-btn:hover {
+  transform: scale(1.08) rotate(-3deg);
+  filter: drop-shadow(0 16px 30px rgba(0, 240, 255, 0.45));
+}
+
+/* Speech Bubbles for Footer Trio Mascots */
+.speech-bubble {
+  position: relative;
+  background: #17113a;
+  color: #ffffff;
+  border: 2px solid rgba(212, 175, 55, 0.65);
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: 800;
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.5);
+  transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+.speech-bubble:hover {
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  border-color: #ffffff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* Drawer & Modal Transitions */
+.backdrop-fade {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.backdrop-fade.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer-slide {
+  transform: translateX(100%);
+  transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.drawer-slide.open {
+  transform: translateX(0);
+}
+
+/* Badge Bounce on Add */
+@keyframes cartPop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.45); }
+  100% { transform: scale(1); }
+}
+.cart-pop {
+  animation: cartPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .pedestal-cloud-body::before,
+  .pedestal-cloud-body::after {
+    width: 16px;
+    height: 48px;
+  }
+}
