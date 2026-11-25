@@ -1,18 +1,18 @@
 /* ==========================================================================
-   PERSPECTIVE SCT — BASE DE DATOS MAESTRA OFICIAL (EXTRAÍDA DE DOCUMENTO MAESTRO)
-   Cero datos inventados que contradigan la Matriz de Planificación Corporativa.
+   PERSPECTIVE SCT — CATÁLOGO MAESTRO DE SOLUCIONES TECNOLÓGICAS Y DIGITALES
+   Enfoque principal: Desarrollo de Software, Web, Automatización, Cloud y Arte.
    ========================================================================== */
 
 window.PERSPECTIVE_DATA = {
   brand: {
     commercialName: "Perspective SCT",
-    legalName: "Perspective SCT SA de CV",
-    fiscalNote: "Operación fiscal activa con emisión CFDI 4.0 (PFAE en transición estructurada a S.A.P.I. de C.V.)",
+    corpName: "Perspective SCT",
+    focusNote: "Agencia de Servicios Tecnológicos, Desarrollo de Software, Automatización e Infraestructura Digital",
     slogan: "Piensa en el futuro desde el presente",
-    tagline: "MARKETING • PROGRAMACIÓN • 3D & ANIMACIÓN • APPS • WEB • ENTRETENIMIENTO",
+    tagline: "MARKETING • PROGRAMACIÓN • DISEÑO & ANIMACIÓN • APPS • WEB • ENTRETENIMIENTO",
     est: "EST. 2026",
-    email: "omniiapps@gmail.com",
-    region: "Corredor Industrial del Bajío (Guanajuato • León • Irapuato • Querétaro) & Nearshoring EE.UU. / Canadá",
+    email: "perspectivesct.shop@gmail.com",
+    region: "Corredor Industrial del Bajío (Guanajuato • León • Irapuato • Querétaro) & Atención Remota Internacional",
     monthlyCapHours: 120
   },
 
@@ -22,28 +22,24 @@ window.PERSPECTIVE_DATA = {
     Estrategicas: 999
   },
 
-  // Mascotas SVG personalizadas estilo Paranice x Cyber-Prism / Daft Punk / Art Deco
+  // Mascotas SVG personalizadas estilo Cartoon-Tech (Paranice x Cyber-Prism)
   mascotSVGs: {
     prismBot: `
       <svg viewBox="0 0 120 100" class="w-24 h-20 mx-auto drop-shadow-lg anim-mascot">
-        <!-- Piernas colgando sobre la tarjeta como en Paranice -->
         <path d="M44 76 C42 88, 38 94, 34 94" stroke="#18123b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
         <path d="M76 76 C78 88, 82 94, 86 94" stroke="#18123b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
-        <ellipse cx="32" cy="95" rx="6" ry="3.5" fill="#d4af37"/>
-        <ellipse cx="88" cy="95" rx="6" ry="3.5" fill="#d4af37"/>
-        <!-- Cuerpo Pirámide Prisma -->
-        <polygon points="60,12 24,76 96,76" fill="url(#gradPrismBot)" stroke="#18123b" stroke-width="3.5" stroke-linejoin="round"/>
-        <!-- Visor Daft Punk -->
-        <rect x="41" y="44" width="38" height="16" rx="8" fill="#0d0b1a" stroke="#d4af37" stroke-width="2"/>
-        <circle cx="52" cy="52" r="3.2" fill="#00f0ff" class="anim-blink"/>
-        <circle cx="68" cy="52" r="3.2" fill="#ff2a85" class="anim-blink"/>
-        <!-- Rayo arcoíris lateral -->
-        <line x1="78" y1="38" x2="108" y2="24" stroke="#ff2a85" stroke-width="3" stroke-linecap="round"/>
-        <line x1="80" y1="43" x2="110" y2="32" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
-        <line x1="82" y1="48" x2="110" y2="40" stroke="#00f0ff" stroke-width="3" stroke-linecap="round"/>
+        <ellipse cx="32" cy="95" rx="6.5" ry="4" fill="#fbbf24" stroke="#18123b" stroke-width="2"/>
+        <ellipse cx="88" cy="95" rx="6.5" ry="4" fill="#fbbf24" stroke="#18123b" stroke-width="2"/>
+        <polygon points="60,10 23,76 97,76" fill="url(#gradPrismBot)" stroke="#18123b" stroke-width="3.8" stroke-linejoin="round"/>
+        <rect x="40" y="43" width="40" height="17" rx="8.5" fill="#0d0b1a" stroke="#ffe07d" stroke-width="2.2"/>
+        <circle cx="52" cy="51.5" r="3.5" fill="#22eefc" class="anim-blink"/>
+        <circle cx="68" cy="51.5" r="3.5" fill="#ff3b94" class="anim-blink"/>
+        <line x1="78" y1="36" x2="108" y2="22" stroke="#ff3b94" stroke-width="3.2" stroke-linecap="round"/>
+        <line x1="80" y1="42" x2="110" y2="31" stroke="#fbbf24" stroke-width="3.2" stroke-linecap="round"/>
+        <line x1="82" y1="48" x2="110" y2="40" stroke="#22eefc" stroke-width="3.2" stroke-linecap="round"/>
         <defs>
           <linearGradient id="gradPrismBot" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#f6d365"/>
+            <stop offset="0%" stop-color="#ffe07d"/>
             <stop offset="55%" stop-color="#a78bfa"/>
             <stop offset="100%" stop-color="#38bdf8"/>
           </linearGradient>
@@ -54,73 +50,66 @@ window.PERSPECTIVE_DATA = {
       <svg viewBox="0 0 120 100" class="w-24 h-20 mx-auto drop-shadow-lg anim-mascot">
         <path d="M46 76 C44 88, 40 94, 35 94" stroke="#18123b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
         <path d="M74 76 C76 88, 80 94, 85 94" stroke="#18123b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
-        <ellipse cx="33" cy="95" rx="6" ry="3.5" fill="#00f0ff"/>
-        <ellipse cx="87" cy="95" rx="6" ry="3.5" fill="#00f0ff"/>
-        <!-- Engranaje Dorado Carismático -->
-        <circle cx="60" cy="48" r="28" fill="#fbbf24" stroke="#18123b" stroke-width="3.5"/>
-        <circle cx="60" cy="48" r="20" fill="#fef3c7" stroke="#18123b" stroke-width="2.5"/>
-        <!-- Antena CPU -->
-        <line x1="60" y1="20" x2="60" y2="9" stroke="#18123b" stroke-width="3.5"/>
-        <circle cx="60" cy="7" r="5" fill="#ff2a85" stroke="#18123b" stroke-width="2"/>
-        <!-- Ojos felices y sonrisa -->
-        <circle cx="52" cy="45" r="3.5" fill="#18123b" class="anim-blink"/>
-        <circle cx="68" cy="45" r="3.5" fill="#18123b" class="anim-blink"/>
-        <path d="M52 54 Q60 61 68 54" stroke="#18123b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <ellipse cx="33" cy="95" rx="6.5" ry="4" fill="#22eefc" stroke="#18123b" stroke-width="2"/>
+        <ellipse cx="87" cy="95" rx="6.5" ry="4" fill="#22eefc" stroke="#18123b" stroke-width="2"/>
+        <circle cx="60" cy="48" r="28" fill="#fbbf24" stroke="#18123b" stroke-width="3.8"/>
+        <circle cx="60" cy="48" r="20" fill="#fef3c7" stroke="#18123b" stroke-width="2.6"/>
+        <line x1="60" y1="20" x2="60" y2="8" stroke="#18123b" stroke-width="3.8"/>
+        <circle cx="60" cy="7" r="5.5" fill="#ff3b94" stroke="#18123b" stroke-width="2.2"/>
+        <circle cx="52" cy="45" r="3.8" fill="#18123b" class="anim-blink"/>
+        <circle cx="68" cy="45" r="3.8" fill="#18123b" class="anim-blink"/>
+        <path d="M51 54 Q60 62 69 54" stroke="#18123b" stroke-width="3.2" stroke-linecap="round" fill="none"/>
       </svg>`,
 
     helmetBot: `
       <svg viewBox="0 0 120 100" class="w-24 h-20 mx-auto drop-shadow-lg anim-mascot">
         <path d="M45 76 C43 88, 39 94, 34 94" stroke="#18123b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
         <path d="M75 76 C77 88, 81 94, 86 94" stroke="#18123b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
-        <ellipse cx="33" cy="95" rx="6" ry="3.5" fill="#ff2a85"/>
-        <ellipse cx="87" cy="95" rx="6" ry="3.5" fill="#ff2a85"/>
-        <!-- Casco Retro 80s Daft Punk -->
-        <rect x="30" y="20" width="60" height="54" rx="24" fill="#c4b5fd" stroke="#18123b" stroke-width="3.5"/>
-        <rect x="37" y="33" width="46" height="22" rx="11" fill="#0f0c24" stroke="#d4af37" stroke-width="2.5"/>
-        <!-- LED Equalizer Visor -->
-        <rect x="45" y="40" width="5" height="9" rx="2" fill="#00f0ff"/>
-        <rect x="53" y="37" width="5" height="12" rx="2" fill="#34d399"/>
-        <rect x="61" y="39" width="5" height="10" rx="2" fill="#fbbf24"/>
-        <rect x="69" y="41" width="5" height="8" rx="2" fill="#ff2a85"/>
+        <ellipse cx="33" cy="95" rx="6.5" ry="4" fill="#ff3b94" stroke="#18123b" stroke-width="2"/>
+        <ellipse cx="87" cy="95" rx="6.5" ry="4" fill="#ff3b94" stroke="#18123b" stroke-width="2"/>
+        <rect x="29" y="19" width="62" height="55" rx="25" fill="#c4b5fd" stroke="#18123b" stroke-width="3.8"/>
+        <rect x="36" y="32" width="48" height="23" rx="11.5" fill="#0f0c24" stroke="#ffe07d" stroke-width="2.5"/>
+        <rect x="44" y="39" width="5.5" height="9.5" rx="2" fill="#22eefc"/>
+        <rect x="52.5" y="36" width="5.5" height="12.5" rx="2" fill="#34d399"/>
+        <rect x="61" y="38" width="5.5" height="10.5" rx="2" fill="#fbbf24"/>
+        <rect x="69.5" y="40" width="5.5" height="8.5" rx="2" fill="#ff3b94"/>
       </svg>`,
 
     shieldBot: `
       <svg viewBox="0 0 120 100" class="w-24 h-20 mx-auto drop-shadow-lg anim-mascot">
         <path d="M46 77 C44 88, 40 94, 35 94" stroke="#18123b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
         <path d="M74 77 C76 88, 80 94, 85 94" stroke="#18123b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
-        <ellipse cx="33" cy="95" rx="6" ry="3.5" fill="#34d399"/>
-        <ellipse cx="87" cy="95" rx="6" ry="3.5" fill="#34d399"/>
-        <!-- Escudo Blindaje Legal/Cyber -->
-        <path d="M60 14 L90 26 V50 C90 66 76 76 60 81 C44 76 30 66 30 50 V26 Z" fill="#6ee7b7" stroke="#18123b" stroke-width="3.5" stroke-linejoin="round"/>
-        <rect x="43" y="37" width="34" height="16" rx="8" fill="#18123b"/>
-        <circle cx="53" cy="45" r="3.2" fill="#34d399" class="anim-blink"/>
-        <circle cx="67" cy="45" r="3.2" fill="#f6d365" class="anim-blink"/>
-        <path d="M54 61 L59 66 L68 56" stroke="#18123b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <ellipse cx="33" cy="95" rx="6.5" ry="4" fill="#34d399" stroke="#18123b" stroke-width="2"/>
+        <ellipse cx="87" cy="95" rx="6.5" ry="4" fill="#34d399" stroke="#18123b" stroke-width="2"/>
+        <path d="M60 13 L91 26 V50 C91 66 76 76 60 81 C44 76 29 66 29 50 V26 Z" fill="#6ee7b7" stroke="#18123b" stroke-width="3.8" stroke-linejoin="round"/>
+        <rect x="42" y="36" width="36" height="17" rx="8.5" fill="#18123b"/>
+        <circle cx="53" cy="44.5" r="3.5" fill="#34d399" class="anim-blink"/>
+        <circle cx="67" cy="44.5" r="3.5" fill="#ffe07d" class="anim-blink"/>
+        <path d="M53 61 L58.5 66.5 L68.5 56" stroke="#18123b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
       </svg>`,
 
     cubeBot: `
       <svg viewBox="0 0 120 100" class="w-24 h-20 mx-auto drop-shadow-lg anim-mascot">
         <path d="M45 76 C43 88, 39 94, 34 94" stroke="#18123b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
         <path d="M75 76 C77 88, 81 94, 86 94" stroke="#18123b" stroke-width="4.5" stroke-linecap="round" fill="none"/>
-        <ellipse cx="33" cy="95" rx="6" ry="3.5" fill="#a78bfa"/>
-        <ellipse cx="87" cy="95" rx="6" ry="3.5" fill="#a78bfa"/>
-        <!-- Cubo 3D / Gaming -->
-        <polygon points="60,14 92,30 92,64 60,78 28,64 28,30" fill="#f472b6" stroke="#18123b" stroke-width="3.5" stroke-linejoin="round"/>
-        <polyline points="28,30 60,45 92,30" fill="none" stroke="#18123b" stroke-width="2.5"/>
-        <line x1="60" y1="45" x2="60" y2="78" stroke="#18123b" stroke-width="2.5"/>
-        <circle cx="46" cy="54" r="3.5" fill="#ffffff" class="anim-blink"/>
-        <circle cx="74" cy="54" r="3.5" fill="#00f0ff" class="anim-blink"/>
+        <ellipse cx="33" cy="95" rx="6.5" ry="4" fill="#a78bfa" stroke="#18123b" stroke-width="2"/>
+        <ellipse cx="87" cy="95" rx="6.5" ry="4" fill="#a78bfa" stroke="#18123b" stroke-width="2"/>
+        <polygon points="60,13 93,30 93,64 60,79 27,64 27,30" fill="#f472b6" stroke="#18123b" stroke-width="3.8" stroke-linejoin="round"/>
+        <polyline points="27,30 60,45 93,30" fill="none" stroke="#18123b" stroke-width="2.8"/>
+        <line x1="60" y1="45" x2="60" y2="79" stroke="#18123b" stroke-width="2.8"/>
+        <circle cx="46" cy="54" r="3.8" fill="#ffffff" class="anim-blink"/>
+        <circle cx="74" cy="54" r="3.8" fill="#22eefc" class="anim-blink"/>
       </svg>`
   },
 
-  // Carrusel de Productos Estilo Paranice (Pestaña 1: Paquetes / Bolsas de Horas Oficiales)
+  // Pestaña 1 del Carrusel: Paquetes / Bolsas de Horas Oficiales
   packages: [
     {
       id: "pkg-starter",
       group: "paquetes",
       badge: "5% OFF",
-      badgeColor: "bg-amber-400 text-slate-950",
-      backdropBg: "bg-gradient-to-b from-amber-200/90 to-orange-200/85",
+      badgeColor: "bg-amber-400 text-slate-950 border-2 border-slate-950",
+      backdropBg: "bg-gradient-to-b from-amber-200 to-orange-200",
       pillBg: "bg-amber-200 text-amber-950",
       mascot: "gearBot",
       title: "Starter / Jumpstart",
@@ -130,15 +119,15 @@ window.PERSPECTIVE_DATA = {
       price: 7590,
       priceNote: "MXN (Base 10h Desarrollo • Desde $3,795 en 5h)",
       ctaText: "¡Rápido! Agregar",
-      description: "Diagnóstico inicial y entregables rápidos. El primer paso para validar ideas y resolver necesidades puntuales sin grandes compromisos.",
-      highlights: ["5% de descuento oficial aplicado", "Pago 100% anticipado • Arranque inmediato", "Ideal para MVPs, fixes críticos o prototipos"]
+      description: "Diagnóstico técnico inicial y entregables rápidos. Ideal para validar ideas digitales y resolver ajustes puntuales.",
+      highlights: ["5% de descuento oficial aplicado", "Pago 100% anticipado • Arranque rápido", "Ideal para MVPs, mejoras web o prototipos"]
     },
     {
       id: "pkg-growth",
       group: "paquetes",
       badge: "8% OFF",
-      badgeColor: "bg-cyan-400 text-slate-950",
-      backdropBg: "bg-gradient-to-b from-cyan-200/90 to-sky-200/85",
+      badgeColor: "bg-cyan-400 text-slate-950 border-2 border-slate-950",
+      backdropBg: "bg-gradient-to-b from-cyan-200 to-sky-200",
       pillBg: "bg-cyan-200 text-cyan-950",
       mascot: "prismBot",
       title: "Growth Pack",
@@ -148,15 +137,15 @@ window.PERSPECTIVE_DATA = {
       price: 14702,
       priceNote: "MXN (Base 20h Desarrollo o Mix)",
       ctaText: "¡Popular! Agregar",
-      description: "Optimización y primeros flujos de automatización. Impulsa la presencia digital y optimiza los procesos clave de tu negocio.",
-      highlights: ["8% de descuento oficial en tabulador", "Web/E-commerce + primeras automatizaciones", "Entrega por Sprints Agile medibles"]
+      description: "Impulsa tu presencia digital, conecta herramientas clave y activa tus primeros flujos de automatización operativa.",
+      highlights: ["8% de descuento directo en tabulador", "Web / E-commerce + automatizaciones", "Entregas ágiles con avances claros"]
     },
     {
       id: "pkg-proscale",
       group: "paquetes",
-      badge: "12% OFF • TOP B2B",
-      badgeColor: "bg-fuchsia-500 text-white",
-      backdropBg: "bg-gradient-to-b from-violet-300/95 to-fuchsia-200/90",
+      badge: "12% OFF • TOP",
+      badgeColor: "bg-fuchsia-500 text-white border-2 border-slate-950",
+      backdropBg: "bg-gradient-to-b from-violet-300 to-fuchsia-200",
       pillBg: "bg-violet-200 text-violet-950",
       mascot: "helmetBot",
       title: "Pro Scale",
@@ -166,15 +155,15 @@ window.PERSPECTIVE_DATA = {
       price: 28125,
       priceNote: "MXN (50% anticipo / 50% contra hitos)",
       ctaText: "¡Escalar! Agregar",
-      description: "Desarrollo constante y ecosistema digital activo. Acelera la innovación operativa y escala la capacidad tecnológica de tu empresa.",
-      highlights: ["12% de descuento corporativo", "Arquitectura Cloud + IA + UX Nivel Gaming", "Auditoría legal/fiscal exprés integrada"]
+      description: "Desarrollo constante y ecosistema digital activo para escalar tus ventas, logística interna y capacidad tecnológica.",
+      highlights: ["12% de descuento por volumen", "Arquitectura Cloud + IA + UX Nivel Gaming", "Recomendaciones de mejora operativa"]
     },
     {
       id: "pkg-partner",
       group: "paquetes",
       badge: "15% OFF",
-      badgeColor: "bg-emerald-400 text-slate-950",
-      backdropBg: "bg-gradient-to-b from-emerald-200/90 to-teal-200/85",
+      badgeColor: "bg-emerald-400 text-slate-950 border-2 border-slate-950",
+      backdropBg: "bg-gradient-to-b from-emerald-200 to-teal-200",
       pillBg: "bg-emerald-200 text-emerald-950",
       mascot: "shieldBot",
       title: "Business Partner",
@@ -182,17 +171,17 @@ window.PERSPECTIVE_DATA = {
       hours: "80 hrs",
       oldPrice: 63920,
       price: 54332,
-      priceNote: "MXN (Célula dedicada multidisciplinaria)",
+      priceNote: "MXN (Célula tecnológica dedicada)",
       ctaText: "¡Partner! Agregar",
-      description: "Una célula dedicada de tecnología, diseño 3D y estrategia legal/contable integrada directamente a tu organización.",
-      highlights: ["15% de descuento directo", "Ingeniería + Arte 3D + Blindaje Normativo", "SLAs prioritarios y mesa ejecutiva"]
+      description: "Un equipo multidisciplinario de software, automatización, arte digital y optimización operativa integrado a tu negocio.",
+      highlights: ["15% de descuento directo", "Ingeniería + Diseño + Eficiencia Logística", "Atención prioritaria y seguimiento continuo"]
     },
     {
       id: "pkg-enterprise",
       group: "paquetes",
       badge: "20% OFF • ELITE",
-      badgeColor: "bg-slate-950 text-amber-300 border border-amber-400/60",
-      backdropBg: "bg-gradient-to-b from-amber-300/95 to-purple-300/90",
+      badgeColor: "bg-slate-950 text-amber-300 border-2 border-amber-400",
+      backdropBg: "bg-gradient-to-b from-amber-300 to-purple-300",
       pillBg: "bg-amber-300 text-slate-950",
       mascot: "cubeBot",
       title: "Enterprise Custom",
@@ -200,135 +189,135 @@ window.PERSPECTIVE_DATA = {
       hours: "120+ hrs",
       oldPrice: 95880,
       price: 76704,
-      priceNote: "MXN (Capacidad exclusiva de socios)",
+      priceNote: "MXN (Capacidad mensual completa)",
       ctaText: "¡Reservar Cupo!",
-      description: "Transformación digital integral y desarrollo a la medida para líderes de industria agroindustrial, manufactura e inmobiliario.",
-      highlights: ["20% descuento máximo institucional", "Bloqueo de capacidad mensual (120h Hub)", "Transferencia 100% IP + Blindaje MSA/NDA"]
+      description: "Transformación tecnológica integral y software a la medida para empresas industriales, comerciales y de servicios.",
+      highlights: ["20% descuento máximo del tabulador", "Capacidad dedicada (120h mensuales)", "Entrega del 100% de código al liquidar"]
     }
   ],
 
-  // Pestaña 2 del Carrusel: Igualas Mensuales / Retainers Oficiales
+  // Pestaña 2 del Carrusel: Planes Mensuales y Promoción de Mantenimiento Web ($2,000 MXN/mes)
   retainers: [
+    {
+      id: "ret-web-promo",
+      group: "retainers",
+      badge: "¡PROMO ESTRELLA!",
+      badgeColor: "bg-amber-400 text-slate-950 border-2 border-slate-950",
+      backdropBg: "bg-gradient-to-b from-amber-200 via-pink-200 to-violet-200",
+      pillBg: "bg-amber-300 text-slate-950",
+      mascot: "prismBot",
+      title: "Mantenimiento Web",
+      subtitle: "Plan Todo Incluido",
+      hours: "Mensual",
+      oldPrice: 2800,
+      price: 2000,
+      priceNote: "MXN / mes • Tu web siempre viva y actualizada",
+      ctaText: "¡Aprovechar Promo!",
+      description: "Modificaciones continuas, cambios temáticos completos para eventos y festividades, solución de errores, agregados puntuales y soporte técnico.",
+      highlights: ["Temáticas completas por temporada y eventos", "Cambios continuos y agregados puntuales", "Solución de errores y soporte técnico directo"]
+    },
     {
       id: "ret-tech-support",
       group: "retainers",
       badge: "95% UPTIME",
-      badgeColor: "bg-emerald-400 text-slate-950",
-      backdropBg: "bg-gradient-to-b from-emerald-200/90 to-cyan-200/85",
+      badgeColor: "bg-emerald-400 text-slate-950 border-2 border-slate-950",
+      backdropBg: "bg-gradient-to-b from-emerald-200 to-cyan-200",
       pillBg: "bg-emerald-200 text-emerald-950",
       mascot: "gearBot",
-      title: "Soporte & Mant. TI",
-      subtitle: "Iguala Mensual",
+      title: "Soporte Servidores TI",
+      subtitle: "Monitoreo Base",
       hours: "Mensual",
       oldPrice: null,
       price: 499,
-      priceNote: "MXN / mes • SLA Emergencias 1-2h",
-      ctaText: "¡Blindar Web! Agregar",
-      description: "Mantenimiento preventivo, correctivo, predictivo y proactivo para tu infraestructura web y servidores con 95% uptime garantizado.",
-      highlights: ["Monitoreo continuo y parches de seguridad", "Ventanas programadas fuera de tráfico pico", "Respuesta en emergencias críticas 1–2 hrs"]
+      priceNote: "MXN / mes • Emergencias 1-2h",
+      ctaText: "¡Agregar Soporte!",
+      description: "Vigilancia preventiva, correctiva y proactiva de hosting, dominios y servidores para mantener 95%+ de disponibilidad.",
+      highlights: ["Monitoreo continuo y respaldos técnicos", "Actualizaciones fuera de horario pico", "Respuesta en caídas críticas 1–2 hrs"]
     },
     {
       id: "ret-ecosystem",
       group: "retainers",
-      badge: "ALL-IN-ONE",
-      badgeColor: "bg-violet-600 text-white",
-      backdropBg: "bg-gradient-to-b from-violet-300/95 to-indigo-200/90",
+      badge: "CLOUD & APPS",
+      badgeColor: "bg-violet-600 text-white border-2 border-slate-950",
+      backdropBg: "bg-gradient-to-b from-violet-300 to-indigo-200",
       pillBg: "bg-violet-200 text-violet-950",
-      mascot: "prismBot",
-      title: "Suscripción Ecosistema",
-      subtitle: "Web + Apps + Cloud",
-      hours: "Mensual",
-      oldPrice: null,
-      price: 999,
-      priceNote: "MXN / mes • Cap mensual controlado",
-      ctaText: "¡Suscribir! Agregar",
-      description: "Gestión continua de Página Web, Apps, Servidores en la nube y asesorías tecnológicas recurrentes para mantener tu operación al día.",
-      highlights: ["Administración Cloud & dominios", "Asesoría recurrente de evolución TI", "Estabilidad operativa sin costos sorpresa"]
-    },
-    {
-      id: "ret-legal",
-      group: "retainers",
-      badge: "BLINDAJE NOM",
-      badgeColor: "bg-amber-400 text-slate-950",
-      backdropBg: "bg-gradient-to-b from-amber-200/95 to-yellow-100/90",
-      pillBg: "bg-amber-200 text-amber-950",
-      mascot: "shieldBot",
-      title: "Auditoría Legal Digital",
-      subtitle: "Cumplimiento Mensual",
-      hours: "Mensual",
-      oldPrice: null,
-      price: 999,
-      priceNote: "MXN / mes • Prevención de contingencias",
-      ctaText: "¡Proteger! Agregar",
-      description: "Vigilancia permanente de normativas vigentes, leyes de comercio electrónico, privacidad de datos (LFPDPPP) y leyes laborales.",
-      highlights: ["Revisión de contratos B2B (MSA / NDA)", "Cumplimiento electrónico y LFPDPPP", "Cero multas por vacíos regulatorios"]
-    },
-    {
-      id: "ret-accounting",
-      group: "retainers",
-      badge: "FISCAL & FLUJO",
-      badgeColor: "bg-cyan-500 text-slate-950",
-      backdropBg: "bg-gradient-to-b from-sky-200/95 to-indigo-200/90",
-      pillBg: "bg-sky-200 text-sky-950",
       mascot: "helmetBot",
-      title: "Auditoría Contable",
-      subtitle: "Rastreo de Flujo",
-      hours: "A Revisión",
+      title: "Gestión Ecosistema",
+      subtitle: "Infraestructura + TI",
+      hours: "Mensual",
+      oldPrice: null,
+      price: 999,
+      priceNote: "MXN / mes • Acompañamiento continuo",
+      ctaText: "¡Suscribir! Agregar",
+      description: "Administración técnica de servidores cloud, integraciones activas y sesiones recurrentes de evolución tecnológica.",
+      highlights: ["Supervisión de nube y repositorios", "Recomendaciones de optimización operativa", "Estabilidad técnica mes a mes"]
+    },
+    {
+      id: "ret-custom-digital",
+      group: "retainers",
+      badge: "MULTI-PLATAFORMA",
+      badgeColor: "bg-cyan-400 text-slate-950 border-2 border-slate-950",
+      backdropBg: "bg-gradient-to-b from-sky-200 to-indigo-200",
+      pillBg: "bg-sky-200 text-sky-950",
+      mascot: "cubeBot",
+      title: "Otros Servicios Digitales",
+      subtitle: "Apps, ERP, IA & Cloud",
+      hours: "A Medida",
       oldPrice: null,
       price: 0,
-      customPriceLabel: "A Revisión",
-      priceNote: "Cotización según volumen transaccional",
-      ctaText: "Solicitar Evaluación",
-      description: "Reportería ejecutiva mensual, auditoría contable continua, rastreo de flujo de efectivo, CFDI 4.0/32D y detección de fugas de dinero.",
-      highlights: ["Detección de fugas en pasarelas y operación", "Atención prioritaria ante requerimientos SAT", "Ahorro de hasta 30% en costos ocultos"]
+      customPriceLabel: "Según Plataforma",
+      priceNote: "Cotización variable por tipo de sistema",
+      ctaText: "Preguntar por mi Sistema",
+      description: "Planes de mantenimiento mensual para apps móviles, software logístico a medida, bots de IA o tiendas e-commerce avanzadas.",
+      highlights: ["Ajustado al tamaño de tu plataforma", "Soporte evolutivo, parches y mejoras", "Atención directa para tu operación"]
     }
   ],
 
-  // Pestaña 3 del Carrusel: Tarifas Directas por Hora & Diagnóstico Estrella
+  // Pestaña 3 del Carrusel: Tarifas Directas por Hora & Diagnóstico Operativo
   featuredRates: [
     {
       id: "rate-diag",
       group: "tarifas",
       badge: "100% GRATUITO",
-      badgeColor: "bg-emerald-400 text-slate-950",
-      backdropBg: "bg-gradient-to-b from-emerald-300/95 to-teal-200/90",
+      badgeColor: "bg-emerald-400 text-slate-950 border-2 border-slate-950",
+      backdropBg: "bg-gradient-to-b from-emerald-300 to-teal-200",
       pillBg: "bg-emerald-200 text-emerald-950",
       mascot: "prismBot",
       title: "Diagnóstico Técnico",
-      subtitle: "Auditoría Exprés",
+      subtitle: "Revisión Operativa",
       hours: "Sesión Inicial",
       oldPrice: 2999,
       price: 0,
       customPriceLabel: "$0 MXN",
-      priceNote: "Sin compromiso • Bajo NDA Bidireccional",
+      priceNote: "Sin compromiso • Confidencialidad total",
       ctaText: "¡Agendar Gratis!",
-      description: "Evaluación corta de dolor operativo, fallas de seguridad críticas o fugas de efectivo para definir tu arquitectura ideal.",
-      highlights: ["Identificación de cuellos de botella reales", "Estimación transparente de ROI", "Propuesta formal a medida"]
+      description: "Revisamos tus procesos actuales, cuellos de botella logísticos o necesidades de software para proponerte la solución tecnológica exacta.",
+      highlights: ["Detección de áreas de ahorro operativo", "Estimación clara de retorno (ROI)", "Propuesta tecnológica a la medida"]
     },
     {
       id: "rate-design",
       group: "tarifas",
       badge: "5 VERTICALES",
-      badgeColor: "bg-pink-500 text-white",
-      backdropBg: "bg-gradient-to-b from-pink-200/95 to-rose-200/90",
+      badgeColor: "bg-pink-500 text-white border-2 border-slate-950",
+      backdropBg: "bg-gradient-to-b from-pink-200 to-rose-200",
       pillBg: "bg-pink-200 text-pink-950",
       mascot: "cubeBot",
-      title: "Hora Diseño & 3D",
-      subtitle: "Arte, Render & Video",
+      title: "Hora Diseño & Arte",
+      subtitle: "Visual, Render & Video",
       hours: "Por Hora",
       oldPrice: null,
       price: 699,
-      priceNote: "MXN / hora • Modelado 3D, IA Visual, Ads",
+      priceNote: "MXN / hora • Diseño, IA Visual, Video, Ads",
       ctaText: "+1 Hora Diseño",
-      description: "Modelado arquitectónico 2D/3D, producción audiovisual, activos asistidos por IA, retoque profesional y campañas publicitarias.",
-      highlights: ["Estética Art Deco / Gaming UX de élite", "Renders inmobiliarios e industriales", "Producción acelerada con IA generativa"]
+      description: "Diseño digital, modelado visual 2D/3D, producción audiovisual, activos creados con IA, retoque fotográfico y campañas web.",
+      highlights: ["Interfaces atractivas estilo Gaming UX", "Renders para proyectos e industria", "Entrega ágil asistida por herramientas IA"]
     },
     {
       id: "rate-dev",
       group: "tarifas",
       badge: "8 VERTICALES",
-      badgeColor: "bg-cyan-400 text-slate-950",
-      backdropBg: "bg-gradient-to-b from-cyan-200/95 to-blue-200/90",
+      badgeColor: "bg-cyan-400 text-slate-950 border-2 border-slate-950",
+      backdropBg: "bg-gradient-to-b from-cyan-200 to-blue-200",
       pillBg: "bg-cyan-200 text-cyan-950",
       mascot: "gearBot",
       title: "Hora Ingeniería TI",
@@ -336,136 +325,122 @@ window.PERSPECTIVE_DATA = {
       hours: "Por Hora",
       oldPrice: null,
       price: 799,
-      priceNote: "MXN / hora • Web, Apps, ERP, Gaming, APIs",
+      priceNote: "MXN / hora • Web, Apps, Logística, APIs",
       ctaText: "+1 Hora Desarrollo",
-      description: "Desarrollo de software a la medida, e-commerce de alta conversión, apps iOS/Android, Big Data, IA aplicada, Cloud y simuladores VR.",
-      highlights: ["Código limpio con QA y repositorios cifrados", "Cesión 100% de IP al liquidar proyecto", "Arquitectura escalable lista para crecer"]
+      description: "Desarrollo de software a la medida, páginas web, tiendas en línea, apps móviles, automatización de APIs, Big Data, IA y Cloud.",
+      highlights: ["Código limpio, rápido y escalable", "Entrega del 100% de tu proyecto al liquidar", "Pruebas de calidad antes de publicar"]
     },
     {
       id: "rate-strat",
       group: "tarifas",
-      badge: "5 VERTICALES",
-      badgeColor: "bg-amber-400 text-slate-950",
-      backdropBg: "bg-gradient-to-b from-amber-200/95 to-orange-200/90",
+      badge: "4 VERTICALES",
+      badgeColor: "bg-amber-400 text-slate-950 border-2 border-slate-950",
+      backdropBg: "bg-gradient-to-b from-amber-200 to-orange-200",
       pillBg: "bg-amber-200 text-amber-950",
       mascot: "shieldBot",
-      title: "Hora Estratégica",
-      subtitle: "TI, Ciberseguridad & NOM",
+      title: "Hora Estrategia Ops",
+      subtitle: "Operación & Negocio",
       hours: "Por Hora",
       oldPrice: null,
       price: 999,
-      priceNote: "MXN / hora • Consultoría C-Level & Blindaje",
+      priceNote: "MXN / hora • Logística, Costos, CRM & Datos",
       ctaText: "+1 Hora Estrategia",
-      description: "Transformación digital, reducción de costos operativos, cumplimiento normativo NOM, ciberseguridad AES-256 y arquitectura CRM.",
-      highlights: ["Enfoque directo en ROI y ahorro medible", "Capacitación anti-fugas para empleados", "Alineación fiscal, legal y tecnológica"]
+      description: "Estrategia TI, optimización logística, reducción de costos operativos, consejos financieros básicos prácticos derivados del análisis operativo y CRM.",
+      highlights: ["Recomendaciones prácticas de operación", "Optimización logística y ahorro de tiempos", "Protección técnica de datos y sistemas CRM"]
     }
   ],
 
-  // Catálogo Maestro Oficial: Las 18 Verticales Exactas
+  // Catálogo Maestro Oficial: 17 Verticales Tecnológicas, Creativas y Operativas
   verticals: [
-    { num: 1, name: "Transformación Digital y Estrategia TI", category: "Estrategicas", price: 999, icon: "compass", desc: "Diagnóstico y plan maestro para modernizar la tecnología de tu negocio y adaptarla a las exigencias del mercado." },
-    { num: 2, name: "Optimización Operativa y Reducción de Costos", category: "Estrategicas", price: 999, icon: "trending-down", desc: "Análisis de tus procesos de trabajo para detectar cuellos de botella, eliminar gastos innecesarios y acelerar entregas." },
-    { num: 3, name: "Sistemas de Gestión y Logística", category: "Desarrollo", price: 799, icon: "boxes", desc: "Creación de software a la medida para controlar inventarios, envíos, almacenes y la operación interna de tu empresa en tiempo real." },
-    { num: 4, name: "Cumplimiento Normativo y Auditoría (NOM)", category: "Estrategicas", price: 999, icon: "scale", desc: "Revisión y ajuste de tus sistemas informáticos para asegurar que cumplan con las regulaciones de ley, estándares y normativas vigentes NOM." },
-    { num: 5, name: "Ciberseguridad y Protección de Datos", category: "Estrategicas", price: 999, icon: "shield-check", desc: "Blindaje de la información confidencial contra ataques informáticos, accesos no autorizados, fugas de datos y cursos de capacitación para empleados." },
-    { num: 6, name: "Desarrollo Web y E-commerce (Diseño y Gestión)", category: "Desarrollo", price: 799, icon: "globe", desc: "Construcción de sitios web profesionales y tiendas en línea rápidas, seguras y optimizadas para convertir visitas en ventas." },
-    { num: 7, name: "Big Data y Analítica Empresarial", category: "Desarrollo", price: 799, icon: "bar-chart-3", desc: "Organización y análisis de grandes volúmenes de datos para transformarlos en reportes visuales que faciliten la toma de decisiones." },
-    { num: 8, name: "Marketing Digital y Publicidad Web", category: "Diseno", price: 699, icon: "megaphone", desc: "Diseño visual y ejecución estratégica de campañas publicitarias digitales para posicionar tu marca y atraer prospectos." },
-    { num: 9, name: "Inteligencia Artificial Aplicada al Negocio", category: "Desarrollo", price: 799, icon: "bot", desc: "Integración de herramientas de IA para automatizar atención a clientes, analizar tendencias y hacer predicciones operativas." },
-    { num: 10, name: "Modelado Arquitectónico 2D / 3D", category: "Diseno", price: 699, icon: "box", desc: "Renderizado y creación de planos visuales en 3D para proyectos inmobiliarios, arquitectónicos o prototipos industriales." },
-    { num: 11, name: "Edición Digital y Retoque Visual (Photoshop)", category: "Diseno", price: 699, icon: "wand-2", desc: "Optimización y edición fotográfica profesional para catálogos, publicidad y activos gráficos de alta calidad." },
-    { num: 12, name: "Gestión de Clientes y Proveedores (CRM)", category: "Estrategicas", price: 999, icon: "users", desc: "Asesoría e implementación de sistemas CRM y procesos para mejorar la comunicación, seguimiento comercial y control con aliados estratégicos." },
-    { num: 13, name: "Generación de Activos Visuales y Diseño con IA", category: "Diseno", price: 699, icon: "sparkles", desc: "Producción rápida de imágenes y contenido gráfico mediante herramientas avanzadas de Inteligencia Artificial para acelerar entregas creativas." },
-    { num: 14, name: "Producción Audiovisual y Postproducción Digital", category: "Diseno", price: 699, icon: "clapperboard", desc: "Grabación, montaje y efectos para videos corporativos, promocionales y contenido de alto impacto para redes sociales." },
-    { num: 15, name: "Videojuegos, Simuladores y Experiencias Inmersivas", category: "Desarrollo", price: 799, icon: "gamepad-2", desc: "Creación de software interactivo y de realidad virtual para entretenimiento, capacitaciones industriales o presentaciones de producto." },
-    { num: 16, name: "Arquitectura e Infraestructura Cloud Computing", category: "Desarrollo", price: 799, icon: "cloud-cog", desc: "Configuración y migración de servidores en la nube (AWS / Azure / GCP / Hetzner) para garantizar sistemas siempre disponibles y protegidos." },
-    { num: 17, name: "Apps Móviles Nativas e Híbridas (iOS / Android)", category: "Desarrollo", price: 799, icon: "smartphone", desc: "Programación de aplicaciones para celulares y tabletas diseñadas para la interacción directa con tus usuarios o colaboradores." },
-    { num: 18, name: "Integración Avanzada de APIs y Automatización", category: "Desarrollo", price: 799, icon: "workflow", desc: "Conexión de tus herramientas digitales existentes para que compartan datos de forma automática y sin tareas manuales repetitivas." }
+    { num: 1, name: "Transformación Digital y Estrategia TI", category: "Estrategicas", price: 999, icon: "compass", desc: "Diagnóstico tecnológico y plan práctico para modernizar las herramientas digitales de tu empresa y escalar su operación." },
+    { num: 2, name: "Optimización Logística y Reducción de Costos Operativos", category: "Estrategicas", price: 999, icon: "trending-down", desc: "Análisis directo de tu operación diaria para detectar cuellos de botella, mejorar flujos logísticos, eliminar gastos innecesarios y brindar consejos financieros básicos prácticos basados en lo observado." },
+    { num: 3, name: "Sistemas de Gestión y Logística a Medida", category: "Desarrollo", price: 799, icon: "boxes", desc: "Creación de software personalizado para controlar inventarios, rutas, envíos, almacenes y la operación interna de tu negocio en tiempo real." },
+    { num: 4, name: "Ciberseguridad Técnica y Protección de Datos", category: "Estrategicas", price: 999, icon: "shield-check", desc: "Resguardo técnico de la información de tu empresa contra accesos no autorizados, respaldos cifrados, prevención de fugas técnicas y capacitación práctica para tu equipo." },
+    { num: 5, name: "Desarrollo Web y E-commerce (Diseño y Gestión)", category: "Desarrollo", price: 799, icon: "globe", desc: "Construcción de sitios web de alto impacto y tiendas en línea rápidas, intuitivas y optimizadas para convertir visitantes en clientes." },
+    { num: 6, name: "Big Data y Analítica Empresarial", category: "Desarrollo", price: 799, icon: "bar-chart-3", desc: "Organización de tus datos operativos y comerciales en tableros visuales claros que facilitan tomar mejores decisiones de negocio." },
+    { num: 7, name: "Marketing Digital y Publicidad Web", category: "Diseno", price: 699, icon: "megaphone", desc: "Diseño visual atractivo y ejecución de campañas digitales para posicionar tus productos o servicios y atraer nuevos prospectos." },
+    { num: 8, name: "Inteligencia Artificial Aplicada al Negocio", category: "Desarrollo", price: 799, icon: "bot", desc: "Integración de asistentes de IA para automatizar atención al cliente, agilizar tareas internas y analizar tendencias de ventas u operación." },
+    { num: 9, name: "Modelado Arquitectónico y Visualización 2D / 3D", category: "Diseno", price: 699, icon: "box", desc: "Renderizado y creación de modelos visuales tridimensionales para proyectos arquitectónicos, inmobiliarios, catálogos o prototipos industriales." },
+    { num: 10, name: "Edición Digital y Retoque Visual Profesional", category: "Diseno", price: 699, icon: "wand-2", desc: "Optimización y edición fotográfica de alta calidad para catálogos comerciales, e-commerce, publicidad e identidad gráfica." },
+    { num: 11, name: "Gestión de Clientes y Proveedores (Sistemas CRM)", category: "Estrategicas", price: 999, icon: "users", desc: "Implementación y configuración de plataformas CRM para ordenar tu seguimiento de ventas, atención a clientes y coordinación con proveedores." },
+    { num: 12, name: "Generación de Activos Visuales y Diseño con IA", category: "Diseno", price: 699, icon: "sparkles", desc: "Producción ágil de ilustraciones, conceptos visuales y contenido gráfico apoyada en herramientas avanzadas de Inteligencia Artificial." },
+    { num: 13, name: "Producción Audiovisual y Postproducción de Video", category: "Diseno", price: 699, icon: "clapperboard", desc: "Edición dinámica, animación y montaje de videos promocionales, demostrativos de producto y contenido para redes sociales." },
+    { num: 14, name: "Videojuegos, Simuladores y Experiencias Interactivas", category: "Desarrollo", price: 799, icon: "gamepad-2", desc: "Desarrollo de experiencias interactivas, entornos virtuales y simuladores de capacitación o presentación innovadora de productos." },
+    { num: 15, name: "Arquitectura e Infraestructura Cloud Computing", category: "Desarrollo", price: 799, icon: "cloud-cog", desc: "Configuración, optimización y migración de servidores en la nube (AWS, Azure, GCP, Hetzner) para máxima velocidad y disponibilidad." },
+    { num: 16, name: "Apps Móviles Nativas e Híbridas (iOS / Android)", category: "Desarrollo", price: 799, icon: "smartphone", desc: "Programación de aplicaciones móviles fluidas y modernas para conectar directamente con tus clientes o equipos de campo." },
+    { num: 17, name: "Integración Avanzada de APIs y Automatización", category: "Desarrollo", price: 799, icon: "workflow", desc: "Conexión automática entre tus plataformas actuales (tienda, inventario, mensajería, CRM) para eliminar capturas manuales repetitivas." }
   ],
 
-  // Equipo Directivo Real (Hoja 8: Talento y Cultura)
+  // Equipo Directivo Real
   team: [
     {
       name: "Antonio Espinoza",
-      role: "Co-CEO • Gobernanza, Estrategia Comercial y Financiera",
-      badge: "Dirección Ejecutiva & ROI",
+      role: "Co-CEO • Dirección Comercial y Estrategia Operativa",
+      badge: "Operación & Negocio",
       accent: "from-amber-400 to-orange-500",
-      desc: "Liderazgo estratégico en optimización operativa B2B, estructuración financiera, blindaje regulatorio y relacionamiento ejecutivo."
+      desc: "Enfoque práctico en eficiencia operativa, optimización logística, reducción de costos y retorno de inversión en proyectos tecnológicos."
     },
     {
       name: "Gael Villalobos",
       role: "Líder de Ingeniería y Arquitectura de Software",
       badge: "Core Tecnológico & Cloud",
       accent: "from-cyan-400 to-blue-600",
-      desc: "Gestión directa del desarrollo de software a la medida, infraestructura cloud resiliente, ciberseguridad e integraciones avanzadas de IA."
+      desc: "Dirección técnica de desarrollo de software a la medida, infraestructura cloud de alto rendimiento, automatización e integraciones de IA."
     },
     {
       name: "Marlen",
-      role: "Dirección Creativa, Arte 3D & Experiencias UX/UI",
-      badge: "Arte 3D & Gaming UX",
+      role: "Dirección Creativa, Arte Digital & Experiencias UX/UI",
+      badge: "Arte & Gaming UX",
       accent: "from-fuchsia-500 to-violet-600",
-      desc: "Dirección artística de modelado 3D, entornos interactivos, estética Art Deco futurista e interfaces con dinámicas de gamificación."
+      desc: "Dirección artística de interfaces interactivas, identidad visual moderna, visualización digital y experiencias de usuario memorables."
     }
   ],
 
-  // Centro Legal y de Cumplimiento Corporativo (5 Políticas Completas)
-  legalDocs: {
+  // Políticas Operativas, de Privacidad y Servicio Tecnológico (4 Pestañas Claras)
+  policyDocs: {
     privacidad: {
-      title: "Aviso de Privacidad Integral (LFPDPPP & AES-256)",
-      updated: "Vigente 2026 • Cumplimiento LFPDPPP / Estándar GDPR",
+      title: "Política de Privacidad y Resguardo Técnico de Datos",
+      updated: "Vigente 2026 • Protección Técnica AES-256",
       content: `
-        <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-          <p><strong class="text-white">1. Identidad del Responsable y Encargado:</strong> <strong>Perspective SCT</strong> (en proceso de consolidación societaria bajo <em>Perspective SCT SA de CV / S.A.P.I. de C.V.</em>, operando fiscalmente con pleno cumplimiento tributario ante el SAT y domicilio operativo en el Corredor Industrial del Bajío, México; contacto oficial: <a href="mailto:omniiapps@gmail.com" class="text-cyan-400 underline">omniiapps@gmail.com</a>) es responsable del tratamiento legítimo, controlado e informado de sus datos personales conforme a la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong>.</p>
-          <p><strong class="text-white">2. Datos Recabados:</strong> Recabamos únicamente datos de identificación corporativa y contacto profesional (nombre completo, cargo directivo, razón social, correo electrónico institucional, teléfono y requerimientos técnicos/operativos) suministrados voluntariamente en nuestros formularios de Diagnóstico Técnico o Cotizador Interactivo.</p>
-          <p><strong class="text-white">3. Protocolos de Ciberseguridad y Proyectos de Big Data / IA:</strong> Cuando Perspective SCT interviene bases de datos corporativas de terceros para proyectos de Big Data, Analítica o Inteligencia Artificial, actúa bajo la figura legal de <em>Encargado</em>, aplicando protocolos de cifrado <strong>AES-256</strong>, repositorios privados cifrados, control estricto de credenciales y acuerdos previos de confidencialidad (NDA Bidireccional).</p>
-          <p><strong class="text-white">4. Finalidades del Tratamiento:</strong> (a) Elaborar Diagnósticos Técnicos y Operativos; (b) Presentar propuestas técnico-económicas con cálculo de ROI; (c) Formalizar Contratos Marco (MSA), Anexos SOW y facturación electrónica <strong>CFDI 4.0</strong>; (d) Cumplir obligaciones legales y regulatorias aplicables.</p>
-          <p><strong class="text-white">5. Derechos ARCO:</strong> Usted puede ejercer en cualquier momento sus derechos de Acceso, Rectificación, Cancelación u Oposición (ARCO), así como revocar su consentimiento, enviando solicitud expresa a <a href="mailto:omniiapps@gmail.com" class="text-cyan-400 underline">omniiapps@gmail.com</a> con respuesta garantizada dentro de los plazos de ley.</p>
+        <div class="space-y-4 text-base text-slate-200 leading-relaxed">
+          <p><strong class="text-white">1. Uso Responsable de Datos de Contacto:</strong> En <strong>Perspective SCT</strong> (contacto directo oficial: <a href="mailto:perspectivesct.shop@gmail.com" class="text-cyan-300 underline">perspectivesct.shop@gmail.com</a>) utilizamos los datos que nos compartes en nuestros formularios o cotizador únicamente para preparar tu diagnóstico técnico, enviarte propuestas comerciales y dar seguimiento a tus proyectos digitales.</p>
+          <p><strong class="text-white">2. Seguridad Técnica y Cifrado:</strong> Toda información técnica, accesos a servidores o bases de datos operativas de nuestros clientes se resguarda mediante conexiones seguras, repositorios privados con control de acceso estricto y estándares de cifrado <strong>AES-256</strong>.</p>
+          <p><strong class="text-white">3. Cero Venta de Información a Terceros:</strong> Jamás comercializamos ni compartimos directorios, métricas operativas ni información interna de nuestros clientes con terceros.</p>
+          <p><strong class="text-white">4. Actualización o Eliminación de Datos:</strong> En cualquier momento puedes solicitar la actualización o baja inmediata de tus datos de contacto escribiendo directamente a <a href="mailto:perspectivesct.shop@gmail.com" class="text-cyan-300 underline">perspectivesct.shop@gmail.com</a>.</p>
         </div>`
     },
-    terminos: {
-      title: "Términos Comerciales, MSA, Anticipos y Stop-Loss",
-      updated: "Marco Jurídico B2B • Perspective SCT",
+    alcance: {
+      title: "Condiciones de Servicio, Alcance (SOW) y Pagos",
+      updated: "Transparencia Operativa • Perspective SCT",
       content: `
-        <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-          <p><strong class="text-white">1. Estructura Contractual (MSA + SOW):</strong> Toda relación comercial B2B se rige por un <em>Master Service Agreement (Contrato Marco de Prestación de Servicios)</em> acompañado de Anexos de Alcance de Trabajo Específicos (<strong>SOW</strong>) que detallan entregables exactos, desglose de horas por vertical y criterios formales de aceptación.</p>
-          <p><strong class="text-white">2. Tabulador Oficial y Reglas de Promoción:</strong> Las tarifas base vigentes son: <strong>Desarrollo $799 MXN/h</strong>, <strong>Diseño & 3D $699 MXN/h</strong> y <strong>Consultoría Estratégica/Legal/TI $999 MXN/h</strong>. Los descuentos por volumen en Bolsas de Horas (5% a 20%) aplican exclusivamente sobre paquetes cerrados. <em>Política estricta: No se acumulan múltiples promociones ni descuentos adicionales fuera de tabulador.</em></p>
-          <p><strong class="text-white">3. Esquema de Pagos y Anticipos:</strong> Para Bolsas <em>Starter/Jumpstart</em> y <em>Growth</em> se requiere el <strong>100% de anticipo</strong> previo al arranque. Para paquetes <em>Pro Scale (40h)</em>, <em>Business Partner (80h)</em> y <em>Enterprise (120h+)</em> se opera bajo esquema <strong>50% anticipo</strong> en el Kick-off y 50% contra entrega de hitos quincenales validados.</p>
-          <p><strong class="text-white">4. Límite de Responsabilidad Civil y Financiera:</strong> La responsabilidad financiera máxima asumida por Perspective SCT ante cualquier contingencia técnica o caída fortuita de proveedores cloud externos queda estrictamente limitada al monto efectivamente pagado por el cliente en el período o mes en curso.</p>
-          <p><strong class="text-white">5. Cláusula de Control de Alcance (Scope Cap & Stop-Loss):</strong> Los retainers mensuales cuentan con un límite definido de horas (cap) para prevenir desbordes de alcance (<em>scope creep</em>). Ante desviaciones continuas de alcance solicitadas fuera del SOW original, se activará una mesa formal de ajuste presupuestal antes de continuar la ejecución.</p>
+        <div class="space-y-4 text-base text-slate-200 leading-relaxed">
+          <p><strong class="text-white">1. Alcance Claro por escrito (SOW):</strong> Cada proyecto o paquete inicia con un documento de alcance técnico claro donde detallamos entregables, cronograma por etapas, horas asignadas y objetivos medibles.</p>
+          <p><strong class="text-white">2. Tarifas y Promociones:</strong> Nuestras tarifas por hora son transparentes: <strong>Desarrollo $799 MXN/h</strong>, <strong>Diseño & Arte $699 MXN/h</strong> y <strong>Estrategia Operativa $999 MXN/h</strong>, además de nuestra promoción de <strong>Mantenimiento Web Mensual por $2,000 MXN/mes</strong>. <em>Las promociones y descuentos por paquete no son acumulables entre sí.</em></p>
+          <p><strong class="text-white">3. Esquema de Anticipos:</strong> Los paquetes rápidos (<em>Starter</em> y <em>Growth</em>) y planes mensuales se activan con el <strong>100% de pago inicial</strong>. Los proyectos mayores (<em>Pro Scale 40h+</em>, <em>Business Partner</em> y <em>Enterprise</em>) operan con <strong>50% de anticipo</strong> y 50% contra entregas validadas.</p>
+          <p><strong class="text-white">4. Enfoque de Recomendaciones Operativas:</strong> Nuestras observaciones sobre logística, ahorro operativo o consejos financieros básicos constituyen recomendaciones prácticas de negocio derivadas del análisis técnico-operativo de tus procesos para ayudarte a aprovechar mejor tu inversión digital.</p>
         </div>`
     },
-    ip: {
-      title: "Política de Propiedad Intelectual (Código, 3D e IA)",
-      updated: "Reserva de Dominio y Cesión Patrimonial",
+    propiedad: {
+      title: "Entrega de Código y Titularidad de Activos Digitales",
+      updated: "Garantía sobre tus Desarrollos",
       content: `
-        <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-          <p><strong class="text-white">1. Transferencia 100% Post-Liquidación:</strong> Perspective SCT establece con total transparencia que los derechos patrimoniales sobre el código fuente a la medida (<em>Custom Code</em>), entregables finales de diseño y modelos 3D específicos del cliente se transfieren al cliente final <strong>únicamente tras la liquidación del 100% de las facturas correspondientes al proyecto</strong>.</p>
-          <p><strong class="text-white">2. Frameworks y Librerías Reutilizables:</strong> Perspective SCT retiene la titularidad sobre sus metodologías internas, motores base, librerías genéricas reutilizables y herramientas propietarias de aceleración, otorgando al cliente una licencia perpetua, no exclusiva y libre de regalías para operar su producto final sin restricciones.</p>
-          <p><strong class="text-white">3. Custodia de Repositorios y Bases de Datos:</strong> Durante el desarrollo, el código base y los activos digitales se resguardan en repositorios privados con control de versiones (GitHub Enterprise / entornos cifrados) y respaldos de seguridad supervisados directamente por los socios directores.</p>
-        </div>`
-    },
-    nda: {
-      title: "Acuerdo de Confidencialidad Bidireccional (NDA)",
-      updated: "Protocolo de Secreto Industrial Corporativo",
-      content: `
-        <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-          <p><strong class="text-white">1. Firma Previa al Diagnóstico Profundo:</strong> Antes de recibir credenciales TI, accesos a servidores, pasarelas de pago, contabilidad interna o bases de datos para diagnósticos de Big Data e Inteligencia Artificial, Perspective SCT suscribe un <strong>NDA Corporativo Bidireccional</strong> que protege jurídicamente a ambas partes.</p>
-          <p><strong class="text-white">2. Resguardo de Secretos Industriales:</strong> Toda información financiera, algoritmos, listas de clientes/proveedores, costos unitarios y estrategias comerciales compartidas se catalogan como Secreto Industrial protegido, con acceso restringido exclusivamente a los líderes asignados en la matriz RACI del proyecto.</p>
-          <p><strong class="text-white">3. Extensión a Células Técnicas y Peritos:</strong> Todos los colaboradores internos, desarrolladores asociados, peritos contables y abogados aliados operan bajo convenios individuales de confidencialidad y no divulgación vigentes.</p>
+        <div class="space-y-4 text-base text-slate-200 leading-relaxed">
+          <p><strong class="text-white">1. Titularidad 100% para el Cliente al Liquidar:</strong> Una vez cubierto el 100% del proyecto acordado, entregamos al cliente la titularidad completa sobre el código personalizado, diseños finales, archivos fuente y activos visuales creados específicamente para su marca.</p>
+          <p><strong class="text-white">2. Herramientas Base y Componentes Técnicos:</strong> Perspective SCT conserva sus librerías internas genéricas y plantillas técnicas de aceleración, otorgando al cliente uso libre, permanente y sin cargos ocultos dentro de su producto entregado.</p>
+          <p><strong class="text-white">3. Respaldo en Repositorios Privados:</strong> Durante toda la construcción del proyecto mantenemos control de versiones privado y copias de seguridad para proteger cada avance.</p>
         </div>`
     },
     sla: {
-      title: "SLAs de Servicio, QA, Facturación CFDI 4.0 y NOM",
-      updated: "Estándares Operativos y Fiscales",
+      title: "Tiempos de Respuesta (SLAs), Calidad QA y Confidencialidad",
+      updated: "Compromiso Técnico y Soporte",
       content: `
-        <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-          <p><strong class="text-white">1. Acuerdos de Nivel de Servicio (SLAs Técnicos):</strong>
-            <br>• <strong>Emergencias Imperativas (Caída crítica en producción / E-commerce):</strong> Tiempo de respuesta inicial de <strong>1 a 2 horas</strong>.
-            <br>• <strong>Peticiones Urgentes Operativas:</strong> Tiempo de atención de <strong>24 a 48 horas hábiles</strong>.
-            <br>• <strong>Peticiones Planificadas y Evolutivas:</strong> Ejecutadas dentro de los Sprints quincenales (Scrum) o flujos continuos (Kanban) sobre la bolsa de horas contratada.
-            <br>• <strong>Disponibilidad en Iguala de Mantenimiento ($499/mes):</strong> Objetivo operativo de <strong>95%+ Uptime</strong> con ventanas de mantenimiento programadas fuera de horarios pico.</p>
-          <p><strong class="text-white">2. Control de Calidad (QA):</strong> Ningún entregable de software, tienda en línea o entorno interactivo pasa a producción sin validación cruzada funcional y estética entre la rama de Ingeniería y la Dirección Creativa.</p>
-          <p><strong class="text-white">3. Facturación Electrónica CFDI 4.0 y Cumplimiento Fiscal:</strong> Emitimos comprobantes fiscales digitales <strong>CFDI 4.0</strong> válidos ante el SAT para deducibilidad empresarial B2B, manteniendo monitoreo riguroso de Opinión de Cumplimiento (32D) y observancia de Normas Oficiales Mexicanas (NOM) aplicables.</p>
+        <div class="space-y-4 text-base text-slate-200 leading-relaxed">
+          <p><strong class="text-white">1. Tiempos de Atención Técnica (SLAs):</strong>
+            <br>• <strong>Emergencias Críticas (Caída total de sitio o tienda activa):</strong> Respuesta técnica inicial en <strong>1 a 2 horas</strong>.
+            <br>• <strong>Solicitudes Urgentes y Ajustes Prioritarios:</strong> Atención dentro de <strong>24 a 48 horas hábiles</strong>.
+            <br>• <strong>Modificaciones y Cambios Temáticos (Plan $2,000/mes):</strong> Programación continua y entregas puntuales para cada campaña, evento o festividad.</p>
+          <p><strong class="text-white">2. Pruebas de Calidad (QA):</strong> Todo sitio web, tienda en línea, automatización o software pasa por revisión funcional y visual en móvil y escritorio antes de publicarse.</p>
+          <p><strong class="text-white">3. Confidencialidad Total (NDA):</strong> Resguardamos con absoluta discreción tus ideas de producto, métricas comerciales, listas de proveedores y credenciales técnicas desde el primer contacto.</p>
         </div>`
     }
   }

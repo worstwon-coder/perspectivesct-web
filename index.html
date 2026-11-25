@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perspective SCT | Hub de Ingeniería, Arte 3D, Software & Blindaje Legal</title>
-  <meta name="description" content="Perspective SCT SA de CV — Soluciones tecnológicas de élite, desarrollo de software, diseño 3D/gaming, IA, infraestructura cloud y blindaje legal/contable integrado en México. Piensa en el futuro desde el presente." />
-  <meta name="keywords" content="Perspective SCT, desarrollo de software, agencia tecnológica México, Bajío, modelado 3D, inteligencia artificial, ciberseguridad, e-commerce, blindaje legal TI, videojuegos" />
-  <meta name="theme-color" content="#16132b" />
+  <title>Perspective SCT | Hub de Ingeniería, Arte, Software & Soluciones Digitales</title>
+  <meta name="description" content="Perspective SCT — Venta de servicios tecnológicos y soluciones digitales: desarrollo de software, páginas web, automatización, infraestructura cloud, arte digital y optimización operativa. Piensa en el futuro desde el presente." />
+  <meta name="keywords" content="Perspective SCT, servicios tecnológicos, desarrollo de software, páginas web, mantenimiento web, automatización, inteligencia artificial, cloud, optimización logística, soluciones digitales" />
+  <meta name="theme-color" content="#181430" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Perspective SCT | Ingeniería, Arte 3D & Blindaje Corporativo" />
-  <meta property="og:description" content="Convergencia entre arte, ingeniería y estrategia legal/fiscal. Paquetes claros, precios definidos y ahorro de hasta 30% en costos operativos ocultos." />
+  <meta property="og:title" content="Perspective SCT | Ingeniería, Arte, Software & Soluciones Digitales" />
+  <meta property="og:description" content="Soluciones tecnológicas de alto impacto: desarrollo web, software a la medida, automatización, cloud y mantenimiento web mensual en promoción por $2,000 MXN/mes." />
   <meta property="og:image" content="assets/img/LOGO%20Super%20GOD.jpg" />
   <meta property="og:type" content="website" />
 
@@ -18,10 +18,10 @@
   <link rel="icon" type="image/jpeg" href="assets/img/Icono%20Favicon.jpg" />
   <link rel="apple-touch-icon" href="assets/img/Icono%20Favicon.jpg" />
 
-  <!-- Google Fonts: Syne (Art Deco / Bauhaus Display) + Space Grotesk + Plus Jakarta Sans + JetBrains Mono -->
+  <!-- Google Fonts de Alta Legibilidad + Toque Caricaturesco Tecnológico -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS vía CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -32,12 +32,12 @@
         extend: {
           colors: {
             cosmic: {
-              950: '#0d0b1a',
-              900: '#16132b',
-              800: '#1e183b',
-              700: '#2a2252'
+              950: '#0e0c1d',
+              900: '#181430',
+              800: '#221b47',
+              700: '#2e255e'
             },
-            decoGold: '#d4af37'
+            decoGold: '#f5b935'
           }
         }
       }
@@ -53,77 +53,78 @@
   <canvas id="prism-canvas" aria-hidden="true"></canvas>
 
   <!-- ========================================================================
-       DOCK LATERAL IZQUIERDO FIJO (HOMENAJE A PARANICE + ACCESOS TECH B2B)
+       DOCK LATERAL IZQUIERDO FIJO (ACCESOS RÁPIDOS TECNOLÓGICOS)
        ======================================================================== -->
   <aside aria-label="Accesos rápidos laterales" class="hidden xl:flex fixed left-0 top-1/2 -translate-y-1/2 z-40 flex-col gap-2.5">
-    <a href="mailto:omniiapps@gmail.com" title="Correo Directo Oficial" class="w-12 h-12 rounded-r-2xl bg-slate-950/90 border border-l-0 border-amber-400/40 flex items-center justify-center text-amber-300 hover:w-14 hover:bg-violet-700 hover:text-white transition-all shadow-lg">
+    <a href="mailto:perspectivesct.shop@gmail.com" title="Escribir a perspectivesct.shop@gmail.com" class="w-12 h-12 rounded-r-2xl bg-slate-950/95 border-2 border-l-0 border-amber-400/60 flex items-center justify-center text-amber-300 hover:w-14 hover:bg-violet-700 hover:text-white transition-all shadow-lg">
       <i data-lucide="mail" class="w-5 h-5"></i>
     </a>
-    <a href="#calculadora" title="Calculadora de Horas y ROI" class="w-12 h-12 rounded-r-2xl bg-slate-950/90 border border-l-0 border-cyan-400/40 flex items-center justify-center text-cyan-300 hover:w-14 hover:bg-cyan-600 hover:text-white transition-all shadow-lg">
+    <a href="#promo-mantenimiento" title="Promo Mantenimiento Web $2,000/mes" class="w-12 h-12 rounded-r-2xl bg-slate-950/95 border-2 border-l-0 border-fuchsia-400/60 flex items-center justify-center text-fuchsia-300 hover:w-14 hover:bg-fuchsia-600 hover:text-white transition-all shadow-lg">
+      <i data-lucide="sparkles" class="w-5 h-5"></i>
+    </a>
+    <a href="#calculadora" title="Calculadora de Horas y Ahorro" class="w-12 h-12 rounded-r-2xl bg-slate-950/95 border-2 border-l-0 border-cyan-400/60 flex items-center justify-center text-cyan-300 hover:w-14 hover:bg-cyan-600 hover:text-white transition-all shadow-lg">
       <i data-lucide="calculator" class="w-5 h-5"></i>
     </a>
-    <button type="button" data-open-legal="privacidad" title="Blindaje Legal, NDA y Privacidad LFPDPPP" class="w-12 h-12 rounded-r-2xl bg-slate-950/90 border border-l-0 border-emerald-400/40 flex items-center justify-center text-emerald-300 hover:w-14 hover:bg-emerald-600 hover:text-white transition-all shadow-lg cursor-pointer">
+    <button type="button" data-open-policy="privacidad" title="Políticas de Servicio y Privacidad" class="w-12 h-12 rounded-r-2xl bg-slate-950/95 border-2 border-l-0 border-emerald-400/60 flex items-center justify-center text-emerald-300 hover:w-14 hover:bg-emerald-600 hover:text-white transition-all shadow-lg cursor-pointer">
       <i data-lucide="shield-check" class="w-5 h-5"></i>
     </button>
   </aside>
 
   <!-- ========================================================================
-       NAVBAR FLOTANTE EN CÁPSULAS (ESTILO PARANICE + GLASSMORPHISM DE LUJO)
+       NAVBAR FLOTANTE EN CÁPSULAS (ESTILO PARANICE + ALTA LEGIBILIDAD)
        ======================================================================== -->
   <header id="main-header" class="fixed top-0 inset-x-0 z-50 px-4 sm:px-6 lg:px-10 pt-4 pb-2 transition-all duration-300">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
 
       <!-- Cápsula Izquierda: Navegación Principal -->
       <nav aria-label="Navegación principal" class="hidden lg:flex items-center gap-1 px-3 py-2 rounded-full nav-pill-glass">
-        <a href="#inicio" class="nav-link-item px-4 py-1.5 text-sm">Home</a>
-        <a href="#productos" class="nav-link-item px-4 py-1.5 text-sm">Paquetes</a>
-        <a href="#verticales" class="nav-link-item px-4 py-1.5 text-sm">18 Verticales</a>
-        <a href="#calculadora" class="nav-link-item px-4 py-1.5 text-sm">Cotizador ROI</a>
-        <a href="#metodologia" class="nav-link-item px-4 py-1.5 text-sm">Proceso</a>
+        <a href="#inicio" class="nav-link-item px-3.5 py-1.5 text-sm">Home</a>
+        <a href="#productos" class="nav-link-item px-3.5 py-1.5 text-sm">Paquetes</a>
+        <a href="#promo-mantenimiento" class="nav-link-item px-3.5 py-1.5 text-sm">Promo Web</a>
+        <a href="#verticales" class="nav-link-item px-3.5 py-1.5 text-sm">Servicios</a>
+        <a href="#calculadora" class="nav-link-item px-3.5 py-1.5 text-sm">Cotizador</a>
+        <a href="#metodologia" class="nav-link-item px-3.5 py-1.5 text-sm">Proceso</a>
       </nav>
 
       <!-- Botón Menú Móvil -->
-      <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" class="lg:hidden px-3.5 py-2.5 rounded-full nav-pill-glass flex items-center gap-2 cursor-pointer">
+      <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" class="lg:hidden px-4 py-2.5 rounded-full nav-pill-glass flex items-center gap-2 cursor-pointer">
         <i data-lucide="menu" class="w-5 h-5"></i>
         <span class="text-xs font-extrabold">Menú</span>
       </button>
 
       <!-- Emblema Central: Identidad Oficial Perspective SCT -->
-      <a href="#inicio" class="group flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-950/90 border border-amber-400/45 shadow-xl hover:border-cyan-400/70 transition">
+      <a href="#inicio" class="group flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-950/95 border-2 border-amber-400/60 shadow-xl hover:border-cyan-300 transition">
         <img
           src="assets/img/Icono%20Favicon.jpg"
           alt="Icono Prisma y Engranaje Perspective SCT"
-          class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover ring-1 ring-amber-400/60 group-hover:rotate-12 transition duration-500"
+          class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover ring-2 ring-amber-400/70 group-hover:rotate-12 transition duration-500"
         />
         <div class="leading-none pr-1">
-          <span class="font-display font-extrabold text-base sm:text-lg tracking-wider text-prism block">
+          <span class="font-display font-bold text-base sm:text-lg tracking-wide text-prism block">
             PERSPECTIVE
           </span>
-          <span class="font-mono-code text-[9px] tracking-[0.24em] text-amber-300/90 block mt-0.5">
-            SCT • HUB TECH & 3D
+          <span class="font-mono-code text-[10px] tracking-[0.2em] text-amber-200 font-bold block mt-0.5">
+            SCT • HUB TECH & ARTE
           </span>
         </div>
       </a>
 
-      <!-- Cápsulas Derechas: Región, Buscador Ctrl+K, Legal & Bolsa de Proyecto -->
+      <!-- Cápsulas Derechas: Región, Buscador Ctrl+K y Bolsa de Innovación -->
       <div class="flex items-center gap-2">
-        <!-- Región MX / Nearshoring -->
-        <a href="#contacto" title="Bajío México & Nearshoring USA/Canadá" class="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-full nav-pill-glass text-xs font-extrabold">
+        <a href="#contacto" title="Bajío México & Proyectos Remotos" class="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-full nav-pill-glass text-xs font-extrabold">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
           <span>MX • Bajío</span>
         </a>
 
-        <!-- Buscador Instantáneo / Command Palette -->
         <button type="button" data-open-cmd aria-label="Buscar servicios (Ctrl+K)" title="Buscar servicios o paquetes (Ctrl+K)" class="w-10 h-10 sm:w-auto sm:px-3.5 sm:py-2 rounded-full nav-pill-glass flex items-center justify-center gap-1.5 cursor-pointer">
           <i data-lucide="search" class="w-4 h-4"></i>
-          <span class="hidden xl:inline text-xs font-mono-code opacity-75">Ctrl+K</span>
+          <span class="hidden xl:inline text-xs font-mono-code font-bold">Ctrl+K</span>
         </button>
 
-        <!-- Botón Bolsa de Innovación (Carrito de Cotización estilo Paranice) -->
         <button type="button" data-open-cart aria-label="Abrir Bolsa de Cotización" class="relative px-4 py-2 rounded-full nav-pill-glass flex items-center gap-2 font-extrabold text-xs sm:text-sm cursor-pointer">
           <i data-lucide="briefcase-business" class="w-4 h-4 text-violet-700"></i>
           <span class="hidden sm:inline">Mi Bolsa</span>
-          <span class="cart-count-badge w-5 h-5 rounded-full bg-slate-950 text-cyan-300 font-mono-code text-[11px] font-bold flex items-center justify-center shadow">
+          <span class="cart-count-badge w-5 h-5 rounded-full bg-slate-950 text-cyan-300 font-mono-code text-xs font-bold flex items-center justify-center shadow">
             0
           </span>
         </button>
@@ -131,23 +132,24 @@
     </div>
 
     <!-- Panel Desplegable Móvil -->
-    <div id="mobile-menu-panel" class="hidden lg:hidden mt-3 max-w-md mx-auto rounded-3xl bg-slate-950/95 backdrop-blur-xl border border-amber-400/30 p-5 shadow-2xl space-y-2">
-      <a href="#inicio" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-sm text-white">Home • Fábrica Digital</a>
-      <a href="#productos" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-sm text-cyan-300">Paquetes, Igualas y Precios</a>
-      <a href="#verticales" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-sm text-white">Catálogo 18 Verticales</a>
-      <a href="#calculadora" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-sm text-amber-300">Calculadora Interactiva ROI</a>
-      <a href="#metodologia" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-sm text-white">Metodología, SLAs y Equipo</a>
-      <a href="#contacto" class="block px-4 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 font-extrabold text-sm text-center text-white mt-2">Solicitar Diagnóstico Gratis</a>
+    <div id="mobile-menu-panel" class="hidden lg:hidden mt-3 max-w-md mx-auto rounded-3xl bg-slate-950/95 backdrop-blur-xl border-2 border-amber-400/50 p-5 shadow-2xl space-y-2">
+      <a href="#inicio" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-base text-white">Home • Fábrica Digital</a>
+      <a href="#productos" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-base text-cyan-300">Paquetes y Precios</a>
+      <a href="#promo-mantenimiento" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-base text-amber-300">🔥 Promo Mantenimiento Web ($2,000)</a>
+      <a href="#verticales" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-base text-white">Catálogo de Servicios</a>
+      <a href="#calculadora" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-base text-fuchsia-300">Calculadora Interactiva</a>
+      <a href="#metodologia" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-base text-white">Proceso, SLAs y Equipo</a>
+      <a href="#contacto" class="block px-4 py-3 rounded-xl bg-amber-300 text-slate-950 font-extrabold text-base text-center mt-2">Solicitar Diagnóstico Gratis</a>
     </div>
   </header>
 
   <!-- ========================================================================
        FLUJO CONTINUO VIVO — CAPÍTULO 1: HERO "CYBER-PRISM FACTORY"
-       Inspirado en el mundo ilustrado vivo de paranice.co + Art Deco Prisma
+       Título superior enfocado en la convergencia de Arte e Ingeniería
        ======================================================================== -->
   <main class="relative z-10">
 
-    <section id="inicio" data-stage-bg="#16132b" class="relative pt-28 sm:pt-32 pb-10 overflow-hidden deco-grid-overlay">
+    <section id="inicio" data-stage-bg="#181430" class="relative pt-28 sm:pt-32 pb-10 overflow-hidden deco-grid-overlay">
       <!-- Resplandores Cósmicos de Fondo -->
       <div class="absolute top-16 left-1/2 -translate-x-1/2 w-[680px] h-[380px] bg-violet-600/25 blur-[130px] rounded-full pointer-events-none"></div>
       <div class="absolute top-40 right-10 w-72 h-72 bg-cyan-500/15 blur-[110px] rounded-full pointer-events-none"></div>
@@ -155,125 +157,119 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Píldora Editorial Superior -->
-        <div class="text-center mb-4">
-          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-amber-400/40 text-xs sm:text-sm font-bold text-amber-200 backdrop-blur-md shadow-lg">
-            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-            HUB DE INGENIERÍA, ARTE 3D, ENTRETENIMIENTO Y BLINDAJE LEGAL • EST. 2026
+        <div class="text-center mb-5">
+          <span class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-950/80 border-2 border-amber-400/50 text-xs sm:text-sm font-extrabold text-amber-200 shadow-lg">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
+            HUB DE INGENIERÍA, ARTE, SOFTWARE Y SOLUCIONES DIGITALES • EST. 2026
           </span>
         </div>
 
         <!-- ESCENA ILUSTRADA INTERACTIVA: LA FÁBRICA VIVA DE PERSPECTIVE SCT -->
         <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-6 items-center mt-2">
 
-          <!-- Columna Izquierda Ilustrada: Banda Transportadora de Código/3D + Ingeniero Bot -->
+          <!-- Columna Izquierda Ilustrada: Banda Transportadora Digital + Ingeniero Bot -->
           <div class="hidden lg:flex lg:col-span-3 flex-col gap-5 items-center">
-            <!-- Portal Banda Transportadora (Homenaje tecnológico al conveyor belt de Paranice) -->
-            <div class="w-full rounded-[32px] bg-indigo-950/75 border-2 border-violet-400/30 p-4 shadow-2xl anim-float">
-              <div class="flex items-center justify-between text-[10px] font-mono-code text-cyan-300 mb-2">
-                <span>PIPELINE • CI/CD & 3D</span>
+            <div class="w-full rounded-[32px] bg-indigo-950/85 border-2 border-violet-400/45 p-4 shadow-2xl anim-float">
+              <div class="flex items-center justify-between text-xs font-mono-code font-bold text-cyan-300 mb-2">
+                <span>PIPELINE • WEB & CLOUD</span>
                 <span class="text-emerald-400">● LIVE</span>
               </div>
               <svg viewBox="0 0 240 135" class="w-full h-auto">
-                <!-- Tubo / Portal -->
-                <ellipse cx="42" cy="72" rx="32" ry="44" fill="#0d0b1a" stroke="#a78bfa" stroke-width="3"/>
-                <ellipse cx="198" cy="48" rx="28" ry="38" fill="#0d0b1a" stroke="#00f0ff" stroke-width="3"/>
-                <!-- Banda curva -->
+                <ellipse cx="42" cy="72" rx="32" ry="44" fill="#0d0b1a" stroke="#a78bfa" stroke-width="3.2"/>
+                <ellipse cx="198" cy="48" rx="28" ry="38" fill="#0d0b1a" stroke="#22eefc" stroke-width="3.2"/>
                 <path d="M36 90 Q120 115 202 68" fill="none" stroke="#312e81" stroke-width="22" stroke-linecap="round"/>
-                <path d="M36 90 Q120 115 202 68" fill="none" stroke="#f6d365" stroke-width="3" stroke-dasharray="10 14" class="anim-conveyor"/>
-                <!-- Módulos viajando en la banda -->
-                <g transform="translate(55, 62) rotate(6)">
-                  <rect width="30" height="26" rx="6" fill="#00f0ff" stroke="#141129" stroke-width="2.5"/>
-                  <text x="15" y="17" text-anchor="middle" font-size="10" font-weight="bold" fill="#141129">IA</text>
+                <path d="M36 90 Q120 115 202 68" fill="none" stroke="#ffe07d" stroke-width="3.2" stroke-dasharray="10 14" class="anim-conveyor"/>
+                <g transform="translate(53, 62) rotate(6)">
+                  <rect width="32" height="26" rx="7" fill="#22eefc" stroke="#14102c" stroke-width="2.8"/>
+                  <text x="16" y="17" text-anchor="middle" font-size="10" font-weight="900" fill="#14102c">IA</text>
                 </g>
-                <g transform="translate(105, 68) rotate(-4)">
-                  <rect width="30" height="26" rx="6" fill="#ff2a85" stroke="#141129" stroke-width="2.5"/>
-                  <text x="15" y="17" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">3D</text>
+                <g transform="translate(103, 68) rotate(-4)">
+                  <rect width="34" height="26" rx="7" fill="#ff3b94" stroke="#14102c" stroke-width="2.8"/>
+                  <text x="17" y="17" text-anchor="middle" font-size="9.5" font-weight="900" fill="#ffffff">WEB</text>
                 </g>
                 <g transform="translate(154, 48) rotate(-14)">
-                  <rect width="32" height="26" rx="6" fill="#34d399" stroke="#141129" stroke-width="2.5"/>
-                  <text x="16" y="17" text-anchor="middle" font-size="9" font-weight="bold" fill="#141129">APP</text>
+                  <rect width="34" height="26" rx="7" fill="#34d399" stroke="#14102c" stroke-width="2.8"/>
+                  <text x="17" y="17" text-anchor="middle" font-size="9.5" font-weight="900" fill="#14102c">APP</text>
                 </g>
               </svg>
             </div>
 
-            <!-- Consola de Telemetría con Personaje Casco Daft Punk -->
-            <div class="w-full rounded-[32px] bg-slate-950/80 border-2 border-amber-400/35 p-4 shadow-2xl anim-float-delay">
+            <!-- Consola de Telemetría Operativa con Personaje Cyber -->
+            <div class="w-full rounded-[32px] bg-slate-950/90 border-2 border-amber-400/45 p-4 shadow-2xl anim-float-delay">
               <svg viewBox="0 0 230 130" class="w-full h-auto">
-                <!-- Pantalla de métricas ROI -->
-                <rect x="85" y="14" width="130" height="82" rx="16" fill="#1e1b4b" stroke="#d4af37" stroke-width="2.5"/>
+                <rect x="85" y="14" width="130" height="82" rx="16" fill="#1e1b4b" stroke="#ffe07d" stroke-width="2.8"/>
                 <rect x="98" y="54" width="14" height="28" rx="3" fill="#38bdf8"/>
                 <rect x="120" y="42" width="14" height="40" rx="3" fill="#a78bfa"/>
                 <rect x="142" y="30" width="14" height="52" rx="3" fill="#34d399"/>
                 <rect x="164" y="22" width="14" height="60" rx="3" fill="#fbbf24"/>
-                <text x="150" y="114" text-anchor="middle" font-size="10" font-weight="bold" fill="#fde68a">-30% COSTOS OCULTOS</text>
-                <!-- Personaje Cyber-Operador -->
-                <circle cx="48" cy="52" r="22" fill="#f472b6" stroke="#0d0b1a" stroke-width="3"/>
-                <rect x="33" y="43" width="30" height="13" rx="6" fill="#0d0b1a" stroke="#00f0ff" stroke-width="2"/>
-                <circle cx="42" cy="49.5" r="2.5" fill="#00f0ff" class="anim-blink"/>
-                <circle cx="54" cy="49.5" r="2.5" fill="#fbbf24" class="anim-blink"/>
-                <rect x="32" y="74" width="32" height="34" rx="12" fill="#fbbf24" stroke="#0d0b1a" stroke-width="3"/>
-                <!-- Brazo tocando el panel -->
-                <path d="M64 82 Q82 76 92 66" fill="none" stroke="#0d0b1a" stroke-width="5" stroke-linecap="round"/>
+                <text x="150" y="115" text-anchor="middle" font-size="10.5" font-weight="800" fill="#fde68a">OPTIMIZACIÓN LOGÍSTICA</text>
+                <circle cx="48" cy="52" r="22" fill="#f472b6" stroke="#0d0b1a" stroke-width="3.2"/>
+                <rect x="33" y="43" width="30" height="13" rx="6.5" fill="#0d0b1a" stroke="#22eefc" stroke-width="2.2"/>
+                <circle cx="42" cy="49.5" r="2.8" fill="#22eefc" class="anim-blink"/>
+                <circle cx="54" cy="49.5" r="2.8" fill="#fbbf24" class="anim-blink"/>
+                <rect x="32" y="74" width="32" height="34" rx="12" fill="#fbbf24" stroke="#0d0b1a" stroke-width="3.2"/>
+                <path d="M64 82 Q82 76 92 66" fill="none" stroke="#0d0b1a" stroke-width="5.5" stroke-linecap="round"/>
               </svg>
             </div>
           </div>
 
-          <!-- Columna Central Monumental: Logo Oficial Super GOD + Propuesta de Valor + Portal Diagnóstico -->
+          <!-- Columna Central Monumental: Logo Oficial + Título Principal Limpio (Arte e Ingeniería) -->
           <div class="lg:col-span-6 text-center flex flex-col items-center">
 
-            <p class="font-tech uppercase tracking-[0.28em] text-xs sm:text-sm text-cyan-300 font-bold mb-2">
-              WELCOME TO THE PRISM FACTORY
+            <p class="font-tech uppercase tracking-[0.22em] text-xs sm:text-sm text-cyan-300 font-extrabold mb-2">
+              WELCOME TO THE PRISM TECH FACTORY
             </p>
 
-            <!-- Logo Principal Oficial Integrado con Fusión Luminosa -->
-            <div class="relative w-full max-w-[500px] mx-auto my-1 group">
-              <div class="absolute inset-6 bg-gradient-to-r from-amber-500/20 via-fuchsia-500/25 to-cyan-400/20 blur-2xl rounded-full group-hover:opacity-100 transition"></div>
+            <!-- Logo Principal Oficial Integrado -->
+            <div class="relative w-full max-w-[490px] mx-auto my-1 group">
+              <div class="absolute inset-6 bg-gradient-to-r from-amber-500/20 via-fuchsia-500/25 to-cyan-400/20 blur-2xl rounded-full"></div>
               <img
                 src="assets/img/LOGO%20Super%20GOD.jpg"
-                alt="Perspective SCT — Marketing, Programación, 3D & Animación, Apps, Web, Entretenimiento"
+                alt="Perspective SCT — Soluciones Tecnológicas, Arte e Ingeniería"
                 class="relative z-10 w-full h-auto rounded-3xl logo-screen-blend mx-auto select-none"
               />
             </div>
 
-            <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[50px] leading-[1.08] tracking-tight text-white mt-2">
-              Donde el <span class="text-prism">Arte 3D y la Ingeniería</span> blindan el futuro de tu empresa.
+            <!-- TÍTULO PRINCIPAL SUPERIOR: Convergencia de Arte e Ingeniería -->
+            <h1 class="font-display font-bold text-3xl sm:text-5xl lg:text-[52px] leading-[1.12] tracking-normal text-white mt-3">
+              Donde el <span class="text-prism">Arte y la Ingeniería</span> impulsan la evolución digital de tu empresa.
             </h1>
 
-            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
-              Desarrollamos software a la medida, experiencias UX/UI de nivel gaming, inteligencia artificial e infraestructura cloud con <strong class="text-amber-300">auditoría legal y contable integrada desde el código</strong>.
+            <p class="text-slate-100 text-base sm:text-lg max-w-2xl mx-auto mt-4 leading-relaxed font-medium">
+              Creamos <strong class="text-cyan-300">software a la medida, páginas web, automatizaciones e infraestructura cloud</strong>, sumando recomendaciones prácticas para optimizar tu logística y reducir costos operativos.
             </p>
 
-            <!-- Botones CTA Principales -->
-            <div class="flex flex-wrap items-center justify-center gap-3.5 mt-7">
-              <a href="#productos" class="px-7 py-4 rounded-full bg-gradient-to-r from-amber-400 via-fuchsia-500 to-cyan-400 text-slate-950 font-extrabold text-sm sm:text-base shadow-xl shadow-fuchsia-500/25 hover:scale-105 transition flex items-center gap-2">
+            <!-- Botones CTA Principales Táctiles -->
+            <div class="flex flex-wrap items-center justify-center gap-4 mt-7">
+              <a href="#productos" class="toon-btn-primary px-7 py-4 rounded-full bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 text-slate-950 font-extrabold text-sm sm:text-base flex items-center gap-2">
                 <span>Ver Paquetes y Precios</span>
                 <i data-lucide="arrow-down-right" class="w-5 h-5"></i>
               </a>
-              <a href="#calculadora" class="px-7 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/25 text-white font-extrabold text-sm sm:text-base backdrop-blur-md transition flex items-center gap-2">
-                <i data-lucide="sliders-horizontal" class="w-4 h-4 text-cyan-300"></i>
-                <span>Armar Bolsa a Medida</span>
+              <a href="#promo-mantenimiento" class="toon-btn-primary px-7 py-4 rounded-full bg-white text-slate-950 hover:bg-amber-200 font-extrabold text-sm sm:text-base flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-5 h-5 text-fuchsia-600"></i>
+                <span>Promo Web $2,000/mes</span>
               </a>
             </div>
 
-            <!-- Pedestal Central Destacado del Hero (Inspirado en el Portal Central de Paranice) -->
-            <div class="mt-9 w-full max-w-md rounded-[30px] bg-slate-950/85 border-2 border-amber-400/50 p-5 shadow-2xl relative overflow-hidden">
+            <!-- Pedestal Central Destacado del Hero -->
+            <div class="mt-9 w-full max-w-md rounded-[30px] bg-slate-950/90 border-2 border-amber-400/65 p-5 shadow-2xl relative overflow-hidden">
               <div class="absolute -right-8 -top-8 w-28 h-28 bg-emerald-400/20 blur-2xl rounded-full"></div>
               <div class="flex items-center justify-between gap-3">
                 <div class="text-left">
-                  <span class="inline-block px-3 py-0.5 rounded-full bg-emerald-400 text-slate-950 font-extrabold text-[11px] uppercase tracking-wider">
-                    Acceso Ejecutivo B2B
+                  <span class="inline-block px-3 py-0.5 rounded-full bg-emerald-400 text-slate-950 font-extrabold text-xs uppercase tracking-wider">
+                    Sesión Inicial B2B
                   </span>
-                  <h2 class="font-display font-extrabold text-lg sm:text-xl text-white mt-1">
-                    Diagnóstico Técnico & Fiscal
+                  <h2 class="font-display font-bold text-xl text-white mt-1.5">
+                    Diagnóstico Técnico & Operativo
                   </h2>
-                  <p class="text-xs text-slate-300 mt-0.5">
-                    Detectamos cuellos de botella, brechas TI o fugas en pasarelas bajo NDA.
+                  <p class="text-sm text-slate-200 mt-1 leading-snug">
+                    Detectamos cuellos de botella, procesos automatizables y mejoras para tu web o sistema.
                   </p>
                 </div>
                 <div class="text-right shrink-0">
                   <span class="block text-xs line-through text-slate-400 font-mono-code">$2,999</span>
                   <span class="font-tech font-extrabold text-2xl text-emerald-400 block">$0 MXN</span>
-                  <a href="#contacto" class="inline-block mt-1.5 px-3.5 py-1.5 rounded-full bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-extrabold text-xs transition">
+                  <a href="#contacto" class="inline-block mt-2 px-4 py-1.5 rounded-full bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-extrabold text-xs border-2 border-slate-950 transition">
                     Agendar →
                   </a>
                 </div>
@@ -281,54 +277,49 @@
             </div>
           </div>
 
-          <!-- Columna Derecha Ilustrada: Bóveda Blindaje AES-256 / NDA + Monitores Flotantes -->
+          <!-- Columna Derecha Ilustrada: Bóveda de Código AES-256 + Monitores de Estado -->
           <div class="hidden lg:flex lg:col-span-3 flex-col gap-5 items-center">
-            <!-- Bóveda de Seguridad con Personaje Guardián (Inspirado en la puerta/plataforma derecha de Paranice) -->
-            <div class="w-full rounded-[32px] bg-indigo-950/75 border-2 border-cyan-400/30 p-4 shadow-2xl anim-float-delay">
-              <div class="flex items-center justify-between text-[10px] font-mono-code text-amber-300 mb-2">
-                <span>BLINDAJE • AES-256 & NDA</span>
-                <span class="text-cyan-300">NOM / SAT</span>
+            <div class="w-full rounded-[32px] bg-indigo-950/85 border-2 border-cyan-400/45 p-4 shadow-2xl anim-float-delay">
+              <div class="flex items-center justify-between text-xs font-mono-code font-bold text-amber-300 mb-2">
+                <span>SEGURIDAD • AES-256</span>
+                <span class="text-cyan-300">100% CODE</span>
               </div>
               <svg viewBox="0 0 230 155" class="w-full h-auto">
-                <!-- Puerta de Bóveda Blindada -->
-                <rect x="65" y="10" width="100" height="86" rx="14" fill="#1e1b4b" stroke="#d4af37" stroke-width="3.5"/>
-                <rect x="85" y="22" width="60" height="20" rx="5" fill="#fbbf24"/>
-                <text x="115" y="35" text-anchor="middle" font-size="9" font-weight="900" fill="#141129">NDA + IP 100%</text>
-                <!-- Timón giratorio de seguridad -->
-                <circle cx="115" cy="66" r="18" fill="none" stroke="#00f0ff" stroke-width="4"/>
-                <line x1="97" y1="66" x2="133" y2="66" stroke="#00f0ff" stroke-width="3.5"/>
-                <line x1="115" y1="48" x2="115" y2="84" stroke="#00f0ff" stroke-width="3.5"/>
-                <!-- Plataforma Pedestal -->
-                <ellipse cx="115" cy="112" rx="78" ry="15" fill="#312e81" stroke="#a78bfa" stroke-width="2.5"/>
-                <path d="M90 126 L102 152 L128 152 L140 126 Z" fill="#d4af37" opacity="0.85"/>
-                <!-- Personaje Guardián Engranaje -->
-                <circle cx="115" cy="84" r="15" fill="#ff2a85" stroke="#0d0b1a" stroke-width="2.5"/>
-                <circle cx="110" cy="82" r="2.2" fill="#ffffff"/>
-                <circle cx="120" cy="82" r="2.2" fill="#ffffff"/>
+                <rect x="65" y="10" width="100" height="86" rx="14" fill="#1e1b4b" stroke="#ffe07d" stroke-width="3.5"/>
+                <rect x="82" y="22" width="66" height="20" rx="5" fill="#fbbf24"/>
+                <text x="115" y="35" text-anchor="middle" font-size="9.5" font-weight="900" fill="#14102c">NDA + 100% IP</text>
+                <circle cx="115" cy="66" r="18" fill="none" stroke="#22eefc" stroke-width="4"/>
+                <line x1="97" y1="66" x2="133" y2="66" stroke="#22eefc" stroke-width="3.5"/>
+                <line x1="115" y1="48" x2="115" y2="84" stroke="#22eefc" stroke-width="3.5"/>
+                <ellipse cx="115" cy="112" rx="78" ry="15" fill="#312e81" stroke="#a78bfa" stroke-width="2.8"/>
+                <path d="M90 126 L102 152 L128 152 L140 126 Z" fill="#fbbf24" opacity="0.9"/>
+                <circle cx="115" cy="84" r="15" fill="#ff3b94" stroke="#0d0b1a" stroke-width="2.8"/>
+                <circle cx="110" cy="82" r="2.5" fill="#ffffff"/>
+                <circle cx="120" cy="82" r="2.5" fill="#ffffff"/>
               </svg>
             </div>
 
-            <!-- Pantallas CRT Flotantes de Estado (Uptime 95% & Facturación CFDI 4.0) -->
-            <div class="w-full rounded-[32px] bg-slate-950/80 border-2 border-fuchsia-400/35 p-4 shadow-2xl anim-float">
+            <!-- Pantallas Flotantes: Uptime 95% & Promo Mantenimiento Web -->
+            <div class="w-full rounded-[32px] bg-slate-950/90 border-2 border-fuchsia-400/45 p-4 shadow-2xl anim-float">
               <div class="space-y-3">
-                <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 border border-white/10">
-                  <div class="w-10 h-10 rounded-xl bg-emerald-400/20 text-emerald-300 flex items-center justify-center font-mono-code font-bold text-xs">
+                <div class="flex items-center gap-3 p-3 rounded-2xl bg-white/10 border border-white/15">
+                  <div class="w-11 h-11 rounded-xl bg-emerald-400/20 text-emerald-300 flex items-center justify-center font-mono-code font-extrabold text-xs shrink-0">
                     95%+
                   </div>
                   <div>
-                    <p class="text-xs font-extrabold text-white">SLA Uptime & Emergencias</p>
-                    <p class="text-[11px] text-slate-400">Respuesta crítica 1–2 horas</p>
+                    <p class="text-xs font-extrabold text-white">SLA Uptime & Soporte</p>
+                    <p class="text-xs text-slate-300">Emergencias técnicas 1–2h</p>
                   </div>
                 </div>
-                <div class="flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 border border-white/10">
-                  <div class="w-10 h-10 rounded-xl bg-amber-400/20 text-amber-300 flex items-center justify-center font-mono-code font-bold text-xs">
-                    4.0
+                <a href="#promo-mantenimiento" class="flex items-center gap-3 p-3 rounded-2xl bg-amber-400/15 hover:bg-amber-400/25 border border-amber-300/40 transition">
+                  <div class="w-11 h-11 rounded-xl bg-amber-300 text-slate-950 flex items-center justify-center font-mono-code font-extrabold text-xs shrink-0">
+                    $2K
                   </div>
                   <div>
-                    <p class="text-xs font-extrabold text-white">Facturación CFDI 4.0 & 32D</p>
-                    <p class="text-[11px] text-slate-400">100% deducible para corporativos</p>
+                    <p class="text-xs font-extrabold text-amber-200">Promo Mantenimiento Web</p>
+                    <p class="text-xs text-slate-200">Cambios + Eventos / mes →</p>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -336,65 +327,64 @@
         </div>
       </div>
 
-      <!-- Cinta Infinita de Capacidades e Industrias (Marquee) -->
-      <div class="mt-12 py-3.5 bg-slate-950/80 border-y border-amber-400/25 overflow-hidden">
-        <div class="marquee-track items-center gap-8 text-xs sm:text-sm font-mono-code font-bold tracking-wider uppercase text-slate-200">
-          <span class="text-amber-300">✦ DESARROLLO DE SOFTWARE $799/H</span>
+      <!-- Cinta Infinita de Capacidades Tecnológicas (Marquee Legible) -->
+      <div class="mt-12 py-4 bg-slate-950/90 border-y-2 border-amber-400/35 overflow-hidden">
+        <div class="marquee-track items-center gap-8 text-sm font-mono-code font-bold tracking-wider uppercase text-white">
+          <span class="text-amber-300">✦ DESARROLLO DE SOFTWARE Y WEB $799/H</span>
           <span>•</span>
-          <span class="text-fuchsia-300">✦ DISEÑO 3D, VIDEO & ARTE IA $699/H</span>
+          <span class="text-fuchsia-300">✦ DISEÑO DIGITAL, ARTE & VIDEO $699/H</span>
           <span>•</span>
-          <span class="text-cyan-300">✦ ESTRATEGIA TI, CIBERSEGURIDAD & NOM $999/H</span>
+          <span class="text-cyan-300">✦ ESTRATEGIA TI Y OPTIMIZACIÓN OPERATIVA $999/H</span>
           <span>•</span>
-          <span class="text-emerald-300">✦ BLINDAJE LEGAL MSA + NDA BIDIRECCIONAL</span>
+          <span class="text-emerald-300">✦ PROMO MANTENIMIENTO WEB $2,000 MXN/MES</span>
           <span>•</span>
-          <span>✦ CORREDOR INDUSTRIAL BAJÍO & NEARSHORING</span>
+          <span>✦ AUTOMATIZACIÓN, APPS MÓVILES & CLOUD</span>
           <span>•</span>
-          <span class="text-amber-300">✦ DESARROLLO DE SOFTWARE $799/H</span>
+          <span class="text-amber-300">✦ DESARROLLO DE SOFTWARE Y WEB $799/H</span>
           <span>•</span>
-          <span class="text-fuchsia-300">✦ DISEÑO 3D, VIDEO & ARTE IA $699/H</span>
+          <span class="text-fuchsia-300">✦ DISEÑO DIGITAL, ARTE & VIDEO $699/H</span>
           <span>•</span>
-          <span class="text-cyan-300">✦ ESTRATEGIA TI, CIBERSEGURIDAD & NOM $999/H</span>
+          <span class="text-cyan-300">✦ ESTRATEGIA TI Y OPTIMIZACIÓN OPERATIVA $999/H</span>
           <span>•</span>
-          <span class="text-emerald-300">✦ BLINDAJE LEGAL MSA + NDA BIDIRECCIONAL</span>
+          <span class="text-emerald-300">✦ PROMO MANTENIMIENTO WEB $2,000 MXN/MES</span>
           <span>•</span>
-          <span>✦ CORREDOR INDUSTRIAL BAJÍO & NEARSHORING</span>
+          <span>✦ AUTOMATIZACIÓN, APPS MÓVILES & CLOUD</span>
         </div>
       </div>
     </section>
 
-    <!-- ONDA ORGÁNICA DE TRANSICIÓN 1 (EFECTO BLOQUE ÚNICO CONTINUO ESTILO PARANICE) -->
+    <!-- ONDA ORGÁNICA DE TRANSICIÓN 1 -->
     <svg class="wave-divider" viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0 36C240 92 480 -12 720 36C960 84 1200 6 1440 42V90H0V36Z" fill="#231c4c" fill-opacity="0.65"/>
+      <path d="M0 36C240 92 480 -12 720 36C960 84 1200 6 1440 42V90H0V36Z" fill="#221b47" fill-opacity="0.72"/>
     </svg>
 
     <!-- ======================================================================
-         CAPÍTULO 2: ESCAPARATE DE PRODUCTOS Y PAQUETES (ESTILO PARANICE.CO)
-         Pedestales nube, mascotas tech encima, descuentos claros y precios reales
+         CAPÍTULO 2: ESCAPARATE DE PRODUCTOS Y PROMOCIÓN ESTRELLA DE MANTENIMIENTO
          ====================================================================== -->
-    <section id="productos" data-stage-bg="#231c4c" class="relative py-16 sm:py-24">
+    <section id="productos" data-stage-bg="#221b47" class="relative py-16 sm:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Encabezado y Pestañas de Categoría -->
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 reveal-up">
           <div>
-            <span class="inline-block px-3.5 py-1 rounded-full bg-amber-400/15 border border-amber-400/40 text-amber-300 font-mono-code text-xs font-bold mb-3">
-              INGENIERÍA DE MENÚ • PRECIOS TRANSPARENTES EN MXN
+            <span class="inline-block px-4 py-1 rounded-full bg-amber-400/20 border border-amber-300/50 text-amber-200 font-mono-code text-xs font-bold mb-3">
+              PRODUCTOS CLAROS • PRECIOS DEFINIDOS EN MXN
             </span>
-            <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
-              Paquetes Claros, <span class="text-prism">Resultados Medibles</span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-normal">
+              Soluciones Digitales listas para <span class="text-prism">Impulsar tu Negocio</span>
             </h2>
-            <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl">
-              Elige una bolsa de horas con descuento escalonado, blinda tu operación con una iguala mensual o cotiza por hora exacta. Sin letras chiquitas ni costos sorpresa.
+            <p class="text-slate-100 text-base sm:text-lg mt-3 max-w-2xl leading-relaxed">
+              Elige una bolsa de horas con descuento escalonado, mantén tu sitio siempre al día con nuestros planes mensuales o cotiza por hora exacta.
             </p>
           </div>
 
           <!-- Selector de Pestañas del Escaparate -->
-          <div class="flex flex-wrap items-center gap-2 bg-slate-950/60 p-2 rounded-full border border-white/15 self-start lg:self-auto">
-            <button type="button" data-carousel-tab="paquetes" class="px-5 py-2.5 rounded-full text-sm font-extrabold bg-white text-slate-950 shadow-lg transition cursor-pointer">
+          <div class="flex flex-wrap items-center gap-2 bg-slate-950/75 p-2 rounded-full border-2 border-white/15 self-start lg:self-auto">
+            <button type="button" data-carousel-tab="paquetes" class="px-5 py-2.5 rounded-full text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-md transition cursor-pointer">
               Bolsas de Horas (5%–20% OFF)
             </button>
             <button type="button" data-carousel-tab="retainers" class="px-5 py-2.5 rounded-full text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition cursor-pointer">
-              Igualas Mensuales ($499+)
+              Planes Mensuales & Promo Web
             </button>
             <button type="button" data-carousel-tab="tarifas" class="px-5 py-2.5 rounded-full text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition cursor-pointer">
               Por Hora & Diagnóstico $0
@@ -408,7 +398,7 @@
             id="carousel-prev"
             type="button"
             aria-label="Anterior producto"
-            class="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-slate-950/90 hover:bg-violet-600 text-white border border-amber-400/50 items-center justify-center shadow-2xl transition cursor-pointer"
+            class="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-amber-300 hover:bg-white text-slate-950 border-2 border-slate-950 items-center justify-center shadow-2xl transition cursor-pointer"
           >
             <i data-lucide="chevron-left" class="w-6 h-6"></i>
           </button>
@@ -424,22 +414,155 @@
             id="carousel-next"
             type="button"
             aria-label="Siguiente producto"
-            class="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-slate-950/90 hover:bg-violet-600 text-white border border-amber-400/50 items-center justify-center shadow-2xl transition cursor-pointer"
+            class="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-amber-300 hover:bg-white text-slate-950 border-2 border-slate-950 items-center justify-center shadow-2xl transition cursor-pointer"
           >
             <i data-lucide="chevron-right" class="w-6 h-6"></i>
           </button>
         </div>
 
-        <!-- Nota Oficial de Transparencia Financiera -->
-        <div class="mt-8 flex flex-wrap items-center justify-between gap-4 px-6 py-4 rounded-2xl bg-slate-950/60 border border-white/10 text-xs text-slate-300">
-          <div class="flex items-center gap-2">
-            <i data-lucide="badge-check" class="w-4 h-4 text-amber-400 shrink-0"></i>
-            <span><strong>Regla Corporativa Transparente:</strong> Promociones no acumulables. Propiedad intelectual cedida al 100% al liquidar el proyecto.</span>
+        <!-- ==================================================================
+             NUEVA PROMOCIÓN DESTACADA: MANTENIMIENTO MENSUAL PÁGINAS WEB ($2,000)
+             + NOTA DE MANTENIMIENTO PARA OTROS SERVICIOS DIGITALES
+             ================================================================== -->
+        <div id="promo-mantenimiento" class="mt-16 promo-cartoon-box p-6 sm:p-10 relative overflow-hidden reveal-up">
+          <div class="absolute -top-20 -right-20 w-72 h-72 bg-fuchsia-500/20 blur-3xl rounded-full pointer-events-none"></div>
+          <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-cyan-400/15 blur-3xl rounded-full pointer-events-none"></div>
+
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+            <!-- Columna Izquierda: Mascota Pintora Web + Oferta Principal -->
+            <div class="lg:col-span-7 space-y-5">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="px-4 py-1.5 rounded-full bg-amber-300 text-slate-950 font-extrabold text-xs sm:text-sm border-2 border-slate-950 shadow">
+                  🔥 PROMOCIÓN MENSUAL DESTACADA
+                </span>
+                <span class="px-3.5 py-1 rounded-full bg-emerald-400/20 border border-emerald-300/40 text-emerald-200 font-mono-code text-xs font-bold">
+                  TU PÁGINA SIEMPRE VIVA Y ACTUALIZADA
+                </span>
+              </div>
+
+              <h3 class="font-display font-bold text-3xl sm:text-4xl lg:text-[42px] text-white leading-tight">
+                Mantenimiento Mensual para Páginas Web por <span class="text-gold-deco">$2,000 MXN / mes</span>
+              </h3>
+
+              <p class="text-base sm:text-lg text-slate-100 leading-relaxed">
+                Olvídate de tener una página estática o desactualizada. Nos encargamos de mantener tu sitio impecable, fresco en cada temporada comercial y funcionando al 100%:
+              </p>
+
+              <!-- Lista Clara de Beneficios Incluidos -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-white/10 border border-white/15">
+                  <i data-lucide="refresh-cw" class="w-5 h-5 text-cyan-300 shrink-0 mt-0.5"></i>
+                  <span class="text-sm sm:text-[15px] text-white font-semibold"><strong>Modificaciones continuas</strong> de textos, imágenes, precios y secciones.</span>
+                </div>
+                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-white/10 border border-white/15">
+                  <i data-lucide="party-popper" class="w-5 h-5 text-amber-300 shrink-0 mt-0.5"></i>
+                  <span class="text-sm sm:text-[15px] text-white font-semibold"><strong>Cambios temáticos completos</strong> para eventos, campañas y festividades.</span>
+                </div>
+                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-white/10 border border-white/15">
+                  <i data-lucide="wrench" class="w-5 h-5 text-emerald-300 shrink-0 mt-0.5"></i>
+                  <span class="text-sm sm:text-[15px] text-white font-semibold"><strong>Solución rápida de errores</strong> y ajustes visuales en móvil y escritorio.</span>
+                </div>
+                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-white/10 border border-white/15">
+                  <i data-lucide="plus-circle" class="w-5 h-5 text-fuchsia-300 shrink-0 mt-0.5"></i>
+                  <span class="text-sm sm:text-[15px] text-white font-semibold"><strong>Agregados puntuales</strong> y <strong>soporte técnico directo</strong> todo el mes.</span>
+                </div>
+              </div>
+
+              <!-- Botones de Acción de la Promo -->
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <button
+                  id="btn-add-web-promo"
+                  type="button"
+                  class="toon-btn-primary px-7 py-4 rounded-full bg-amber-300 hover:bg-amber-200 text-slate-950 font-extrabold text-sm sm:text-base flex items-center gap-2 cursor-pointer"
+                >
+                  <i data-lucide="sparkles" class="w-5 h-5"></i>
+                  <span>¡Agregar Promo $2,000/mes a mi Bolsa!</span>
+                </button>
+                <a
+                  href="mailto:perspectivesct.shop@gmail.com?subject=Contratar%20Promoci%C3%B3n%20Mantenimiento%20Web%20(%242%2C000%20MXN%2Fmes)"
+                  class="px-6 py-4 rounded-full bg-white/15 hover:bg-white/25 border-2 border-white/30 text-white font-extrabold text-sm sm:text-base transition flex items-center gap-2"
+                >
+                  <i data-lucide="mail" class="w-4 h-4 text-cyan-300"></i>
+                  <span>Solicitar por Correo</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Columna Derecha: Ilustración Mascota Creativa + Bloque "Otros Servicios Digitales" -->
+            <div class="lg:col-span-5 flex flex-col gap-5">
+              <!-- Tarjeta Pedestal Visual de Precio + Mascota -->
+              <div class="rounded-3xl bg-white text-slate-950 border-[3px] border-slate-950 p-6 text-center shadow-xl relative">
+                <svg viewBox="0 0 180 110" class="w-36 h-24 mx-auto -mt-2 mb-1 anim-mascot">
+                  <!-- Ventana Web + Bot Creativo Carismático -->
+                  <rect x="20" y="18" width="92" height="68" rx="12" fill="#ede9fe" stroke="#14102c" stroke-width="3.5"/>
+                  <line x1="20" y1="34" x2="112" y2="34" stroke="#14102c" stroke-width="3"/>
+                  <circle cx="32" cy="26" r="3" fill="#ff3b94"/>
+                  <circle cx="42" cy="26" r="3" fill="#fbbf24"/>
+                  <circle cx="52" cy="26" r="3" fill="#34d399"/>
+                  <rect x="32" y="44" width="68" height="14" rx="5" fill="#a78bfa"/>
+                  <rect x="32" y="64" width="42" height="10" rx="4" fill="#22eefc"/>
+                  <!-- Bot Artista Festivo -->
+                  <circle cx="132" cy="58" r="26" fill="#fbbf24" stroke="#14102c" stroke-width="3.5"/>
+                  <polygon points="132,16 116,36 148,36" fill="#ff3b94" stroke="#14102c" stroke-width="3" stroke-linejoin="round"/>
+                  <circle cx="124" cy="55" r="3.5" fill="#14102c" class="anim-blink"/>
+                  <circle cx="140" cy="55" r="3.5" fill="#14102c" class="anim-blink"/>
+                  <path d="M124 65 Q132 72 140 65" stroke="#14102c" stroke-width="3" fill="none" stroke-linecap="round"/>
+                </svg>
+
+                <span class="text-xs font-extrabold uppercase tracking-wider text-violet-700 bg-violet-100 px-3 py-1 rounded-full">
+                  Precio Promocional Mensual
+                </span>
+                <div class="mt-2 flex items-baseline justify-center gap-2">
+                  <span class="text-base line-through text-slate-400 font-bold">$2,800</span>
+                  <span class="font-tech font-extrabold text-4xl text-slate-950">$2,000</span>
+                  <span class="text-sm font-extrabold text-slate-700">MXN / mes</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 font-semibold mt-1">
+                  Ideal para sitios corporativos, landing pages y catálogos web.
+                </p>
+              </div>
+
+              <!-- Nota Clara para Mantenimiento de Otros Servicios Digitales -->
+              <div class="rounded-3xl bg-slate-950/90 border-2 border-cyan-400/55 p-6 space-y-3 shadow-xl">
+                <div class="flex items-center gap-2 text-cyan-300 font-display font-bold text-lg">
+                  <i data-lucide="layers" class="w-5 h-5 shrink-0"></i>
+                  <span>¿Tienes otro servicio o plataforma digital?</span>
+                </div>
+                <p class="text-sm text-slate-100 leading-relaxed">
+                  Pregunta por nuestros <strong>planes de mantenimiento para otros servicios digitales</strong> (aplicaciones móviles, tiendas e-commerce avanzadas, software logístico, automatizaciones o servidores cloud). <span class="text-amber-300 font-semibold">La cotización varía según el tipo de servicio o plataforma que requieras.</span>
+                </p>
+                <div class="flex flex-wrap gap-2.5 pt-1">
+                  <button
+                    id="btn-ask-other-maint"
+                    type="button"
+                    class="px-4 py-2.5 rounded-full bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-extrabold text-xs sm:text-sm border-2 border-slate-950 transition cursor-pointer"
+                  >
+                    Cotizar mi Plataforma →
+                  </button>
+                  <a
+                    href="mailto:perspectivesct.shop@gmail.com?subject=Informaci%C3%B3n%20Mantenimiento%20para%20Otros%20Servicios%20Digitales"
+                    class="px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 transition"
+                  >
+                    perspectivesct.shop@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="flex items-center gap-4 font-mono-code text-cyan-300">
-            <span>CFDI 4.0 Válido</span>
+        </div>
+
+        <!-- Nota de Transparencia Comercial -->
+        <div class="mt-8 flex flex-wrap items-center justify-between gap-4 px-6 py-4 rounded-2xl bg-slate-950/70 border border-white/15 text-sm text-slate-200">
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="badge-check" class="w-5 h-5 text-amber-300 shrink-0"></i>
+            <span><strong>Transparencia Total:</strong> Promociones no acumulables. Entregamos el 100% de la titularidad de tu código y diseño al liquidar tu proyecto.</span>
+          </div>
+          <div class="flex items-center gap-4 font-mono-code text-xs sm:text-sm text-cyan-300 font-bold">
+            <span>Alcance SOW Claro</span>
             <span>•</span>
-            <span>NDA Incluido</span>
+            <span>Confidencialidad NDA</span>
           </div>
         </div>
 
@@ -448,62 +571,61 @@
 
     <!-- ONDA ORGÁNICA DE TRANSICIÓN 2 -->
     <svg class="wave-divider" viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0 54C320 0 640 96 960 36C1180 -4 1330 28 1440 48V90H0V54Z" fill="#131b36" fill-opacity="0.75"/>
+      <path d="M0 54C320 0 640 96 960 36C1180 -4 1330 28 1440 48V90H0V54Z" fill="#15203f" fill-opacity="0.8"/>
     </svg>
 
     <!-- ======================================================================
-         CAPÍTULO 3: CATÁLOGO MAESTRO DE LAS 18 VERTICALES OFICIALES
-         Bento interactivo con filtro instantáneo y tarifas reales
+         CAPÍTULO 3: CATÁLOGO MAESTRO DE SERVICIOS TECNOLÓGICOS Y OPERATIVOS
          ====================================================================== -->
-    <section id="verticales" data-stage-bg="#131b36" class="relative py-16 sm:py-24">
+    <section id="verticales" data-stage-bg="#15203f" class="relative py-16 sm:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="text-center max-w-3xl mx-auto mb-10 reveal-up">
-          <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-400/15 border border-cyan-400/40 text-cyan-300 font-mono-code text-xs font-bold mb-3">
-            PORTAFOLIO INTEGRAL • 18 VERTICALES DE ESPECIALIZACIÓN
+          <span class="inline-block px-4 py-1 rounded-full bg-cyan-400/20 border border-cyan-300/45 text-cyan-200 font-mono-code text-xs font-bold mb-3">
+            CATÁLOGO DE SOLUCIONES DIGITALES • 17 LÍNEAS ESPECIALIZADAS
           </span>
-          <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
-            Un solo socio para <span class="text-gold-deco">Ingeniería, Diseño 3D y Ley</span>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-normal">
+            Tecnología, Diseño Digital y <span class="text-gold-deco">Mejora Operativa</span>
           </h2>
-          <p class="text-slate-300 text-sm sm:text-base mt-3">
-            Explora nuestras 18 líneas oficiales de ejecución. Filtra por rama o busca tu necesidad específica para agregar bloques directamente a tu cotización.
+          <p class="text-slate-100 text-base sm:text-lg mt-3 leading-relaxed">
+            Nuestro giro principal es construir tecnología que funcione y venda: desde desarrollo web, software e infraestructura cloud hasta recomendaciones prácticas de logística y ahorro operativo.
           </p>
         </div>
 
         <!-- Barra de Filtros y Búsqueda en Vivo -->
-        <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-8 p-4 rounded-3xl bg-slate-950/65 border border-white/10">
+        <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-8 p-4 rounded-3xl bg-slate-950/75 border-2 border-white/15">
           <div class="flex flex-wrap items-center gap-2">
-            <button type="button" data-vert-filter="all" class="px-4 py-2 rounded-full text-xs sm:text-sm font-extrabold bg-gradient-to-r from-amber-400 via-fuchsia-500 to-cyan-400 text-slate-950 shadow-md transition cursor-pointer">
-              Todas (18)
+            <button type="button" data-vert-filter="all" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-md transition cursor-pointer">
+              Todos (17)
             </button>
-            <button type="button" data-vert-filter="Desarrollo" class="px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/5 text-slate-200 border border-white/10 hover:bg-white/15 transition cursor-pointer">
-              Desarrollo • $799/h (8)
+            <button type="button" data-vert-filter="Desarrollo" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white border border-white/15 hover:bg-white/20 transition cursor-pointer">
+              Desarrollo & Cloud • $799/h (8)
             </button>
-            <button type="button" data-vert-filter="Diseno" class="px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/5 text-slate-200 border border-white/10 hover:bg-white/15 transition cursor-pointer">
-              Diseño & 3D • $699/h (5)
+            <button type="button" data-vert-filter="Diseno" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white border border-white/15 hover:bg-white/20 transition cursor-pointer">
+              Diseño, Arte & Video • $699/h (5)
             </button>
-            <button type="button" data-vert-filter="Estrategicas" class="px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/5 text-slate-200 border border-white/10 hover:bg-white/15 transition cursor-pointer">
-              Estratégicas & NOM • $999/h (5)
+            <button type="button" data-vert-filter="Estrategicas" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white border border-white/15 hover:bg-white/20 transition cursor-pointer">
+              Estrategia & Operación • $999/h (4)
             </button>
           </div>
 
           <div class="relative lg:w-80">
-            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+            <i data-lucide="search" class="w-4 h-4 text-slate-300 absolute left-4 top-1/2 -translate-y-1/2"></i>
             <input
               id="vertical-search-input"
               type="search"
-              placeholder="Buscar: IA, Cloud, 3D, NOM, Web..."
-              class="w-full pl-10 pr-4 py-2.5 rounded-full bg-white/5 border border-white/15 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:border-cyan-400"
+              placeholder="Buscar: Web, IA, Cloud, Logística, Apps..."
+              class="w-full pl-10 pr-4 py-2.5 rounded-full bg-white/10 border border-white/20 text-sm text-white placeholder:text-slate-300 focus:outline-none focus:border-cyan-300"
             />
           </div>
         </div>
 
-        <p id="verticals-count" class="text-xs font-mono-code text-slate-400 mb-4 px-1">
-          Mostrando 18 de 18 verticales oficiales
+        <p id="verticals-count" class="text-sm font-mono-code text-slate-200 mb-5 px-1">
+          Mostrando 17 de 17 líneas de servicio tecnológico y digital
         </p>
 
-        <!-- Grid Bento de las 18 Verticales -->
-        <div id="verticals-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Grid Bento de Servicios -->
+        <div id="verticals-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Renderizado dinámicamente por assets/js/main.js -->
         </div>
 
@@ -512,173 +634,172 @@
 
     <!-- ONDA ORGÁNICA DE TRANSICIÓN 3 -->
     <svg class="wave-divider" viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0 24C360 88 720 -18 1080 44C1260 74 1365 52 1440 30V90H0V24Z" fill="#1b1433" fill-opacity="0.8"/>
+      <path d="M0 24C360 88 720 -18 1080 44C1260 74 1365 52 1440 30V90H0V24Z" fill="#1f173b" fill-opacity="0.85"/>
     </svg>
 
     <!-- ======================================================================
-         CAPÍTULO 4: CALCULADORA GAMIFICADA DE BOLSAS DE HORAS & ROI
+         CAPÍTULO 4: CALCULADORA GAMIFICADA DE BOLSAS DE HORAS & AHORRO OPERATIVO
          ====================================================================== -->
-    <section id="calculadora" data-stage-bg="#1b1433" class="relative py-16 sm:py-24">
+    <section id="calculadora" data-stage-bg="#1f173b" class="relative py-16 sm:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-          <!-- Controles Interactivos de Horas e Igualas -->
-          <div class="lg:col-span-7 rounded-[32px] bg-slate-950/75 border border-amber-400/30 p-6 sm:p-9 shadow-2xl reveal-up">
-            <span class="inline-block px-3 py-1 rounded-full bg-fuchsia-500/20 text-fuchsia-300 font-mono-code text-xs font-bold mb-3">
+          <!-- Controles Interactivos de Horas y Planes Mensuales -->
+          <div class="lg:col-span-7 rounded-[32px] bg-slate-950/85 border-2 border-amber-400/45 p-6 sm:p-9 shadow-2xl reveal-up">
+            <span class="inline-block px-3.5 py-1 rounded-full bg-fuchsia-500/25 text-fuchsia-200 font-mono-code text-xs font-bold mb-3">
               SIMULADOR INTERACTIVO EN TIEMPO REAL
             </span>
-            <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white">
-              Configura tu <span class="text-prism">Bolsa de Innovación</span>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">
+              Arma tu <span class="text-prism">Bolsa Tecnológica a Medida</span>
             </h2>
-            <p class="text-sm text-slate-300 mt-2 mb-7">
-              Combina horas de Ingeniería, Arte 3D y Consultoría Estratégica. El sistema aplica automáticamente tu descuento oficial por volumen (5% a 20% OFF).
+            <p class="text-base text-slate-200 mt-2 mb-7 leading-relaxed">
+              Combina horas de Desarrollo, Diseño Digital y Estrategia Operativa. El cotizador aplica automáticamente tu descuento oficial por volumen (5% a 20% OFF).
             </p>
 
-            <!-- Sliders por Vertical -->
-            <div class="space-y-6">
+            <!-- Sliders por Rama -->
+            <div class="space-y-7">
               <div>
                 <div class="flex justify-between items-center mb-2">
-                  <label for="slider-dev" class="text-sm font-extrabold text-white flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-                    Ingeniería & Desarrollo <span class="text-xs font-mono-code text-slate-400">($799 MXN/h)</span>
+                  <label for="slider-dev" class="text-base font-extrabold text-white flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-cyan-400"></span>
+                    Ingeniería & Desarrollo <span class="text-xs font-mono-code text-cyan-200">($799 MXN/h)</span>
                   </label>
-                  <span id="val-dev-hours" class="font-mono-code font-bold text-cyan-300 text-base">20 h</span>
+                  <span id="val-dev-hours" class="font-mono-code font-bold text-cyan-300 text-lg">20 h</span>
                 </div>
                 <input id="slider-dev" type="range" min="0" max="80" step="5" value="20" class="prism-slider" />
-                <p class="text-[11px] text-slate-400 mt-1">Web, E-commerce, Apps móviles, IA, Cloud, ERP Logístico, Videojuegos/VR, APIs.</p>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1.5">Páginas Web, E-commerce, Software logístico, Apps móviles, IA, Cloud y APIs.</p>
               </div>
 
               <div>
                 <div class="flex justify-between items-center mb-2">
-                  <label for="slider-design" class="text-sm font-extrabold text-white flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-fuchsia-400"></span>
-                    Diseño Creativo, 3D & Video <span class="text-xs font-mono-code text-slate-400">($699 MXN/h)</span>
+                  <label for="slider-design" class="text-base font-extrabold text-white flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-fuchsia-400"></span>
+                    Diseño Digital, Arte & Video <span class="text-xs font-mono-code text-fuchsia-200">($699 MXN/h)</span>
                   </label>
-                  <span id="val-design-hours" class="font-mono-code font-bold text-fuchsia-300 text-base">10 h</span>
+                  <span id="val-design-hours" class="font-mono-code font-bold text-fuchsia-300 text-lg">10 h</span>
                 </div>
                 <input id="slider-design" type="range" min="0" max="60" step="5" value="10" class="prism-slider" />
-                <p class="text-[11px] text-slate-400 mt-1">Modelado arquitectónico 2D/3D, Activos con IA, Video postproducción, Marketing Ads.</p>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1.5">Interfaces UX/UI, visualización 2D/3D, activos con IA, edición de video y campañas web.</p>
               </div>
 
               <div>
                 <div class="flex justify-between items-center mb-2">
-                  <label for="slider-strat" class="text-sm font-extrabold text-white flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
-                    Estrategia TI, Ciberseguridad & NOM <span class="text-xs font-mono-code text-slate-400">($999 MXN/h)</span>
+                  <label for="slider-strat" class="text-base font-extrabold text-white flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                    Estrategia Operativa & Logística <span class="text-xs font-mono-code text-amber-200">($999 MXN/h)</span>
                   </label>
-                  <span id="val-strat-hours" class="font-mono-code font-bold text-amber-300 text-base">10 h</span>
+                  <span id="val-strat-hours" class="font-mono-code font-bold text-amber-300 text-lg">10 h</span>
                 </div>
                 <input id="slider-strat" type="range" min="0" max="60" step="5" value="10" class="prism-slider" />
-                <p class="text-[11px] text-slate-400 mt-1">Transformación digital, reducción de costos, auditoría NOM, protección de datos AES-256, CRM.</p>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1.5">Optimización logística, reducción de costos operativos, consejos financieros básicos prácticos, CRM y protección de datos.</p>
               </div>
             </div>
 
-            <!-- Add-ons de Igualas Mensuales (Retainers) -->
-            <div class="mt-8 pt-6 border-t border-white/10">
-              <p class="text-xs font-mono-code uppercase tracking-wider text-amber-300 font-bold mb-3">
-                + Sumar Blindaje Recurrente Opcional (Retainers Mensuales)
+            <!-- Add-ons de Planes Mensuales -->
+            <div class="mt-8 pt-6 border-t border-white/15">
+              <p class="text-xs sm:text-sm font-mono-code uppercase tracking-wider text-amber-300 font-bold mb-3.5">
+                + Sumar Mantenimiento o Soporte Mensual Opcional
               </p>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <label class="p-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-start gap-2.5 cursor-pointer transition">
-                  <input id="chk-ret-tech" type="checkbox" class="mt-1 accent-cyan-400" />
-                  <span class="text-xs">
-                    <strong class="block text-white">Soporte TI/Web</strong>
-                    <span class="text-cyan-300 font-mono-code">$499/mes</span>
-                    <span class="block text-[10px] text-slate-400">95% Uptime</span>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+                <label class="p-4 rounded-2xl bg-amber-400/15 hover:bg-amber-400/25 border-2 border-amber-300/50 flex items-start gap-2.5 cursor-pointer transition">
+                  <input id="chk-ret-web-promo" type="checkbox" class="mt-1 accent-amber-400 w-4 h-4" />
+                  <span class="text-xs sm:text-sm">
+                    <strong class="block text-white">Promo Mant. Web</strong>
+                    <span class="text-amber-300 font-mono-code font-bold">$2,000/mes</span>
+                    <span class="block text-xs text-slate-200 mt-0.5">Cambios + Eventos</span>
                   </span>
                 </label>
 
-                <label class="p-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-start gap-2.5 cursor-pointer transition">
-                  <input id="chk-ret-eco" type="checkbox" class="mt-1 accent-violet-400" />
-                  <span class="text-xs">
-                    <strong class="block text-white">Ecosistema Pro</strong>
-                    <span class="text-violet-300 font-mono-code">$999/mes</span>
-                    <span class="block text-[10px] text-slate-400">Web + Apps + Cloud</span>
+                <label class="p-4 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/20 flex items-start gap-2.5 cursor-pointer transition">
+                  <input id="chk-ret-tech" type="checkbox" class="mt-1 accent-cyan-400 w-4 h-4" />
+                  <span class="text-xs sm:text-sm">
+                    <strong class="block text-white">Servidores TI</strong>
+                    <span class="text-cyan-300 font-mono-code font-bold">$499/mes</span>
+                    <span class="block text-xs text-slate-300 mt-0.5">95% Uptime</span>
                   </span>
                 </label>
 
-                <label class="p-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-start gap-2.5 cursor-pointer transition">
-                  <input id="chk-ret-legal" type="checkbox" class="mt-1 accent-amber-400" />
-                  <span class="text-xs">
-                    <strong class="block text-white">Auditoría Legal</strong>
-                    <span class="text-amber-300 font-mono-code">$999/mes</span>
-                    <span class="block text-[10px] text-slate-400">NOM & Ley Digital</span>
+                <label class="p-4 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/20 flex items-start gap-2.5 cursor-pointer transition">
+                  <input id="chk-ret-eco" type="checkbox" class="mt-1 accent-violet-400 w-4 h-4" />
+                  <span class="text-xs sm:text-sm">
+                    <strong class="block text-white">Ecosistema Cloud</strong>
+                    <span class="text-violet-300 font-mono-code font-bold">$999/mes</span>
+                    <span class="block text-xs text-slate-300 mt-0.5">Web + Apps + Cloud</span>
                   </span>
                 </label>
               </div>
             </div>
 
-            <!-- Medidor de Capacidad Mensual Controlada (120h Límite Sano de Socios) -->
-            <div class="mt-6 p-4 rounded-2xl bg-indigo-950/60 border border-indigo-400/25">
-              <div class="flex justify-between text-xs mb-1.5">
-                <span class="font-bold text-indigo-200">Capacidad Mensual Dedicada del Hub</span>
-                <span id="calc-cap-label" class="font-mono-code text-cyan-300">40 / 120 hrs (33%)</span>
+            <!-- Medidor de Capacidad Mensual Controlada (120h) -->
+            <div class="mt-6 p-4 rounded-2xl bg-indigo-950/80 border border-indigo-300/30">
+              <div class="flex justify-between text-xs sm:text-sm mb-2">
+                <span class="font-bold text-indigo-100">Capacidad Mensual Dedicada del Hub</span>
+                <span id="calc-cap-label" class="font-mono-code font-bold text-cyan-300">40 / 120 hrs mensuales disponibles (33%)</span>
               </div>
-              <div class="w-full h-2.5 rounded-full bg-slate-900 overflow-hidden">
+              <div class="w-full h-3 rounded-full bg-slate-900 overflow-hidden">
                 <div id="calc-cap-bar" class="h-full bg-gradient-to-r from-cyan-400 via-violet-500 to-amber-400 transition-all duration-300" style="width: 33%"></div>
               </div>
             </div>
           </div>
 
-          <!-- Tarjeta Resumen de Inversión, Mascota Reactiva y ROI -->
-          <div class="lg:col-span-5 rounded-[32px] bg-gradient-to-b from-slate-900/95 to-slate-950/95 border-2 border-cyan-400/40 p-6 sm:p-8 shadow-2xl sticky top-24 reveal-up">
-            <div class="flex items-center justify-between gap-3 pb-4 border-b border-white/10">
+          <!-- Tarjeta Resumen de Inversión y Ahorro Operativo -->
+          <div class="lg:col-span-5 rounded-[32px] bg-slate-950/95 border-2 border-cyan-400/55 p-6 sm:p-8 shadow-2xl sticky top-24 reveal-up">
+            <div class="flex items-center justify-between gap-3 pb-4 border-b border-white/15">
               <div>
-                <span class="text-xs font-mono-code text-slate-400 block">NIVEL DESBLOQUEADO</span>
-                <span id="calc-tier-badge" class="font-display font-extrabold text-lg text-amber-300">Pro Scale (40h+)</span>
+                <span class="text-xs font-mono-code text-slate-300 block font-bold">NIVEL DESBLOQUEADO</span>
+                <span id="calc-tier-badge" class="font-display font-bold text-xl text-amber-300">Pro Scale (40h+)</span>
               </div>
-              <div class="px-3.5 py-1.5 rounded-full bg-cyan-400/15 border border-cyan-400/35 font-mono-code font-bold text-sm text-cyan-300" id="calc-total-hours">
+              <div class="px-4 py-1.5 rounded-full bg-cyan-400/20 border border-cyan-300/45 font-mono-code font-extrabold text-sm text-cyan-200" id="calc-total-hours">
                 40 hrs
               </div>
             </div>
 
-            <!-- Reacción viva de la mascota -->
-            <div class="my-4 px-4 py-3 rounded-2xl bg-white/5 border border-white/10 text-xs font-bold text-fuchsia-200 text-center" id="calc-mascot-mood">
-              ⚡ ¡Escalamiento Acelerado B2B! (12% OFF)
+            <div class="my-4 px-4 py-3 rounded-2xl bg-white/10 border border-white/15 text-sm font-bold text-fuchsia-200 text-center" id="calc-mascot-mood">
+              ⚡ ¡Escalamiento Digital Acelerado! (12% OFF)
             </div>
 
-            <div class="space-y-3 text-sm">
-              <div class="flex justify-between text-slate-300">
+            <div class="space-y-3 text-base">
+              <div class="flex justify-between text-slate-200">
                 <span>Subtotal horas tabulador:</span>
-                <span id="calc-subtotal" class="font-mono-code">$32,960</span>
+                <span id="calc-subtotal" class="font-mono-code font-bold">$32,960</span>
               </div>
-              <div class="flex justify-between text-emerald-400 font-bold">
+              <div class="flex justify-between text-emerald-400 font-extrabold">
                 <span>Descuento por paquete:</span>
                 <span id="calc-discount" class="font-mono-code">-$3,955 (12%)</span>
               </div>
-              <div class="flex justify-between text-slate-300">
-                <span>Igualas mensuales elegidas:</span>
-                <span id="calc-retainers-sum" class="font-mono-code">$0 / mes</span>
+              <div class="flex justify-between text-slate-200">
+                <span>Planes mensuales elegidos:</span>
+                <span id="calc-retainers-sum" class="font-mono-code font-bold">$0 / mes</span>
               </div>
-              <div class="pt-3 border-t border-white/15 flex justify-between items-baseline">
-                <span class="font-display font-bold text-white text-base">Inversión Estimada:</span>
+              <div class="pt-3 border-t border-white/20 flex justify-between items-baseline">
+                <span class="font-display font-bold text-white text-lg">Inversión Estimada:</span>
                 <div class="text-right">
                   <span id="calc-final-price" class="font-tech font-extrabold text-3xl sm:text-4xl text-prism block">$29,005</span>
-                  <span class="text-[11px] text-slate-400 font-mono-code">MXN • Facturable CFDI 4.0</span>
+                  <span class="text-xs text-slate-300 font-mono-code">MXN • Precios Claros</span>
                 </div>
               </div>
             </div>
 
-            <!-- Indicador de Ahorro del 30% en Costos Ocultos (UVP Documento Maestro) -->
-            <div class="mt-5 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-400/30">
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-bold text-emerald-200">Ahorro estimado en costos ocultos (30% UVP):</span>
+            <!-- Indicador de Ahorro del 30% en Costos Operativos Ocultos -->
+            <div class="mt-5 p-4 rounded-2xl bg-emerald-500/15 border border-emerald-400/40">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-xs sm:text-sm font-bold text-emerald-200">Ahorro estimado en costos operativos (30%):</span>
                 <span id="calc-hidden-savings" class="font-mono-code font-extrabold text-emerald-300 text-base">$14,126</span>
               </div>
-              <p class="text-[11px] text-slate-300 mt-1">
-                Al integrar ingeniería + UX + blindaje legal/fiscal evitas retrabajos, multas y proveedores fragmentados.
+              <p class="text-xs text-slate-200 mt-1.5 leading-relaxed">
+                Al centralizar desarrollo, automatización y mejoras logísticas en un mismo equipo evitas retrabajos, tiempos muertos y gastos duplicados.
               </p>
             </div>
 
-            <p class="mt-4 text-xs text-center text-amber-200/90 font-mono-code">
-              Esquema: <span id="calc-anticipation-note">50% anticipo / 50% hitos</span>
+            <p class="mt-4 text-xs sm:text-sm text-center text-amber-200 font-mono-code font-bold">
+              Modalidad: <span id="calc-anticipation-note">50% anticipo / 50% contra avances</span>
             </p>
 
             <button
               id="btn-add-custom-bag"
               type="button"
-              class="mt-5 w-full py-4 px-6 rounded-full bg-gradient-to-r from-amber-400 via-fuchsia-500 to-cyan-400 text-slate-950 font-extrabold text-sm sm:text-base shadow-xl hover:scale-[1.02] transition cursor-pointer"
+              class="toon-btn-primary mt-5 w-full py-4 px-6 rounded-full bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 text-slate-950 font-extrabold text-sm sm:text-base cursor-pointer"
             >
               + Cargar esta Bolsa a mi Cotización
             </button>
@@ -689,159 +810,157 @@
     </section>
 
     <!-- ======================================================================
-         CAPÍTULO 5: DIFERENCIADORES (UVP), METODOLOGÍA HÍBRIDA, SLAs & LIDERAZGO
+         CAPÍTULO 5: DIFERENCIADORES TECNOLÓGICOS, PROCESO Y EQUIPO DIRECTIVO
          ====================================================================== -->
     <section id="metodologia" data-stage-bg="#15122b" class="relative py-16 sm:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
 
-        <!-- 5A. Comparador Interactivo UVP: Perspective SCT vs Agencia Tradicional -->
-        <div class="rounded-[36px] bg-slate-950/75 border border-white/10 p-6 sm:p-10 reveal-up">
+        <!-- 5A. Comparador Interactivo UVP: Perspective SCT vs Proveedores Tradicionales -->
+        <div class="rounded-[36px] bg-slate-950/85 border-2 border-white/15 p-6 sm:p-10 reveal-up">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
             <div>
-              <span class="text-xs font-mono-code uppercase text-amber-300 font-bold">PROPUESTA DE VALOR ÚNICA B2B</span>
-              <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-1">
-                ¿Por qué ahorramos hasta un <span class="text-emerald-400">30% de costos ocultos</span>?
+              <span class="text-xs font-mono-code uppercase text-amber-300 font-bold">VENTAJA COMPETITIVA REAL</span>
+              <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-1">
+                ¿Cómo optimizamos hasta un <span class="text-emerald-400">30% tu operación digital</span>?
               </h2>
             </div>
-            <div class="inline-flex p-1.5 rounded-full bg-white/5 border border-white/10 self-start">
-              <button id="uvp-btn-perspective" type="button" class="px-5 py-2.5 rounded-full text-sm font-extrabold bg-gradient-to-r from-amber-400 to-cyan-400 text-slate-950 shadow-lg cursor-pointer transition">
+            <div class="inline-flex p-1.5 rounded-full bg-white/10 border border-white/15 self-start">
+              <button id="uvp-btn-perspective" type="button" class="px-5 py-2.5 rounded-full text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-lg cursor-pointer transition">
                 Hub Perspective SCT
               </button>
-              <button id="uvp-btn-traditional" type="button" class="px-5 py-2.5 rounded-full text-sm font-bold text-slate-300 hover:text-white cursor-pointer transition">
-                Agencia Tradicional
+              <button id="uvp-btn-traditional" type="button" class="px-5 py-2.5 rounded-full text-sm font-bold text-slate-200 hover:text-white cursor-pointer transition">
+                Proveedores Separados
               </button>
             </div>
           </div>
 
           <!-- Panel Perspective SCT -->
           <div id="uvp-panel-perspective" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="p-6 rounded-3xl bg-gradient-to-br from-cyan-500/10 to-blue-600/5 border border-cyan-400/30">
-              <i data-lucide="cpu" class="w-8 h-8 text-cyan-400 mb-3"></i>
-              <h3 class="font-display font-bold text-lg text-white mb-2">Alta Ingeniería + Cloud</h3>
-              <p class="text-sm text-slate-300 leading-relaxed">Arquitecturas escalables, repositorios cifrados, QA cruzado antes de producción y transferencia del 100% de tu código al liquidar.</p>
+            <div class="p-6 rounded-3xl bg-gradient-to-br from-cyan-500/15 to-blue-600/10 border-2 border-cyan-400/35">
+              <i data-lucide="cpu" class="w-8 h-8 text-cyan-300 mb-3"></i>
+              <h3 class="font-display font-bold text-xl text-white mb-2">Ingeniería, Software & Cloud</h3>
+              <p class="text-[15px] text-slate-100 leading-relaxed">Construimos sistemas rápidos, escalables y automatizados, con repositorios privados cifrados y entrega del 100% de tu código al liquidar.</p>
             </div>
-            <div class="p-6 rounded-3xl bg-gradient-to-br from-fuchsia-500/10 to-violet-600/5 border border-fuchsia-400/30">
-              <i data-lucide="sparkles" class="w-8 h-8 text-fuchsia-400 mb-3"></i>
-              <h3 class="font-display font-bold text-lg text-white mb-2">UX/UI de Nivel Gaming & 3D</h3>
-              <p class="text-sm text-slate-300 leading-relaxed">Interfaces inspiradas en la industria del entretenimiento interactivo y el Art Deco futurista que maximizan adopción y ventas.</p>
+            <div class="p-6 rounded-3xl bg-gradient-to-br from-fuchsia-500/15 to-violet-600/10 border-2 border-fuchsia-400/35">
+              <i data-lucide="sparkles" class="w-8 h-8 text-fuchsia-300 mb-3"></i>
+              <h3 class="font-display font-bold text-xl text-white mb-2">Arte Digital & UX Nivel Gaming</h3>
+              <p class="text-[15px] text-slate-100 leading-relaxed">Diseñamos experiencias visuales memorables, dinámicas e intuitivas que capturan la atención de tus clientes y elevan tus conversiones.</p>
             </div>
-            <div class="p-6 rounded-3xl bg-gradient-to-br from-amber-500/10 to-emerald-600/5 border border-amber-400/30">
-              <i data-lucide="shield-alert" class="w-8 h-8 text-amber-400 mb-3"></i>
-              <h3 class="font-display font-bold text-lg text-white mb-2">Blindaje Legal/Fiscal Integrado</h3>
-              <p class="text-sm text-slate-300 leading-relaxed">Auditoría normativa NOM, LFPDPPP (AES-256), contratos MSA/NDA y control contable CFDI 4.0 integrados desde el diseño del sistema.</p>
+            <div class="p-6 rounded-3xl bg-gradient-to-br from-amber-500/15 to-emerald-600/10 border-2 border-amber-400/35">
+              <i data-lucide="trending-up" class="w-8 h-8 text-amber-300 mb-3"></i>
+              <h3 class="font-display font-bold text-xl text-white mb-2">Visión Operativa y Logística</h3>
+              <p class="text-[15px] text-slate-100 leading-relaxed">Al analizar tu operación diaria para digitalizarla, te compartimos recomendaciones prácticas de logística, ahorro operativo y consejos financieros básicos.</p>
             </div>
           </div>
 
-          <!-- Panel Agencia Tradicional -->
+          <!-- Panel Proveedores Separados -->
           <div id="uvp-panel-traditional" class="hidden grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="p-6 rounded-3xl bg-rose-950/30 border border-rose-500/30">
-              <h3 class="font-display font-bold text-lg text-rose-300 mb-2">✕ Proveedores Fragmentados</h3>
-              <p class="text-sm text-slate-300">El programador no habla con el diseñador ni con el abogado o contador, generando retrabajos costosos y cuellos de botella.</p>
+            <div class="p-6 rounded-3xl bg-rose-950/40 border-2 border-rose-500/40">
+              <h3 class="font-display font-bold text-xl text-rose-200 mb-2">✕ Equipos Desconectados</h3>
+              <p class="text-[15px] text-slate-200 leading-relaxed">El programador no se coordina con el diseñador ni conoce la operación real de tu almacén o tus ventas, provocando retrabajos constantes.</p>
             </div>
-            <div class="p-6 rounded-3xl bg-rose-950/30 border border-rose-500/30">
-              <h3 class="font-display font-bold text-lg text-rose-300 mb-2">✕ Contingencias Jurídicas y SAT</h3>
-              <p class="text-sm text-slate-300">Sitios y bases de datos lanzados sin cumplimiento LFPDPPP, sin contratos de cesión de IP claros ni control de fugas en pasarelas.</p>
+            <div class="p-6 rounded-3xl bg-rose-950/40 border-2 border-rose-500/40">
+              <h3 class="font-display font-bold text-xl text-rose-200 mb-2">✕ Sitios Abandonados</h3>
+              <p class="text-[15px] text-slate-200 leading-relaxed">Te entregan una página y desaparecen: sin cambios temáticos para tus campañas, sin corrección rápida de errores ni evolución continua.</p>
             </div>
-            <div class="p-6 rounded-3xl bg-rose-950/30 border border-rose-500/30">
-              <h3 class="font-display font-bold text-lg text-rose-300 mb-2">✕ Costos Sorpresa (Scope Creep)</h3>
-              <p class="text-sm text-slate-300">Cotizaciones ambiguas sin desglose de horas reales ni SLAs definidos cuando tu operación sufre una emergencia en producción.</p>
+            <div class="p-6 rounded-3xl bg-rose-950/40 border-2 border-rose-500/40">
+              <h3 class="font-display font-bold text-xl text-rose-200 mb-2">✕ Costos Impredecibles</h3>
+              <p class="text-[15px] text-slate-200 leading-relaxed">Cotizaciones cerradas sin desglose por hora ni tiempos de respuesta definidos cuando surge una urgencia técnica en tu negocio.</p>
             </div>
           </div>
         </div>
 
-        <!-- 5B. Metodología Consultiva en 4 Etapas (Scrum + Kanban) -->
+        <!-- 5B. Metodología Ágil en 4 Etapas -->
         <div class="reveal-up">
           <div class="text-center max-w-2xl mx-auto mb-12">
-            <span class="text-xs font-mono-code uppercase text-cyan-300 font-bold">OPERACIONES Y ENTREGA SIN FRICCIÓN</span>
-            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-1">
-              Nuestro Proceso de Ingeniería & Ejecución
+            <span class="text-xs font-mono-code uppercase text-cyan-300 font-bold">EJECUCIÓN ORDENADA Y SIN FRICCIÓN</span>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-1">
+              Cómo Construimos tus Soluciones Digitales
             </h2>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <div class="bento-tech-card p-6 relative">
-              <span class="font-display font-extrabold text-4xl text-amber-400/30">01</span>
-              <h3 class="font-display font-bold text-lg text-white mt-2">NDA & Diagnóstico Gratis</h3>
-              <p class="text-sm text-slate-300 mt-2">Firmamos NDA Bidireccional y realizamos una auditoría técnica/operativa exprés para detectar dolores reales y fugas de efectivo.</p>
+              <span class="font-display font-bold text-4xl text-amber-300/45">01</span>
+              <h3 class="font-display font-bold text-xl text-white mt-2">Diagnóstico Gratis</h3>
+              <p class="text-[15px] text-slate-200 mt-2 leading-relaxed">Escuchamos tus objetivos bajo confidencialidad (NDA) y revisamos tu operación actual para detectar oportunidades tecnológicas claras.</p>
             </div>
             <div class="bento-tech-card p-6 relative">
-              <span class="font-display font-extrabold text-4xl text-cyan-400/30">02</span>
-              <h3 class="font-display font-bold text-lg text-white mt-2">Arquitectura ROI & SOW</h3>
-              <p class="text-sm text-slate-300 mt-2">Entregamos propuesta ejecutiva con retorno de inversión estimado, contrato marco MSA, anexo SOW detallado y roadmap de arranque.</p>
+              <span class="font-display font-bold text-4xl text-cyan-300/45">02</span>
+              <h3 class="font-display font-bold text-xl text-white mt-2">Alcance Claro & ROI</h3>
+              <p class="text-[15px] text-slate-200 mt-2 leading-relaxed">Definimos por escrito los entregables exactos (SOW), horas estimadas, cronograma de trabajo e impacto esperado en tiempos y ventas.</p>
             </div>
             <div class="bento-tech-card p-6 relative">
-              <span class="font-display font-extrabold text-4xl text-fuchsia-400/30">03</span>
-              <h3 class="font-display font-bold text-lg text-white mt-2">Sprints Scrum + Kanban</h3>
-              <p class="text-sm text-slate-300 mt-2">Sprints quincenales ágiles para software, apps y 3D combinados con tableros Kanban continuos para blindaje fiscal y legal.</p>
+              <span class="font-display font-bold text-4xl text-fuchsia-300/45">03</span>
+              <h3 class="font-display font-bold text-xl text-white mt-2">Sprints Ágiles</h3>
+              <p class="text-[15px] text-slate-200 mt-2 leading-relaxed">Desarrollamos por etapas quincenales (Scrum) para software, web y diseño, mostrando avances reales e interactivos en cada corte.</p>
             </div>
             <div class="bento-tech-card p-6 relative">
-              <span class="font-display font-extrabold text-4xl text-emerald-400/30">04</span>
-              <h3 class="font-display font-bold text-lg text-white mt-2">QA, Cloud & 100% IP</h3>
-              <p class="text-sm text-slate-300 mt-2">Validación cruzada de calidad, despliegue seguro en la nube, facturación CFDI 4.0 y cesión total de tu Propiedad Intelectual.</p>
+              <span class="font-display font-bold text-4xl text-emerald-300/45">04</span>
+              <h3 class="font-display font-bold text-xl text-white mt-2">QA, Lanzamiento & Soporte</h3>
+              <p class="text-[15px] text-slate-200 mt-2 leading-relaxed">Probamos todo a detalle, desplegamos en la nube, te entregamos el 100% de tu proyecto y activamos mantenimiento continuo si lo deseas.</p>
             </div>
           </div>
         </div>
 
         <!-- 5C. Liderazgo Directivo y Filosofía Institucional -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch reveal-up">
-          <!-- Misión, Visión y Valores -->
-          <div class="lg:col-span-5 rounded-[32px] bg-gradient-to-br from-indigo-950/90 to-slate-950/95 border border-amber-400/35 p-7 flex flex-col justify-between">
+          <div class="lg:col-span-5 rounded-[32px] bg-gradient-to-br from-indigo-950/95 to-slate-950/95 border-2 border-amber-400/45 p-7 flex flex-col justify-between">
             <div>
-              <span class="text-xs font-mono-code text-amber-300 font-bold uppercase">FILOSOFÍA CORPORATIVA</span>
-              <h3 class="font-display font-extrabold text-2xl text-white mt-2">
+              <span class="text-xs font-mono-code text-amber-300 font-bold uppercase">NUESTRA ESENCIA</span>
+              <h3 class="font-display font-bold text-2xl sm:text-3xl text-white mt-2">
                 "Piensa en el futuro desde el presente"
               </h3>
-              <p class="text-sm text-slate-300 mt-4 leading-relaxed">
-                <strong class="text-white">Misión:</strong> Soluciones innovadoras para problemas complejos mediante la convergencia del arte, la ingeniería y la tecnología, creando productos, experiencias y estrategias que impulsen el crecimiento de nuestros clientes.
+              <p class="text-[15px] text-slate-100 mt-4 leading-relaxed">
+                <strong class="text-amber-200">Misión:</strong> Crear soluciones tecnológicas innovadoras para retos complejos mediante la convergencia del arte, la ingeniería y el software, impulsando el crecimiento real de nuestros clientes.
               </p>
-              <p class="text-sm text-slate-300 mt-3 leading-relaxed">
-                <strong class="text-white">Visión:</strong> Convertirnos en marca líder tecnológica y de entretenimiento a nivel nacional, demostrando que la innovación nace cuando el arte y la ingeniería trabajan como una sola disciplina.
+              <p class="text-[15px] text-slate-100 mt-3 leading-relaxed">
+                <strong class="text-cyan-200">Visión:</strong> Consolidarnos como referente nacional en tecnología, desarrollo interactivo y soluciones digitales, demostrando que la innovación nace cuando el arte y la ingeniería trabajan como una sola disciplina.
               </p>
             </div>
-            <div class="mt-6 pt-5 border-t border-white/10 flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-amber-200">Innovación</span>
-              <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-cyan-200">Creatividad con Propósito</span>
-              <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-fuchsia-200">Excelencia</span>
-              <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-emerald-200">Integridad</span>
-              <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-white">Impacto</span>
+            <div class="mt-6 pt-5 border-t border-white/15 flex flex-wrap gap-2">
+              <span class="px-3.5 py-1 rounded-full bg-white/10 text-xs font-bold text-amber-200">Innovación</span>
+              <span class="px-3.5 py-1 rounded-full bg-white/10 text-xs font-bold text-cyan-200">Creatividad con Propósito</span>
+              <span class="px-3.5 py-1 rounded-full bg-white/10 text-xs font-bold text-fuchsia-200">Excelencia</span>
+              <span class="px-3.5 py-1 rounded-full bg-white/10 text-xs font-bold text-emerald-200">Integridad</span>
+              <span class="px-3.5 py-1 rounded-full bg-white/10 text-xs font-bold text-white">Impacto</span>
             </div>
           </div>
 
-          <!-- Célula Directiva Real -->
           <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div class="bento-tech-card p-6 flex flex-col justify-between">
               <div>
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-slate-950 font-display font-extrabold text-lg flex items-center justify-center mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-300 to-orange-500 text-slate-950 font-display font-bold text-lg flex items-center justify-center border-2 border-slate-950 mb-4">
                   AE
                 </div>
-                <span class="text-[11px] font-mono-code text-amber-300 font-bold">GOBERNANZA & ESTRATEGIA</span>
-                <h4 class="font-display font-extrabold text-lg text-white mt-1">Antonio Espinoza</h4>
-                <p class="text-xs text-cyan-300 font-semibold mb-3">Co-CEO • Operación Comercial y Regulatoria</p>
-                <p class="text-xs text-slate-300 leading-relaxed">Estructuración de ROI B2B, gestión financiera saludable y coordinación del blindaje legal/fiscal corporativo.</p>
+                <span class="text-xs font-mono-code text-amber-300 font-bold">OPERACIÓN & NEGOCIO</span>
+                <h4 class="font-display font-bold text-xl text-white mt-1">Antonio Espinoza</h4>
+                <p class="text-xs sm:text-sm text-cyan-300 font-bold mb-3">Co-CEO • Estrategia Comercial y Operativa</p>
+                <p class="text-sm text-slate-200 leading-relaxed">Análisis de procesos de negocio, optimización logística, reducción de costos operativos y enfoque práctico en retorno de inversión.</p>
               </div>
             </div>
 
             <div class="bento-tech-card p-6 flex flex-col justify-between">
               <div>
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 text-slate-950 font-display font-extrabold text-lg flex items-center justify-center mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-300 to-blue-600 text-slate-950 font-display font-bold text-lg flex items-center justify-center border-2 border-slate-950 mb-4">
                   GV
                 </div>
-                <span class="text-[11px] font-mono-code text-cyan-300 font-bold">RAMA DE INGENIERÍA</span>
-                <h4 class="font-display font-extrabold text-lg text-white mt-1">Gael Villalobos</h4>
-                <p class="text-xs text-cyan-300 font-semibold mb-3">Líder de Software, Cloud & IA</p>
-                <p class="text-xs text-slate-300 leading-relaxed">Arquitectura de software a la medida, servidores en la nube, integraciones API e inteligencia artificial aplicada.</p>
+                <span class="text-xs font-mono-code text-cyan-300 font-bold">RAMA DE INGENIERÍA</span>
+                <h4 class="font-display font-bold text-xl text-white mt-1">Gael Villalobos</h4>
+                <p class="text-xs sm:text-sm text-cyan-300 font-bold mb-3">Líder de Software, Cloud & IA</p>
+                <p class="text-sm text-slate-200 leading-relaxed">Desarrollo de software a la medida, infraestructura en servidores cloud, integraciones API e inteligencia artificial aplicada.</p>
               </div>
             </div>
 
             <div class="bento-tech-card p-6 flex flex-col justify-between">
               <div>
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-fuchsia-400 to-violet-600 text-white font-display font-extrabold text-lg flex items-center justify-center mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-fuchsia-400 to-violet-600 text-white font-display font-bold text-lg flex items-center justify-center border-2 border-slate-950 mb-4">
                   MA
                 </div>
-                <span class="text-[11px] font-mono-code text-fuchsia-300 font-bold">RAMA CREATIVA & 3D</span>
-                <h4 class="font-display font-extrabold text-lg text-white mt-1">Marlen</h4>
-                <p class="text-xs text-fuchsia-300 font-semibold mb-3">Dirección Creativa & Arte 3D</p>
-                <p class="text-xs text-slate-300 leading-relaxed">Modelado 3D, entornos inmersivos, estética Art Deco contemporánea y sistemas UX/UI de alto impacto.</p>
+                <span class="text-xs font-mono-code text-fuchsia-300 font-bold">RAMA CREATIVA</span>
+                <h4 class="font-display font-bold text-xl text-white mt-1">Marlen</h4>
+                <p class="text-xs sm:text-sm text-fuchsia-300 font-bold mb-3">Dirección Creativa, Arte & UX/UI</p>
+                <p class="text-sm text-slate-200 leading-relaxed">Diseño de experiencias interactivas, identidad visual moderna, visualización digital y sistemas UX/UI de alto impacto.</p>
               </div>
             </div>
           </div>
@@ -851,124 +970,123 @@
     </section>
 
     <!-- ======================================================================
-         CAPÍTULO 6: TRÍO DE PERSONAJES INTERACTIVOS + CONTACTO B2B
-         Inspirado directamente en el cierre ilustrado con globos de paranice.co
+         CAPÍTULO 6: TRÍO DE PERSONAJES INTERACTIVOS + CONTACTO DIRECTO
          ====================================================================== -->
     <section id="contacto" data-stage-bg="#1d163d" class="relative pt-16 pb-0 overflow-hidden">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- Escena de los 3 Personajes Tecnológicos Bailando con Globos de Diálogo Interactivos -->
+        <!-- Escena de los 3 Personajes Tecnológicos con Globos de Diálogo Súper Legibles -->
         <div class="text-center mb-10 reveal-up">
-          <span class="inline-block px-4 py-1 rounded-full bg-white/10 text-cyan-300 font-mono-code text-xs font-bold mb-3">
-            HAZ CLIC EN UN GLOBO PARA PRE-CARGAR TU SOLICITUD
+          <span class="inline-block px-4 py-1 rounded-full bg-white/15 text-cyan-200 font-mono-code text-xs font-bold mb-3">
+            HAZ CLIC EN CUALQUIER GLOBO PARA INICIAR TU MENSAJE
           </span>
-          <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white">
-            ¿Listo para evolucionar tu empresa?
+          <h2 class="font-display font-bold text-3xl sm:text-5xl text-white">
+            ¿Qué construimos juntos hoy?
           </h2>
 
           <div class="relative max-w-4xl mx-auto mt-10 grid grid-cols-1 sm:grid-cols-3 gap-8 items-end">
 
-            <!-- Personaje 1: Engranaje Dorado (Diagnóstico) -->
+            <!-- Personaje 1: Engranaje Dorado (Promo Mantenimiento Web $2,000) -->
             <div class="flex flex-col items-center">
               <button
                 type="button"
-                data-speech-topic="Hola Perspective SCT, quiero agendar mi Diagnóstico Técnico y Operativo Gratuito ($0 MXN) bajo NDA para detectar áreas de mejora."
-                class="speech-bubble mb-4 text-xs sm:text-sm"
+                data-speech-topic="Hola Perspective SCT, me interesa contratar la Promoción de Mantenimiento Mensual para Páginas Web ($2,000 MXN/mes) para mantener mi sitio actualizado y con temáticas de temporada."
+                class="speech-bubble mb-5 text-xs sm:text-sm"
               >
-                ¿Diagnóstico Gratis? ✨
+                ¿Promo Web $2,000/mes? ✨
               </button>
               <svg viewBox="0 0 150 150" class="w-36 h-36 anim-float">
-                <path d="M35 80 Q15 60 28 42" stroke="#141129" stroke-width="6" stroke-linecap="round" fill="none"/>
-                <path d="M115 76 Q135 55 122 38" stroke="#141129" stroke-width="6" stroke-linecap="round" fill="none"/>
-                <path d="M58 118 L52 142 M92 118 L98 142" stroke="#141129" stroke-width="6" stroke-linecap="round"/>
-                <circle cx="75" cy="76" r="42" fill="#fbbf24" stroke="#141129" stroke-width="4"/>
-                <circle cx="75" cy="76" r="30" fill="#fef3c7" stroke="#141129" stroke-width="3"/>
-                <circle cx="64" cy="71" r="4.5" fill="#141129" class="anim-blink"/>
-                <circle cx="86" cy="71" r="4.5" fill="#141129" class="anim-blink"/>
-                <path d="M63 85 Q75 95 87 85" stroke="#141129" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <path d="M35 80 Q15 60 28 42" stroke="#14102c" stroke-width="6" stroke-linecap="round" fill="none"/>
+                <path d="M115 76 Q135 55 122 38" stroke="#14102c" stroke-width="6" stroke-linecap="round" fill="none"/>
+                <path d="M58 118 L52 142 M92 118 L98 142" stroke="#14102c" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="75" cy="76" r="42" fill="#fbbf24" stroke="#14102c" stroke-width="4"/>
+                <circle cx="75" cy="76" r="30" fill="#fef3c7" stroke="#14102c" stroke-width="3"/>
+                <circle cx="64" cy="71" r="4.5" fill="#14102c" class="anim-blink"/>
+                <circle cx="86" cy="71" r="4.5" fill="#14102c" class="anim-blink"/>
+                <path d="M63 85 Q75 95 87 85" stroke="#14102c" stroke-width="4" stroke-linecap="round" fill="none"/>
               </svg>
             </div>
 
-            <!-- Personaje 2: Prisma Neón Central (Software / 3D / IA) -->
+            <!-- Personaje 2: Prisma Neón Central (Desarrollo de Software, Web e IA) -->
             <div class="flex flex-col items-center">
               <button
                 type="button"
-                data-speech-topic="Hola Perspective SCT, nos interesa cotizar un proyecto de Desarrollo de Software / E-commerce / Diseño 3D o IA Aplicada."
-                class="speech-bubble mb-4 text-xs sm:text-sm border-cyan-400"
+                data-speech-topic="Hola Perspective SCT, nos interesa cotizar un proyecto de Desarrollo de Software, Tienda en Línea, Automatización con IA o Infraestructura Cloud."
+                class="speech-bubble mb-5 text-xs sm:text-sm"
               >
-                ¿Software, IA o 3D? 🚀
+                ¿Software, Web o IA? 🚀
               </button>
               <svg viewBox="0 0 160 155" class="w-40 h-40 anim-float-delay">
-                <path d="M38 88 Q18 62 32 45" stroke="#141129" stroke-width="6" stroke-linecap="round" fill="none"/>
-                <path d="M122 88 Q142 62 128 45" stroke="#141129" stroke-width="6" stroke-linecap="round" fill="none"/>
-                <path d="M62 122 L56 146 M98 122 L104 146" stroke="#141129" stroke-width="6" stroke-linecap="round"/>
-                <polygon points="80,18 30,120 130,120" fill="#a78bfa" stroke="#141129" stroke-width="4" stroke-linejoin="round"/>
-                <rect x="55" y="68" width="50" height="22" rx="11" fill="#0d0b1a" stroke="#00f0ff" stroke-width="3"/>
-                <circle cx="70" cy="79" r="4" fill="#00f0ff" class="anim-blink"/>
-                <circle cx="90" cy="79" r="4" fill="#ff2a85" class="anim-blink"/>
+                <path d="M38 88 Q18 62 32 45" stroke="#14102c" stroke-width="6" stroke-linecap="round" fill="none"/>
+                <path d="M122 88 Q142 62 128 45" stroke="#14102c" stroke-width="6" stroke-linecap="round" fill="none"/>
+                <path d="M62 122 L56 146 M98 122 L104 146" stroke="#14102c" stroke-width="6" stroke-linecap="round"/>
+                <polygon points="80,18 30,120 130,120" fill="#a78bfa" stroke="#14102c" stroke-width="4" stroke-linejoin="round"/>
+                <rect x="55" y="68" width="50" height="22" rx="11" fill="#0d0b1a" stroke="#22eefc" stroke-width="3"/>
+                <circle cx="70" cy="79" r="4" fill="#22eefc" class="anim-blink"/>
+                <circle cx="90" cy="79" r="4" fill="#ff3b94" class="anim-blink"/>
               </svg>
             </div>
 
-            <!-- Personaje 3: Escudo Cibernético (Blindaje Legal/Contable) -->
+            <!-- Personaje 3: Escudo Tecnológico (Optimización Logística y Operativa) -->
             <div class="flex flex-col items-center">
               <button
                 type="button"
-                data-speech-topic="Hola Perspective SCT, buscamos Blindaje Legal/Fiscal B2B, cumplimiento NOM/LFPDPPP o una Iguala Mensual de Soporte."
-                class="speech-bubble mb-4 text-xs sm:text-sm"
+                data-speech-topic="Hola Perspective SCT, quiero agendar un Diagnóstico Técnico y Operativo Gratuito para optimizar nuestra logística, automatizar procesos y reducir costos."
+                class="speech-bubble mb-5 text-xs sm:text-sm"
               >
-                ¿Blindaje Legal y TI? 🛡️
+                ¿Optimizar mi Operación? ⚡
               </button>
               <svg viewBox="0 0 150 150" class="w-36 h-36 anim-float">
-                <path d="M34 78 Q16 58 30 42" stroke="#141129" stroke-width="6" stroke-linecap="round" fill="none"/>
-                <path d="M116 78 Q134 58 120 42" stroke="#141129" stroke-width="6" stroke-linecap="round" fill="none"/>
-                <path d="M60 120 L55 143 M90 120 L95 143" stroke="#141129" stroke-width="6" stroke-linecap="round"/>
-                <path d="M75 24 L116 40 V74 C116 98 98 114 75 122 C52 114 34 98 34 74 V40 Z" fill="#6ee7b7" stroke="#141129" stroke-width="4"/>
-                <circle cx="64" cy="68" r="4.5" fill="#141129" class="anim-blink"/>
-                <circle cx="86" cy="68" r="4.5" fill="#141129" class="anim-blink"/>
-                <path d="M64 84 Q75 93 86 84" stroke="#141129" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <path d="M34 78 Q16 58 30 42" stroke="#14102c" stroke-width="6" stroke-linecap="round" fill="none"/>
+                <path d="M116 78 Q134 58 120 42" stroke="#14102c" stroke-width="6" stroke-linecap="round" fill="none"/>
+                <path d="M60 120 L55 143 M90 120 L95 143" stroke="#14102c" stroke-width="6" stroke-linecap="round"/>
+                <path d="M75 24 L116 40 V74 C116 98 98 114 75 122 C52 114 34 98 34 74 V40 Z" fill="#6ee7b7" stroke="#14102c" stroke-width="4"/>
+                <circle cx="64" cy="68" r="4.5" fill="#14102c" class="anim-blink"/>
+                <circle cx="86" cy="68" r="4.5" fill="#14102c" class="anim-blink"/>
+                <path d="M64 84 Q75 93 86 84" stroke="#14102c" stroke-width="4" stroke-linecap="round" fill="none"/>
               </svg>
             </div>
 
           </div>
         </div>
 
-        <!-- Formulario Ejecutivo Funcional B2B -->
-        <div class="rounded-[36px] bg-slate-950/90 border-2 border-amber-400/40 p-6 sm:p-10 shadow-2xl mb-14 reveal-up">
+        <!-- Formulario Funcional de Contacto -->
+        <div class="rounded-[36px] bg-slate-950/95 border-2 border-amber-400/55 p-6 sm:p-10 shadow-2xl mb-14 reveal-up">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
             <div class="lg:col-span-5 space-y-5">
-              <span class="inline-block px-3 py-1 rounded-full bg-emerald-400/15 text-emerald-300 font-mono-code text-xs font-bold">
-                CANAL DIRECTO EJECUTIVO
+              <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-400/20 text-emerald-200 font-mono-code text-xs font-bold">
+                ATENCIÓN DIRECTA Y PERSONALIZADA
               </span>
-              <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white">
-                Iniciemos con certidumbre técnica y jurídica.
+              <h3 class="font-display font-bold text-2xl sm:text-3xl text-white leading-snug">
+                Cuéntanos tu idea o necesidad tecnológica.
               </h3>
-              <p class="text-sm text-slate-300 leading-relaxed">
-                Atendemos personalmente a Directores Generales, Gerentes de Operaciones, Directores de TI y Fundadores en el Corredor Industrial del Bajío, todo México y proyectos Nearshoring.
+              <p class="text-[15px] text-slate-200 leading-relaxed">
+                Trabajamos con empresas, negocios en crecimiento y emprendedores en el Corredor Industrial del Bajío, todo México y clientes internacionales.
               </p>
 
               <div class="space-y-3 pt-2 text-sm">
-                <a href="mailto:omniiapps@gmail.com" class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition">
-                  <i data-lucide="mail" class="w-5 h-5 text-cyan-400 shrink-0"></i>
-                  <div>
-                    <span class="block text-xs text-slate-400">Correo Oficial de Atención y Soporte</span>
-                    <strong class="font-mono-code text-white">omniiapps@gmail.com</strong>
+                <a href="mailto:perspectivesct.shop@gmail.com" class="flex items-center gap-3.5 p-4 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 transition">
+                  <i data-lucide="mail" class="w-5 h-5 text-cyan-300 shrink-0"></i>
+                  <div class="min-w-0">
+                    <span class="block text-xs text-slate-300 font-semibold">Correo Oficial de Contacto y Ventas</span>
+                    <strong class="font-mono-code text-white text-xs sm:text-sm break-all">perspectivesct.shop@gmail.com</strong>
                   </div>
                 </a>
 
-                <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/5 border border-white/10">
-                  <i data-lucide="clock" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                <div class="flex items-center gap-3.5 p-4 rounded-2xl bg-white/10 border border-white/15">
+                  <i data-lucide="clock" class="w-5 h-5 text-amber-300 shrink-0"></i>
                   <div>
-                    <span class="block text-xs text-slate-400">SLAs Garantizados de Respuesta</span>
-                    <strong class="text-white text-xs sm:text-sm">Urgentes: 24–48h hábiles • Emergencias: 1–2h</strong>
+                    <span class="block text-xs text-slate-300 font-semibold">Tiempos de Respuesta (SLAs)</span>
+                    <strong class="text-white text-xs sm:text-sm">Solicitudes: 24–48h hábiles • Emergencias: 1–2h</strong>
                   </div>
                 </div>
 
-                <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/5 border border-white/10">
-                  <i data-lucide="map-pin" class="w-5 h-5 text-fuchsia-400 shrink-0"></i>
+                <div class="flex items-center gap-3.5 p-4 rounded-2xl bg-white/10 border border-white/15">
+                  <i data-lucide="map-pin" class="w-5 h-5 text-fuchsia-300 shrink-0"></i>
                   <div>
-                    <span class="block text-xs text-slate-400">Cobertura Operativa</span>
-                    <strong class="text-white text-xs sm:text-sm">Bajío (Gto, León, Irapuato, Qro) • Nacional • USA/Canadá</strong>
+                    <span class="block text-xs text-slate-300 font-semibold">Cobertura Operativa</span>
+                    <strong class="text-white text-xs sm:text-sm">Bajío (Gto, León, Irapuato, Qro) • Nacional & Remoto</strong>
                   </div>
                 </div>
               </div>
@@ -977,51 +1095,52 @@
             <form id="perspective-contact-form" class="lg:col-span-7 space-y-4">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label for="contact-name" class="block text-xs font-bold text-slate-300 mb-1.5">Nombre y Cargo *</label>
-                  <input id="contact-name" type="text" required placeholder="Ej. Ing. Roberto Méndez — Director Ops" class="w-full px-4 py-3 rounded-2xl bg-white/5 border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-cyan-400" />
+                  <label for="contact-name" class="block text-sm font-bold text-slate-200 mb-1.5">Nombre y Cargo *</label>
+                  <input id="contact-name" type="text" required placeholder="Ej. Ing. Roberto Méndez — Operaciones" class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:border-cyan-300" />
                 </div>
                 <div>
-                  <label for="contact-company" class="block text-xs font-bold text-slate-300 mb-1.5">Empresa / Organización</label>
-                  <input id="contact-company" type="text" placeholder="Razón social o marca comercial" class="w-full px-4 py-3 rounded-2xl bg-white/5 border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-cyan-400" />
+                  <label for="contact-company" class="block text-sm font-bold text-slate-200 mb-1.5">Empresa o Marca</label>
+                  <input id="contact-company" type="text" placeholder="Nombre de tu negocio o proyecto" class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:border-cyan-300" />
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label for="contact-email" class="block text-xs font-bold text-slate-300 mb-1.5">Correo Corporativo *</label>
-                  <input id="contact-email" type="email" required placeholder="director@tuempresa.com" class="w-full px-4 py-3 rounded-2xl bg-white/5 border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-cyan-400" />
+                  <label for="contact-email" class="block text-sm font-bold text-slate-200 mb-1.5">Tu Correo de Contacto *</label>
+                  <input id="contact-email" type="email" required placeholder="contacto@tuempresa.com" class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:border-cyan-300" />
                 </div>
                 <div>
-                  <label for="contact-vertical" class="block text-xs font-bold text-slate-300 mb-1.5">Modalidad de Interés</label>
-                  <select id="contact-vertical" class="w-full px-4 py-3 rounded-2xl bg-slate-900 border border-white/15 text-sm text-white focus:outline-none focus:border-cyan-400">
-                    <option value="Diagnóstico Técnico Gratuito ($0 MXN)">Diagnóstico Técnico Gratuito ($0 MXN)</option>
+                  <label for="contact-vertical" class="block text-sm font-bold text-slate-200 mb-1.5">Servicio o Promoción de Interés</label>
+                  <select id="contact-vertical" class="w-full px-4 py-3 rounded-2xl bg-slate-900 border border-white/20 text-sm text-white focus:outline-none focus:border-cyan-300">
+                    <option value="Promo Mantenimiento Mensual Páginas Web ($2,000 MXN/mes)">🔥 Promo Mantenimiento Web ($2,000 MXN/mes)</option>
+                    <option value="Mantenimiento de Otros Servicios Digitales (Cotización según plataforma)">Mantenimiento de Otros Servicios Digitales (Variable)</option>
+                    <option value="Diagnóstico Técnico y Operativo Gratuito ($0 MXN)">Diagnóstico Técnico y Operativo Gratuito ($0 MXN)</option>
                     <option value="Bolsa Starter / Jumpstart (5-10h • 5% OFF)">Bolsa Starter / Jumpstart (5-10h • 5% OFF)</option>
                     <option value="Bolsa Growth (20h • 8% OFF)">Bolsa Growth (20h • 8% OFF)</option>
                     <option value="Bolsa Pro Scale (40h • 12% OFF)">Bolsa Pro Scale (40h • 12% OFF)</option>
                     <option value="Business Partner (80h • 15% OFF)">Business Partner (80h • 15% OFF)</option>
                     <option value="Enterprise Custom (120h+ • 20% OFF)">Enterprise Custom (120h+ • 20% OFF)</option>
-                    <option value="Iguala Mensual / Retainer TI, Legal o Contable">Iguala Mensual / Retainer ($499 - $999/mes)</option>
                   </select>
                 </div>
               </div>
 
               <div>
-                <label for="contact-message" class="block text-xs font-bold text-slate-300 mb-1.5">Objetivos, Dolores Operativos o Resumen de tu Bolsa *</label>
-                <textarea id="contact-message" rows="4" required placeholder="Cuéntanos qué proceso deseas automatizar, desarrollar o blindar..." class="w-full px-4 py-3 rounded-2xl bg-white/5 border border-white/15 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-cyan-400"></textarea>
+                <label for="contact-message" class="block text-sm font-bold text-slate-200 mb-1.5">Detalles de tu Proyecto, Mantenimiento o Bolsa *</label>
+                <textarea id="contact-message" rows="4" required placeholder="Platícanos qué deseas desarrollar, actualizar o automatizar en tu empresa..." class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:border-cyan-300"></textarea>
               </div>
 
               <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
-                <label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
-                  <input id="contact-nda" type="checkbox" checked class="accent-emerald-400" />
-                  <span>Solicitar firma de <strong>NDA Bidireccional</strong> previo y acepto el <button type="button" data-open-legal="privacidad" class="text-cyan-400 underline cursor-pointer">Aviso de Privacidad</button>.</span>
+                <label class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200 cursor-pointer">
+                  <input id="contact-nda" type="checkbox" checked class="accent-emerald-400 w-4 h-4" />
+                  <span>Solicitar acuerdo de confidencialidad (NDA) y acepto la <button type="button" data-open-policy="privacidad" class="text-cyan-300 font-bold underline cursor-pointer">Política de Privacidad</button>.</span>
                 </label>
               </div>
 
-              <div class="flex flex-wrap items-center gap-3 pt-2">
-                <button type="submit" class="px-8 py-4 rounded-full bg-gradient-to-r from-amber-400 via-fuchsia-500 to-cyan-400 text-slate-950 font-extrabold text-sm shadow-xl hover:scale-[1.02] transition cursor-pointer">
-                  Enviar Solicitud Ejecutiva →
+              <div class="flex flex-wrap items-center gap-3.5 pt-2">
+                <button type="submit" class="toon-btn-primary px-8 py-4 rounded-full bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 text-slate-950 font-extrabold text-sm sm:text-base cursor-pointer">
+                  Enviar Solicitud →
                 </button>
-                <button id="copy-brief-btn" type="button" class="px-5 py-4 rounded-full bg-white/10 hover:bg-white/15 text-white text-xs font-bold border border-white/15 transition cursor-pointer">
+                <button id="copy-brief-btn" type="button" class="px-5 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold border border-white/20 transition cursor-pointer">
                   Copiar Resumen de Bolsa
                 </button>
               </div>
@@ -1033,18 +1152,18 @@
         </div>
       </div>
 
-      <!-- Onda Profunda Oscura hacia el Footer Corporativo (Idéntica al cierre de Paranice) -->
+      <!-- Onda Profunda Oscura hacia el Footer -->
       <svg class="wave-divider" viewBox="0 0 1440 110" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0 48C220 115 460 -8 720 48C980 104 1220 8 1440 52V110H0V48Z" fill="#0d0b1a"/>
+        <path d="M0 48C220 115 460 -8 720 48C980 104 1220 8 1440 52V110H0V48Z" fill="#0e0c1d"/>
       </svg>
     </section>
 
   </main>
 
   <!-- ========================================================================
-       FOOTER CORPORATIVO COMPLETO CON MARCO LEGAL INTEGRAL
+       FOOTER CORPORATIVO COMPLETO
        ======================================================================== -->
-  <footer data-stage-bg="#0d0b1a" class="relative z-10 bg-[#0d0b1a] pt-12 pb-16 border-t border-white/5">
+  <footer data-stage-bg="#0e0c1d" class="relative z-10 bg-[#0e0c1d] pt-12 pb-16 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
@@ -1052,129 +1171,123 @@
         <!-- Identidad y Logo Oficial -->
         <div class="lg:col-span-4 space-y-4">
           <div class="flex items-center gap-3">
-            <img src="assets/img/Icono%20Favicon.jpg" alt="Icono Perspective SCT" class="w-12 h-12 rounded-2xl object-cover border border-amber-400/50" />
+            <img src="assets/img/Icono%20Favicon.jpg" alt="Icono Perspective SCT" class="w-12 h-12 rounded-2xl object-cover border-2 border-amber-400/60" />
             <div>
-              <span class="font-display font-extrabold text-xl text-white block">PERSPECTIVE SCT</span>
-              <span class="font-mono-code text-[11px] text-amber-300">Perspective SCT SA de CV • EST. 2026</span>
+              <span class="font-display font-bold text-xl text-white block">PERSPECTIVE SCT</span>
+              <span class="font-mono-code text-xs text-amber-300 font-bold">Soluciones Tecnológicas • EST. 2026</span>
             </div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Hub de Ingeniería de Software, Diseño 3D/Gaming, Inteligencia Artificial, Infraestructura Cloud y Blindaje Legal/Contable Integrado.
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Venta de servicios tecnológicos y soluciones digitales: desarrollo de software, páginas web, automatización, infraestructura cloud, arte digital y mejora operativa.
           </p>
           <img src="assets/img/LOGO%20Super%20GOD.jpg" alt="Emblema Oficial Perspective SCT" class="w-56 h-auto rounded-xl logo-screen-blend opacity-90" />
         </div>
 
         <!-- Navegación y Soluciones -->
         <div class="lg:col-span-3 space-y-2.5 text-sm">
-          <h4 class="font-display font-bold text-white uppercase text-xs tracking-wider text-amber-300 mb-3">Ecosistema & Precios</h4>
-          <a href="#productos" class="block text-slate-400 hover:text-cyan-300 transition">Bolsas de Horas (5% a 20% OFF)</a>
-          <a href="#productos" class="block text-slate-400 hover:text-cyan-300 transition">Igualas / Retainers ($499 – $999)</a>
-          <a href="#verticales" class="block text-slate-400 hover:text-cyan-300 transition">Desarrollo TI ($799 MXN/h)</a>
-          <a href="#verticales" class="block text-slate-400 hover:text-cyan-300 transition">Diseño 3D & Video ($699 MXN/h)</a>
-          <a href="#verticales" class="block text-slate-400 hover:text-cyan-300 transition">Estrategia & NOM ($999 MXN/h)</a>
-          <a href="#calculadora" class="block text-slate-400 hover:text-cyan-300 transition">Calculadora Interactiva ROI</a>
+          <h4 class="font-display font-bold uppercase text-xs tracking-wider text-amber-300 mb-3">Servicios & Precios</h4>
+          <a href="#promo-mantenimiento" class="block text-amber-200 font-bold hover:text-cyan-300 transition">🔥 Promo Mantenimiento Web ($2,000/mes)</a>
+          <a href="#productos" class="block text-slate-300 hover:text-cyan-300 transition">Bolsas de Horas (5% a 20% OFF)</a>
+          <a href="#verticales" class="block text-slate-300 hover:text-cyan-300 transition">Desarrollo & Cloud ($799 MXN/h)</a>
+          <a href="#verticales" class="block text-slate-300 hover:text-cyan-300 transition">Diseño, Arte & Video ($699 MXN/h)</a>
+          <a href="#verticales" class="block text-slate-300 hover:text-cyan-300 transition">Estrategia Operativa ($999 MXN/h)</a>
+          <a href="#calculadora" class="block text-slate-300 hover:text-cyan-300 transition">Calculadora Interactiva</a>
         </div>
 
-        <!-- Centro de Blindaje Legal y Políticas Obligatorias -->
+        <!-- Políticas de Servicio y Privacidad -->
         <div class="lg:col-span-3 space-y-2.5 text-sm">
-          <h4 class="font-display font-bold uppercase text-xs tracking-wider text-emerald-300 mb-3">Legal, Privacidad & Cumplimiento</h4>
-          <button type="button" data-open-legal="privacidad" class="block text-left text-slate-400 hover:text-white transition cursor-pointer">Aviso de Privacidad Integral (LFPDPPP)</button>
-          <button type="button" data-open-legal="terminos" class="block text-left text-slate-400 hover:text-white transition cursor-pointer">Contrato Marco (MSA), SOW & Anticipos</button>
-          <button type="button" data-open-legal="ip" class="block text-left text-slate-400 hover:text-white transition cursor-pointer">Política de Propiedad Intelectual (100% IP)</button>
-          <button type="button" data-open-legal="nda" class="block text-left text-slate-400 hover:text-white transition cursor-pointer">Convenio NDA Bidireccional</button>
-          <button type="button" data-open-legal="sla" class="block text-left text-slate-400 hover:text-white transition cursor-pointer">SLAs de Soporte, NOM & Facturación CFDI 4.0</button>
+          <h4 class="font-display font-bold uppercase text-xs tracking-wider text-emerald-300 mb-3">Políticas de Servicio</h4>
+          <button type="button" data-open-policy="privacidad" class="block text-left text-slate-300 hover:text-white transition cursor-pointer">Política de Privacidad y Datos (AES-256)</button>
+          <button type="button" data-open-policy="alcance" class="block text-left text-slate-300 hover:text-white transition cursor-pointer">Condiciones de Alcance (SOW) y Pagos</button>
+          <button type="button" data-open-policy="propiedad" class="block text-left text-slate-300 hover:text-white transition cursor-pointer">Entrega 100% de Código y Activos</button>
+          <button type="button" data-open-policy="sla" class="block text-left text-slate-300 hover:text-white transition cursor-pointer">SLAs de Soporte, QA y Confidencialidad</button>
         </div>
 
         <!-- Contacto Directo -->
         <div class="lg:col-span-2 space-y-3 text-sm">
-          <h4 class="font-display font-bold uppercase text-xs tracking-wider text-cyan-300 mb-3">Contacto</h4>
-          <a href="mailto:omniiapps@gmail.com" class="block font-mono-code text-xs text-white hover:text-cyan-300 break-all">omniiapps@gmail.com</a>
-          <p class="text-xs text-slate-400">Corredor Industrial del Bajío, Guanajuato, México.</p>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-[11px] text-emerald-300 font-mono-code">
+          <h4 class="font-display font-bold uppercase text-xs tracking-wider text-cyan-300 mb-3">Contacto Oficial</h4>
+          <a href="mailto:perspectivesct.shop@gmail.com" class="block font-mono-code text-xs text-white font-bold hover:text-cyan-300 break-all">perspectivesct.shop@gmail.com</a>
+          <p class="text-xs sm:text-sm text-slate-300">Corredor Industrial del Bajío, Guanajuato, México.</p>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/35 text-xs text-emerald-300 font-mono-code font-bold">
             ● AES-256 Protected
           </span>
         </div>
 
       </div>
 
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-        <p>© 2026 Perspective SCT (Perspective SCT SA de CV). Todos los derechos reservados.</p>
-        <p class="font-mono-code text-[11px] text-slate-400">
-          MARKETING • PROGRAMACIÓN • 3D & ANIMACIÓN • APPS • WEB • ENTRETENIMIENTO
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-400">
+        <p>© 2026 Perspective SCT. Todos los derechos reservados.</p>
+        <p class="font-mono-code text-xs text-slate-300">
+          MARKETING • PROGRAMACIÓN • DISEÑO & ANIMACIÓN • APPS • WEB • ENTRETENIMIENTO
         </p>
       </div>
     </div>
   </footer>
 
   <!-- ========================================================================
-       WIDGET ESQUINA INFERIOR DERECHA: MONITOR CRT BOT (HOMENAJE PARANICE!)
+       WIDGET ESQUINA INFERIOR DERECHA: MONITOR CRT BOT (ASISTENTE RÁPIDO)
        ======================================================================== -->
   <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end">
-    <!-- Popover Asistente de Diagnóstico Rápido -->
-    <div id="crt-bot-popover" class="hidden mb-3 w-80 rounded-3xl bg-slate-950/95 backdrop-blur-xl border-2 border-amber-400/50 p-5 shadow-2xl">
-      <div class="flex items-center justify-between pb-3 border-b border-white/10">
+    <div id="crt-bot-popover" class="hidden mb-3 w-80 rounded-3xl bg-slate-950/95 backdrop-blur-xl border-2 border-amber-400/65 p-5 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-white/15">
         <div class="flex items-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-          <strong class="font-display text-sm text-white">Perspecti-Bot • Concierge</strong>
+          <strong class="font-display text-base text-white">Perspecti-Bot • Asistente</strong>
         </div>
-        <button id="close-crt-bot" type="button" class="text-slate-400 hover:text-white text-sm cursor-pointer">✕</button>
+        <button id="close-crt-bot" type="button" class="text-slate-300 hover:text-white text-sm font-bold cursor-pointer">✕</button>
       </div>
-      <p class="text-xs text-slate-300 mt-3 mb-3 leading-relaxed">
-        ¡Hola! Selecciona tu prioridad actual y pre-armamos tu sesión de diagnóstico gratuito:
+      <p class="text-xs sm:text-sm text-slate-200 mt-3 mb-3 leading-relaxed">
+        ¡Hola! Elige qué necesitas hoy y preparamos tu mensaje al instante:
       </p>
       <div class="space-y-2">
-        <button type="button" data-bot-prompt="Necesito desarrollar o modernizar Web / E-commerce / App Móvil con alta conversión." class="w-full text-left px-3.5 py-2.5 rounded-xl bg-white/5 hover:bg-violet-600/40 border border-white/10 text-xs font-bold text-white transition cursor-pointer">
+        <button type="button" data-bot-prompt="Me interesa contratar la Promoción de Mantenimiento Mensual para Páginas Web por $2,000 MXN/mes." class="w-full text-left px-3.5 py-2.5 rounded-xl bg-amber-400/20 hover:bg-amber-400/35 border border-amber-300/45 text-xs sm:text-sm font-extrabold text-amber-200 transition cursor-pointer">
+          🔥 Promo Mantenimiento Web ($2,000/mes)
+        </button>
+        <button type="button" data-bot-prompt="Necesito crear o modernizar una Página Web, Tienda E-commerce o Aplicación Móvil." class="w-full text-left px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-violet-600/45 border border-white/15 text-xs sm:text-sm font-bold text-white transition cursor-pointer">
           🌐 Crear Web, E-commerce o App ($799/h)
         </button>
-        <button type="button" data-bot-prompt="Busco Automatización con IA, ERP Logístico o Analítica Big Data para reducir costos." class="w-full text-left px-3.5 py-2.5 rounded-xl bg-white/5 hover:bg-cyan-600/40 border border-white/10 text-xs font-bold text-white transition cursor-pointer">
-          🤖 Automatizar con IA / Software a Medida
+        <button type="button" data-bot-prompt="Busco Automatización con IA, Software Logístico a Medida o Infraestructura Cloud." class="w-full text-left px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-cyan-600/45 border border-white/15 text-xs sm:text-sm font-bold text-white transition cursor-pointer">
+          🤖 Automatizar con IA / Software Logístico
         </button>
-        <button type="button" data-bot-prompt="Requiero Modelado 3D Arquitectónico, Video Corporativo o Simulador / Videojuego." class="w-full text-left px-3.5 py-2.5 rounded-xl bg-white/5 hover:bg-fuchsia-600/40 border border-white/10 text-xs font-bold text-white transition cursor-pointer">
-          🎮 Modelado 3D, Video o Gaming ($699/h)
-        </button>
-        <button type="button" data-bot-prompt="Requiero Auditoría de Ciberseguridad, Cumplimiento NOM/LFPDPPP o Blindaje Fiscal." class="w-full text-left px-3.5 py-2.5 rounded-xl bg-white/5 hover:bg-amber-600/40 border border-white/10 text-xs font-bold text-white transition cursor-pointer">
-          🛡️ Ciberseguridad & Blindaje Legal ($999/h)
+        <button type="button" data-bot-prompt="Me interesa cotizar mantenimiento mensual para otro servicio o plataforma digital." class="w-full text-left px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-fuchsia-600/45 border border-white/15 text-xs sm:text-sm font-bold text-white transition cursor-pointer">
+          🛠️ Mantenimiento para Otros Sistemas
         </button>
       </div>
     </div>
 
-    <!-- Botón Monitor Retro-Futurista Carismático -->
     <button id="crt-bot-trigger" type="button" aria-label="Abrir asistente rápido" class="crt-assistant-btn cursor-pointer relative group">
       <svg viewBox="0 0 115 115" class="w-20 h-20 sm:w-24 sm:h-24">
         <defs>
           <path id="curvedTextPath" d="M 16,56 A 42,42 0 0,1 100,56" />
         </defs>
-        <text font-size="8.5" font-weight="800" fill="#fde68a" letter-spacing="0.8">
+        <text font-size="8.8" font-weight="800" fill="#ffe07d" letter-spacing="0.8">
           <textPath href="#curvedTextPath" startOffset="12%">¡DIAGNÓSTICO AQUÍ!</textPath>
         </text>
-        <!-- Carcasa Monitor CRT Estilo Paranice pero Cyber-Prisma -->
-        <rect x="20" y="28" width="75" height="72" rx="20" fill="#2e236c" stroke="#d4af37" stroke-width="3.5"/>
-        <rect x="29" y="37" width="57" height="38" rx="12" fill="#0d0b1a" stroke="#00f0ff" stroke-width="2"/>
-        <!-- Carita Feliz Prisma dentro del Monitor -->
-        <polygon points="57.5,43 42,69 73,69" fill="#ff2a85"/>
-        <circle cx="52" cy="59" r="2.8" fill="#ffffff" class="anim-blink"/>
-        <circle cx="63" cy="59" r="2.8" fill="#ffffff" class="anim-blink"/>
-        <path d="M53 64 Q57.5 68 62 64" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <!-- Botoncitos LED del Monitor -->
-        <circle cx="38" cy="86" r="3" fill="#34d399"/>
-        <circle cx="48" cy="86" r="3" fill="#fbbf24"/>
-        <rect x="62" y="83" width="20" height="6" rx="3" fill="#00f0ff"/>
+        <rect x="20" y="28" width="75" height="72" rx="20" fill="#2e236c" stroke="#ffe07d" stroke-width="3.5"/>
+        <rect x="29" y="37" width="57" height="38" rx="12" fill="#0d0b1a" stroke="#22eefc" stroke-width="2.2"/>
+        <polygon points="57.5,43 42,69 73,69" fill="#ff3b94"/>
+        <circle cx="52" cy="59" r="3" fill="#ffffff" class="anim-blink"/>
+        <circle cx="63" cy="59" r="3" fill="#ffffff" class="anim-blink"/>
+        <path d="M53 64 Q57.5 68 62 64" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <circle cx="38" cy="86" r="3.2" fill="#34d399"/>
+        <circle cx="48" cy="86" r="3.2" fill="#fbbf24"/>
+        <rect x="62" y="83" width="20" height="6" rx="3" fill="#22eefc"/>
       </svg>
     </button>
   </div>
 
   <!-- ========================================================================
-       DRAWER LATERAL: BOLSA DE INNOVACIÓN / CARRITO DE COTIZACIÓN
+       DRAWER LATERAL: BOLSA DE INNOVACIÓN / COTIZADOR
        ======================================================================== -->
   <div id="cart-backdrop" class="backdrop-fade fixed inset-0 bg-black/70 backdrop-blur-sm z-50"></div>
-  <aside id="cart-drawer" aria-label="Bolsa de cotización" class="drawer-slide fixed top-0 right-0 bottom-0 w-full max-w-md bg-slate-950 border-l border-amber-400/35 z-50 flex flex-col justify-between p-6 shadow-2xl">
+  <aside id="cart-drawer" aria-label="Bolsa de cotización" class="drawer-slide fixed top-0 right-0 bottom-0 w-full max-w-md bg-slate-950 border-l-2 border-amber-400/50 z-50 flex flex-col justify-between p-6 shadow-2xl">
     <div>
-      <div class="flex items-center justify-between pb-4 border-b border-white/10">
+      <div class="flex items-center justify-between pb-4 border-b border-white/15">
         <div>
-          <h3 class="font-display font-extrabold text-xl text-white">Tu Bolsa de Innovación</h3>
-          <p class="text-xs text-slate-400">Pre-cotización transparente • Perspective SCT</p>
+          <h3 class="font-display font-bold text-2xl text-white">Tu Bolsa de Innovación</h3>
+          <p class="text-xs sm:text-sm text-slate-300">Pre-cotización transparente • Perspective SCT</p>
         </div>
-        <button id="close-cart-btn" type="button" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold cursor-pointer">✕</button>
+        <button id="close-cart-btn" type="button" class="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 text-white font-bold cursor-pointer">✕</button>
       </div>
 
       <div id="cart-items-list" class="mt-5 space-y-3 max-h-[56vh] overflow-y-auto pr-1">
@@ -1184,46 +1297,45 @@
 
     <div class="pt-4 border-t border-white/15 space-y-3">
       <div class="flex items-baseline justify-between">
-        <span class="text-sm font-bold text-slate-300">Total Estimado:</span>
+        <span class="text-base font-bold text-slate-200">Total Estimado:</span>
         <span id="cart-total-amount" class="font-tech font-extrabold text-2xl text-prism">$0 MXN</span>
       </div>
-      <p class="text-[11px] text-slate-400">
-        Incluye respaldo bajo Contrato Marco (MSA), NDA Bidireccional y opción de comprobante fiscal CFDI 4.0.
+      <p class="text-xs text-slate-300 leading-relaxed">
+        Incluye alcance técnico claro por escrito (SOW), acuerdo de confidencialidad (NDA) y atención directa en <span class="text-cyan-300 font-mono-code">perspectivesct.shop@gmail.com</span>.
       </p>
-      <button id="cart-to-contact-btn" type="button" class="w-full py-3.5 rounded-full bg-gradient-to-r from-amber-400 via-fuchsia-500 to-cyan-400 text-slate-950 font-extrabold text-sm shadow-lg cursor-pointer">
-        Formalizar Propuesta Ejecutiva →
+      <button id="cart-to-contact-btn" type="button" class="toon-btn-primary w-full py-3.5 rounded-full bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 text-slate-950 font-extrabold text-sm cursor-pointer">
+        Continuar a Solicitud de Proyecto →
       </button>
-      <button id="clear-cart-btn" type="button" class="w-full py-2 text-xs text-slate-400 hover:text-rose-300 cursor-pointer">
+      <button id="clear-cart-btn" type="button" class="w-full py-2 text-xs font-bold text-slate-400 hover:text-rose-300 cursor-pointer">
         Vaciar bolsa
       </button>
     </div>
   </aside>
 
   <!-- ========================================================================
-       MODAL: CENTRO LEGAL, PRIVACIDAD LFPDPPP, MSA, IP & SLAs (5 PESTAÑAS)
+       MODAL: POLÍTICAS DE SERVICIO, PRIVACIDAD Y SLAs (4 PESTAÑAS CLARAS)
        ======================================================================== -->
-  <div id="legal-modal" class="backdrop-fade fixed inset-0 bg-black/75 backdrop-blur-md z-50 flex items-center justify-center p-4">
-    <div class="w-full max-w-3xl rounded-[32px] bg-slate-950 border-2 border-amber-400/40 p-6 sm:p-8 shadow-2xl max-h-[88vh] flex flex-col">
-      <div class="flex items-start justify-between gap-4 pb-4 border-b border-white/10">
+  <div id="policy-modal" class="backdrop-fade fixed inset-0 bg-black/75 backdrop-blur-md z-50 flex items-center justify-center p-4">
+    <div class="w-full max-w-3xl rounded-[32px] bg-slate-950 border-2 border-amber-400/55 p-6 sm:p-8 shadow-2xl max-h-[88vh] flex flex-col">
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-white/15">
         <div>
-          <span class="text-[11px] font-mono-code text-emerald-400 font-bold uppercase">CENTRO DE TRANSPARENCIA Y CUMPLIMIENTO CORPORATIVO</span>
-          <h3 id="legal-doc-title" class="font-display font-extrabold text-xl sm:text-2xl text-white mt-1">Aviso de Privacidad Integral</h3>
-          <p id="legal-doc-updated" class="text-xs text-slate-400 mt-0.5"></p>
+          <span class="text-xs font-mono-code text-emerald-300 font-bold uppercase">TRANSPARENCIA OPERATIVA Y SEGURIDAD DE DATOS</span>
+          <h3 id="policy-doc-title" class="font-display font-bold text-xl sm:text-2xl text-white mt-1">Política de Privacidad y Resguardo Técnico</h3>
+          <p id="policy-doc-updated" class="text-xs sm:text-sm text-slate-300 mt-0.5"></p>
         </div>
-        <button id="close-legal-btn" type="button" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold shrink-0 cursor-pointer">✕</button>
+        <button id="close-policy-btn" type="button" class="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 text-white font-bold shrink-0 cursor-pointer">✕</button>
       </div>
 
-      <!-- Pestañas Legales -->
-      <div class="flex flex-wrap gap-2 py-4 border-b border-white/10">
-        <button type="button" data-legal-tab="privacidad" class="px-3.5 py-2 rounded-xl text-xs font-extrabold bg-gradient-to-r from-amber-400 to-cyan-400 text-slate-950 cursor-pointer">Privacidad LFPDPPP</button>
-        <button type="button" data-legal-tab="terminos" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 cursor-pointer">Contrato MSA & Pagos</button>
-        <button type="button" data-legal-tab="ip" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 cursor-pointer">Propiedad Intelectual</button>
-        <button type="button" data-legal-tab="nda" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 cursor-pointer">NDA Secreto Industrial</button>
-        <button type="button" data-legal-tab="sla" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 cursor-pointer">SLAs, NOM & CFDI 4.0</button>
+      <!-- Pestañas de Políticas -->
+      <div class="flex flex-wrap gap-2 py-4 border-b border-white/15">
+        <button type="button" data-policy-tab="privacidad" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 cursor-pointer">Privacidad & Datos</button>
+        <button type="button" data-policy-tab="alcance" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white/10 text-slate-200 cursor-pointer">Alcance SOW & Pagos</button>
+        <button type="button" data-policy-tab="propiedad" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white/10 text-slate-200 cursor-pointer">Entrega 100% Código</button>
+        <button type="button" data-policy-tab="sla" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white/10 text-slate-200 cursor-pointer">SLAs, QA & Confidencialidad</button>
       </div>
 
-      <div id="legal-doc-body" class="py-5 overflow-y-auto pr-2 flex-1">
-        <!-- Contenido legal dinámico -->
+      <div id="policy-doc-body" class="py-5 overflow-y-auto pr-2 flex-1">
+        <!-- Contenido dinámico -->
       </div>
     </div>
   </div>
@@ -1232,30 +1344,30 @@
        MODAL: COMMAND PALETTE / BUSCADOR INSTANTÁNEO (CTRL + K)
        ======================================================================== -->
   <div id="cmd-modal" class="backdrop-fade fixed inset-0 bg-black/75 backdrop-blur-md z-50 flex items-start justify-center pt-20 p-4">
-    <div class="w-full max-w-xl rounded-3xl bg-slate-950 border border-cyan-400/40 p-5 shadow-2xl">
-      <div class="flex items-center gap-3 pb-3 border-b border-white/10">
-        <i data-lucide="terminal" class="w-5 h-5 text-cyan-400"></i>
-        <input id="cmd-input" type="text" placeholder="Escribe un servicio, paquete o política (ej. IA, 3D, Pro Scale, NDA)..." class="w-full bg-transparent text-sm text-white placeholder:text-slate-500 focus:outline-none" />
-        <button id="close-cmd-btn" type="button" class="text-xs font-mono-code px-2 py-1 rounded bg-white/10 text-slate-300 cursor-pointer">ESC</button>
+    <div class="w-full max-w-xl rounded-3xl bg-slate-950 border-2 border-cyan-400/55 p-5 shadow-2xl">
+      <div class="flex items-center gap-3 pb-3 border-b border-white/15">
+        <i data-lucide="terminal" class="w-5 h-5 text-cyan-300"></i>
+        <input id="cmd-input" type="text" placeholder="Busca un servicio, paquete o promoción (ej. Mantenimiento, Web, IA, Cloud)..." class="w-full bg-transparent text-sm sm:text-base text-white placeholder:text-slate-400 focus:outline-none" />
+        <button id="close-cmd-btn" type="button" class="text-xs font-mono-code font-bold px-2.5 py-1 rounded bg-white/15 text-slate-200 cursor-pointer">ESC</button>
       </div>
       <div id="cmd-results" class="mt-3 space-y-1 max-h-80 overflow-y-auto"></div>
     </div>
   </div>
 
   <!-- ========================================================================
-       BANNER DE PRIVACIDAD Y TELEMETRÍA (CUMPLIMIENTO LFPDPPP)
+       BANNER DE PREFERENCIAS LOCALES
        ======================================================================== -->
-  <div id="cookie-banner" class="hidden fixed bottom-4 left-4 right-24 sm:right-auto sm:max-w-md z-40 rounded-2xl bg-slate-950/95 backdrop-blur-xl border border-white/15 p-4 shadow-2xl">
-    <p class="text-xs text-slate-300 leading-relaxed">
-      🔒 Utilizamos almacenamiento local esencial para guardar tu <strong>Bolsa de Innovación</strong> y analítica anónima B2B conforme a nuestro <button type="button" data-open-legal="privacidad" class="text-cyan-400 underline cursor-pointer">Aviso de Privacidad LFPDPPP</button>.
+  <div id="cookie-banner" class="hidden fixed bottom-4 left-4 right-24 sm:right-auto sm:max-w-md z-40 rounded-2xl bg-slate-950/95 backdrop-blur-xl border-2 border-white/20 p-4 shadow-2xl">
+    <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+      🔒 Usamos almacenamiento local en tu navegador únicamente para guardar tu <strong>Bolsa de Innovación</strong> conforme a nuestra <button type="button" data-open-policy="privacidad" class="text-cyan-300 font-bold underline cursor-pointer">Política de Privacidad</button>.
     </p>
-    <div class="flex items-center gap-2 mt-3">
-      <button id="cookie-accept-all" type="button" class="px-4 py-1.5 rounded-full bg-cyan-400 text-slate-950 font-extrabold text-xs cursor-pointer">Aceptar</button>
-      <button id="cookie-essential" type="button" class="px-3.5 py-1.5 rounded-full bg-white/10 text-slate-300 font-bold text-xs cursor-pointer">Solo esenciales</button>
+    <div class="flex items-center gap-2.5 mt-3">
+      <button id="cookie-accept-all" type="button" class="px-4 py-1.5 rounded-full bg-amber-300 text-slate-950 font-extrabold text-xs border-2 border-slate-950 cursor-pointer">Entendido</button>
+      <button id="cookie-essential" type="button" class="px-3.5 py-1.5 rounded-full bg-white/10 text-slate-200 font-bold text-xs cursor-pointer">Cerrar</button>
     </div>
   </div>
 
-  <!-- Librerías Ligeras vía CDN (Lucide Icons + Lenis Smooth Scroll + GSAP + ScrollTrigger) -->
+  <!-- Librerías Ligeras vía CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

@@ -1,79 +1,86 @@
 /* ==========================================================================
-   PERSPECTIVE SCT — AWWWARDS EDITORIAL + PLAYFUL CYBER-FACTORY STYLESHEET
+   PERSPECTIVE SCT — PLAYFUL CYBER-FACTORY & HIGH-LEGIBILITY STYLESHEET
    Inspiración dinámica: paranice.co (bloque continuo vivo, pedestales, mascotas)
-   Identidad: Art Deco / Bauhaus + Prisma Cósmico + 80s Daft Punk Luxury Tech
+   Estética: Cartoon-Tech De Lujo + Alto Contraste + Tipografía Ultra Legible
    ========================================================================== */
 
 :root {
-  --bg-stage-1: #16132b; /* Cosmic Indigo-Violet (Paranice-inspired tech base) */
-  --bg-stage-2: #1e183b; /* Living Prism Lab */
-  --bg-stage-3: #131b36; /* Deep Cyber Blueprint */
-  --bg-stage-4: #1b1433; /* Royal Violet Calculator Stage */
-  --bg-stage-5: #0d0b1a; /* Obsidian Gold Executive Footer */
+  --bg-stage-1: #181430; /* Índigo Cósmico Vibrante */
+  --bg-stage-2: #221b47; /* Laboratorio Violeta Vivo */
+  --bg-stage-3: #15203f; /* Azul Ciber-Ingeniería */
+  --bg-stage-4: #1f173b; /* Escenario Violeta Real */
+  --bg-stage-5: #0e0c1d; /* Obsidiana Ejecutiva */
 
-  --gold-light: #f6d365;
-  --gold-main: #d4af37;
-  --gold-bronze: #9c7a2c;
+  --gold-light: #ffe07d;
+  --gold-main: #f5b935;
+  --gold-bronze: #b78628;
 
-  --neon-cyan: #00f0ff;
-  --neon-magenta: #ff2a85;
-  --neon-violet: #8b5cf6;
+  --neon-cyan: #22eefc;
+  --neon-magenta: #ff3b94;
+  --neon-violet: #9d6eff;
   --neon-lime: #34d399;
   --neon-amber: #fbbf24;
 
-  --card-cream: #f8f7ff;
-  --card-lavender: #ede9fe;
-  --ink-dark: #141129;
+  --card-cream: #ffffff;
+  --ink-dark: #14102c;
 }
 
-/* Smooth Base & Typography */
+/* Base Suave y Tipografía de Alta Legibilidad */
 html {
-  scroll-behavior: auto; /* Managed by Lenis when active */
+  scroll-behavior: auto;
   background-color: var(--bg-stage-1);
   color: #f8fafc;
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 body {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   background-color: var(--bg-stage-1);
+  color: #f4f6fb;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
   transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   overflow-x: hidden;
-  selection-background-color: #8b5cf6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: rgba(255, 42, 133, 0.35);
+  background: rgba(255, 59, 148, 0.4);
   color: #ffffff;
 }
 
+/* Tipografía Display Redondeada y Súper Legible (Toque Caricaturesco + Tech) */
 .font-display {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Fredoka', 'Outfit', sans-serif;
+  letter-spacing: 0.01em;
 }
 
 .font-tech {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.01em;
 }
 
 .font-mono-code {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Custom Scrollbar */
+/* Scrollbar Personalizado */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 8px;
+  width: 11px;
+  height: 9px;
 }
 ::-webkit-scrollbar-track {
   background: #0f0c20;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #d4af37, #8b5cf6, #00f0ff);
+  background: linear-gradient(180deg, #f5b935, #9d6eff, #22eefc);
   border-radius: 999px;
   border: 2px solid #0f0c20;
 }
 
-/* Background Prism Canvas */
+/* Canvas de Partículas Prisma */
 #prism-canvas {
   position: fixed;
   inset: 0;
@@ -81,102 +88,86 @@ body {
   height: 100vh;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.65;
+  opacity: 0.6;
 }
 
-/* Subtle Art-Deco Geometric Grid Overlay */
+/* Cuadrícula Sutil de Laboratorio */
 .deco-grid-overlay {
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(212, 175, 55, 0.12) 1px, transparent 0);
-  background-size: 36px 36px;
+    radial-gradient(circle at 1.5px 1.5px, rgba(245, 185, 53, 0.14) 1.5px, transparent 0);
+  background-size: 38px 38px;
 }
 
-/* Logo Blend Helper (Eliminates black JPG background seamlessly!) */
+/* Integración Limpia de Logos sobre Fondos Oscuros */
 .logo-screen-blend {
   mix-blend-mode: screen;
-  filter: contrast(1.08) brightness(1.05);
+  filter: contrast(1.08) brightness(1.06);
 }
 
-/* Floating Pill Navbar (Paranice-inspired Capsule Architecture) */
+/* Navbar Flotante en Cápsulas con Sombra Táctil Caricaturesca */
 .nav-pill-glass {
-  background: rgba(248, 247, 255, 0.92);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1.5px solid rgba(212, 175, 55, 0.35);
+  border: 2.5px solid #18123b;
   box-shadow:
-    0 12px 32px -8px rgba(10, 8, 26, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    0 6px 0 rgba(14, 11, 32, 0.55),
+    0 14px 28px -8px rgba(10, 8, 26, 0.45);
   color: var(--ink-dark);
-  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 header.is-scrolled .nav-pill-glass {
-  background: rgba(22, 19, 43, 0.88);
-  color: #f8fafc;
-  border-color: rgba(0, 240, 255, 0.3);
+  background: rgba(23, 19, 48, 0.94);
+  color: #ffffff;
+  border-color: rgba(34, 238, 252, 0.55);
   box-shadow:
-    0 14px 36px -8px rgba(0, 0, 0, 0.65),
-    0 0 20px rgba(139, 92, 246, 0.2);
+    0 5px 0 rgba(8, 6, 20, 0.8),
+    0 14px 32px -8px rgba(0, 0, 0, 0.65);
 }
 
 header.is-scrolled .nav-link-item {
-  color: #e2e8f0;
+  color: #f1f5f9;
 }
 header.is-scrolled .nav-link-item:hover,
 header.is-scrolled .nav-link-item.active {
-  color: #00f0ff;
-  background: rgba(255, 255, 255, 0.09);
+  color: #22eefc;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .nav-link-item {
-  color: #1e1b4b;
-  font-weight: 700;
+  color: #18123b;
+  font-weight: 800;
   border-radius: 999px;
-  transition: all 0.25s ease;
+  transition: all 0.22s ease;
 }
 .nav-link-item:hover,
 .nav-link-item.active {
-  background: rgba(139, 92, 246, 0.14);
+  background: rgba(139, 92, 246, 0.16);
   color: #5b21b6;
 }
 
-/* Prism Spectrum Gradient Text & Borders */
+/* Gradientes de Texto Alto Contraste */
 .text-prism {
-  background: linear-gradient(95deg, #f6d365 0%, #ff2a85 32%, #8b5cf6 65%, #00f0ff 100%);
+  background: linear-gradient(95deg, #ffe07d 0%, #ff5ca8 34%, #b48eff 68%, #22eefc 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .text-gold-deco {
-  background: linear-gradient(135deg, #fff3c4 0%, #d4af37 50%, #f59e0b 100%);
+  background: linear-gradient(135deg, #fff6d1 0%, #ffd166 52%, #f59e0b 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.prism-border-glow {
-  position: relative;
-}
-.prism-border-glow::before {
-  content: '';
-  position: absolute;
-  inset: -1.5px;
-  border-radius: inherit;
-  padding: 1.5px;
-  background: linear-gradient(135deg, rgba(212,175,55,0.8), rgba(255,42,133,0.6), rgba(0,240,255,0.8));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
 /* ==========================================================================
-   PARANICE-INSPIRED ORGANIC CLOUD / PEDESTAL PRODUCT CARDS
+   TARJETAS PEDESTAL NUBE (ESTILO PARANICE CON BORDES CARTOON NÍTIDOS)
    ========================================================================== */
 .pedestal-card {
   position: relative;
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .pedestal-card:hover {
   transform: translateY(-10px);
@@ -184,91 +175,109 @@ header.is-scrolled .nav-link-item.active {
 
 .pedestal-backdrop {
   border-radius: 36px 36px 28px 28px;
+  border: 2.5px solid #18123b;
+  box-shadow: 0 8px 0 rgba(15, 11, 35, 0.45);
   transition: all 0.35s ease;
 }
 
 .pedestal-cloud-body {
   position: relative;
-  background: #fdfcff;
+  background: #ffffff;
   color: var(--ink-dark);
   border-radius: 32px;
+  border: 2.5px solid #18123b;
   box-shadow:
-    0 18px 40px -12px rgba(11, 8, 28, 0.45),
-    inset 0 -4px 0 rgba(139, 92, 246, 0.12);
-  border: 2px solid rgba(255, 255, 255, 0.9);
+    0 8px 0 #18123b,
+    0 18px 34px -10px rgba(11, 8, 28, 0.5);
 }
 
-/* Playful Cloud Ears on Pedestal Body (Paranice signature look!) */
+/* Orejas de nube laterales características de Paranice */
 .pedestal-cloud-body::before,
 .pedestal-cloud-body::after {
   content: '';
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 26px;
-  height: 68px;
-  background: #fdfcff;
+  width: 24px;
+  height: 64px;
+  background: #ffffff;
   border-radius: 999px;
   z-index: 0;
 }
 .pedestal-cloud-body::before {
-  left: -12px;
+  left: -11px;
+  border-left: 2.5px solid #18123b;
 }
 .pedestal-cloud-body::after {
-  right: -12px;
+  right: -11px;
+  border-right: 2.5px solid #18123b;
 }
 
 .pedestal-cta-btn {
   background: #18123b;
   color: #ffffff;
   border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   font-weight: 800;
   letter-spacing: 0.01em;
-  box-shadow: 0 10px 24px -6px rgba(24, 18, 59, 0.65);
-  transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 6px 0 #0b081d, 0 12px 22px -6px rgba(24, 18, 59, 0.65);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .pedestal-cta-btn:hover {
-  background: linear-gradient(90deg, #ff2a85, #7c3aed, #06b6d4);
-  transform: scale(1.04);
-  box-shadow: 0 14px 28px -6px rgba(124, 58, 237, 0.65);
+  background: linear-gradient(90deg, #ff3b94, #7c3aed, #06b6d4);
+  border-color: #ffffff;
+  transform: translateY(-2px) scale(1.03);
+}
+.pedestal-cta-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #0b081d;
+}
+
+/* Banner Promocional Estrella ($2,000 MXN / mes Mantenimiento Web) */
+.promo-cartoon-box {
+  background: linear-gradient(135deg, rgba(46, 31, 94, 0.96) 0%, rgba(24, 20, 56, 0.98) 100%);
+  border: 3px solid #ffd166;
+  border-radius: 38px;
+  box-shadow:
+    0 12px 0 #110d29,
+    0 26px 55px -12px rgba(0, 0, 0, 0.65),
+    0 0 40px -10px rgba(255, 209, 102, 0.25);
+}
+
+.toon-btn-primary {
+  border: 2.5px solid #14102c;
+  box-shadow: 0 6px 0 #14102c;
+  transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.toon-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 0 #14102c;
+}
+.toon-btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 #14102c;
 }
 
 /* ==========================================================================
-   ILLUSTRATED CYBER-FACTORY ANIMATIONS (HERO & CHARACTERS)
+   ANIMACIONES DE LA FÁBRICA ILUSTRADA Y PERSONAJES
    ========================================================================== */
 @keyframes floatSlow {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(1.5deg); }
+  50% { transform: translateY(-9px) rotate(1.5deg); }
 }
 
 @keyframes floatReverse {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(9px) rotate(-1.5deg); }
-}
-
-@keyframes spinGearSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes spinGearReverse {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  50% { transform: translateY(8px) rotate(-1.5deg); }
 }
 
 @keyframes conveyorDash {
   to { stroke-dashoffset: -48; }
 }
 
-@keyframes pulsePrism {
-  0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.5)); }
-  50% { opacity: 1; filter: drop-shadow(0 0 24px rgba(255, 42, 133, 0.8)); }
-}
-
 @keyframes mascotBounce {
   0%, 100% { transform: translateY(0) scaleY(1); }
-  45% { transform: translateY(-7px) scaleY(1.03); }
-  55% { transform: translateY(-7px) scaleY(1.03); }
+  50% { transform: translateY(-7px) scaleY(1.03); }
 }
 
 @keyframes blinkEyes {
@@ -283,23 +292,20 @@ header.is-scrolled .nav-link-item.active {
 
 .anim-float { animation: floatSlow 5.5s ease-in-out infinite; }
 .anim-float-delay { animation: floatReverse 6.2s ease-in-out infinite; }
-.anim-gear { transform-origin: center; animation: spinGearSlow 28s linear infinite; }
-.anim-gear-rev { transform-origin: center; animation: spinGearReverse 20s linear infinite; }
 .anim-conveyor { animation: conveyorDash 1.6s linear infinite; }
-.anim-prism { animation: pulsePrism 3.5s ease-in-out infinite; }
 .anim-mascot { animation: mascotBounce 3.2s ease-in-out infinite; }
 .anim-blink { transform-origin: center; animation: blinkEyes 4.5s infinite; }
 
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marqueeScroll 34s linear infinite;
+  animation: marqueeScroll 36s linear infinite;
 }
 .marquee-track:hover {
   animation-play-state: paused;
 }
 
-/* Organic Continuous Section Wave Dividers */
+/* Divisores de Onda Continua */
 .wave-divider {
   display: block;
   width: 100%;
@@ -310,52 +316,53 @@ header.is-scrolled .nav-link-item.active {
   pointer-events: none;
 }
 
-/* Interactive Bento Cards (18 Verticals & UVP) */
+/* Tarjetas Bento con Mayor Contraste y Toque Caricaturesco Suave */
 .bento-tech-card {
-  background: rgba(25, 21, 52, 0.72);
+  background: rgba(29, 24, 61, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 26px;
-  transition: all 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 2px solid rgba(255, 255, 255, 0.16);
+  border-radius: 28px;
+  box-shadow: 0 8px 0 rgba(11, 8, 26, 0.65);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .bento-tech-card:hover {
   transform: translateY(-6px);
-  background: rgba(34, 28, 71, 0.9);
-  border-color: rgba(0, 240, 255, 0.45);
+  background: rgba(39, 32, 82, 0.96);
+  border-color: rgba(34, 238, 252, 0.6);
   box-shadow:
-    0 20px 40px -15px rgba(0, 0, 0, 0.65),
-    0 0 28px -6px rgba(139, 92, 246, 0.35);
+    0 12px 0 rgba(11, 8, 26, 0.8),
+    0 20px 38px -12px rgba(0, 0, 0, 0.6);
 }
 
-/* Custom Range Sliders for ROI & Bag Configurator */
+/* Sliders Interactivos */
 input[type="range"].prism-slider {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  height: 12px;
+  height: 14px;
   border-radius: 999px;
-  background: rgba(15, 12, 32, 0.85);
-  border: 1px solid rgba(212, 175, 55, 0.35);
+  background: rgba(14, 11, 30, 0.95);
+  border: 2px solid rgba(245, 185, 53, 0.45);
   outline: none;
   cursor: pointer;
 }
 input[type="range"].prism-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f6d365, #ff2a85, #00f0ff);
-  border: 3px solid #ffffff;
-  box-shadow: 0 4px 14px rgba(0, 240, 255, 0.55);
+  background: linear-gradient(135deg, #ffe07d, #ff3b94, #22eefc);
+  border: 3px solid #14102c;
+  box-shadow: 0 3px 0 #14102c, 0 4px 14px rgba(34, 238, 252, 0.55);
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 input[type="range"].prism-slider::-webkit-slider-thumb:hover {
-  transform: scale(1.18);
+  transform: scale(1.16);
 }
 
-/* Hide Horizontal Scrollbar on Product Carousel */
+/* Ocultar Barra Horizontal en Carrusel */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -364,36 +371,50 @@ input[type="range"].prism-slider::-webkit-slider-thumb:hover {
   scrollbar-width: none;
 }
 
-/* Corner Floating CRT Mascot Assistant (Paranice Bottom-Right Homage!) */
+/* Botón Monitor CRT Esquina Inferior Derecha */
 .crt-assistant-btn {
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
-  filter: drop-shadow(0 14px 24px rgba(8, 6, 22, 0.65));
+  filter: drop-shadow(0 12px 20px rgba(8, 6, 22, 0.7));
 }
 .crt-assistant-btn:hover {
   transform: scale(1.08) rotate(-3deg);
-  filter: drop-shadow(0 16px 30px rgba(0, 240, 255, 0.45));
+  filter: drop-shadow(0 16px 28px rgba(34, 238, 252, 0.45));
 }
 
-/* Speech Bubbles for Footer Trio Mascots */
+/* Globos de Diálogo Interactivos con Cola y Borde Cartoon */
 .speech-bubble {
   position: relative;
-  background: #17113a;
-  color: #ffffff;
-  border: 2px solid rgba(212, 175, 55, 0.65);
-  border-radius: 20px;
-  padding: 10px 20px;
+  background: #ffffff;
+  color: #14102c;
+  border: 3px solid #14102c;
+  border-radius: 22px;
+  padding: 11px 22px;
   font-weight: 800;
-  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.5);
-  transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 6px 0 #14102c;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   cursor: pointer;
 }
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-right: 3px solid #14102c;
+  border-bottom: 3px solid #14102c;
+}
 .speech-bubble:hover {
-  background: linear-gradient(135deg, #7c3aed, #db2777);
-  border-color: #ffffff;
-  transform: translateY(-4px) scale(1.05);
+  background: #ffe07d;
+  transform: translateY(-5px) scale(1.05);
+}
+.speech-bubble:hover::after {
+  background: #ffe07d;
 }
 
-/* Drawer & Modal Transitions */
+/* Transiciones de Modales y Drawer */
 .backdrop-fade {
   opacity: 0;
   pointer-events: none;
@@ -412,7 +433,6 @@ input[type="range"].prism-slider::-webkit-slider-thumb:hover {
   transform: translateX(0);
 }
 
-/* Badge Bounce on Add */
 @keyframes cartPop {
   0% { transform: scale(1); }
   40% { transform: scale(1.45); }
@@ -422,7 +442,6 @@ input[type="range"].prism-slider::-webkit-slider-thumb:hover {
   animation: cartPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Responsive Tweaks */
 @media (max-width: 768px) {
   .pedestal-cloud-body::before,
   .pedestal-cloud-body::after {
