@@ -58,15 +58,15 @@
     let height = (canvas.height = window.innerHeight);
 
     const colors = ["#ffe07d", "#22eefc", "#ff3b94", "#a78bfa", "#34d399"];
-    const count = Math.min(46, Math.floor(width / 34));
+    const count = Math.min(44, Math.max(18, Math.floor(width / 34)));
     const particles = Array.from({ length: count }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
-      r: Math.random() * 2.3 + 0.9,
-      vx: (Math.random() - 0.5) * 0.34,
-      vy: (Math.random() - 0.5) * 0.34,
+      r: Math.random() * 2.2 + 0.9,
+      vx: (Math.random() - 0.5) * 0.32,
+      vy: (Math.random() - 0.5) * 0.32,
       color: colors[Math.floor(Math.random() * colors.length)],
-      alpha: Math.random() * 0.5 + 0.22
+      alpha: Math.random() * 0.5 + 0.2
     }));
 
     let mouse = { x: width * 0.5, y: height * 0.35 };
@@ -83,8 +83,8 @@
     function draw() {
       ctx.clearRect(0, 0, width, height);
 
-      const grad = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 320);
-      grad.addColorStop(0, "rgba(157, 110, 255, 0.12)");
+      const grad = ctx.createRadialGradient(mouse.x, mouse.y, 10, mouse.x, mouse.y, 300);
+      grad.addColorStop(0, "rgba(157, 110, 255, 0.11)");
       grad.addColorStop(0.5, "rgba(34, 238, 252, 0.04)");
       grad.addColorStop(1, "rgba(0, 0, 0, 0)");
       ctx.fillStyle = grad;
@@ -108,13 +108,13 @@
         const dx = p.x - mouse.x;
         const dy = p.y - mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 145) {
+        if (dist < 140) {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouse.x, mouse.y);
           ctx.strokeStyle = p.color;
-          ctx.globalAlpha = (1 - dist / 145) * 0.22;
-          ctx.lineWidth = 0.9;
+          ctx.globalAlpha = (1 - dist / 140) * 0.2;
+          ctx.lineWidth = 0.85;
           ctx.stroke();
         }
       }
@@ -131,7 +131,7 @@
     const header = document.getElementById("main-header");
 
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 45) {
+      if (window.scrollY > 36) {
         header?.classList.add("is-scrolled");
       } else {
         header?.classList.remove("is-scrolled");
@@ -140,7 +140,7 @@
 
     if (typeof window.Lenis !== "undefined") {
       const lenis = new window.Lenis({
-        duration: 1.08,
+        duration: 1.05,
         smoothWheel: true
       });
       function raf(time) {
@@ -172,15 +172,15 @@
       window.gsap.utils.toArray(".reveal-up").forEach((el) => {
         window.gsap.fromTo(
           el,
-          { y: 32, opacity: 0 },
+          { y: 28, opacity: 0 },
           {
             y: 0,
             opacity: 1,
-            duration: 0.72,
+            duration: 0.68,
             ease: "power3.out",
             scrollTrigger: {
               trigger: el,
-              start: "top 88%",
+              start: "top 90%",
               once: true
             }
           }
@@ -190,7 +190,7 @@
   }
 
   // ==========================================================================
-  // 3. CARRUSEL DE PRODUCTOS ESTILO PARANICE (ALTA LEGIBILIDAD + CARTOON)
+  // 3. CARRUSEL DE PRODUCTOS ESTILO PARANICE (OPTIMIZADO MÓVIL + ESCRITORIO)
   // ==========================================================================
   function renderPedestalCarousel() {
     const track = document.getElementById("pedestal-track");
@@ -203,17 +203,17 @@
     track.innerHTML = items.map((item) => {
       const mascotSvg = DATA.mascotSVGs[item.mascot] || DATA.mascotSVGs.prismBot;
       const oldPriceHtml = item.oldPrice
-        ? `<span class="line-through text-slate-500 font-bold text-sm mr-1.5">${formatMXN(item.oldPrice)}</span>`
+        ? `<span class="line-through text-slate-500 font-bold text-xs sm:text-sm mr-1.5">${formatMXN(item.oldPrice)}</span>`
         : "";
       const mainPriceHtml = item.customPriceLabel
         ? item.customPriceLabel
         : formatMXN(item.price);
 
       return `
-        <article class="pedestal-card shrink-0 w-[305px] sm:w-[330px] pt-8 pb-4 select-none flex flex-col justify-between">
+        <article class="pedestal-card snap-center shrink-0 w-[276px] sm:w-[325px] pt-7 pb-3 select-none flex flex-col justify-between">
           <div class="relative">
             <!-- Etiqueta Superior Flotante -->
-            <span class="absolute -top-5 left-3 z-20 px-4 py-1 rounded-full text-xs font-extrabold tracking-wide shadow-md ${item.badgeColor}">
+            <span class="absolute -top-4 left-3 z-20 px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-extrabold tracking-wide shadow-md ${item.badgeColor}">
               ${item.badge}
             </span>
 
@@ -223,18 +223,18 @@
             </div>
 
             <!-- Respaldo Colorido del Producto -->
-            <div class="pedestal-backdrop ${item.backdropBg} pt-9 pb-12 px-5 mx-3 relative z-10">
-              <div class="bg-[#151130] text-white rounded-2xl p-4 border-2 border-slate-900 shadow-xl">
-                <div class="flex items-center justify-between text-xs font-mono-code text-cyan-300 mb-2">
-                  <span class="font-bold">PERSPECTIVE • TECH</span>
+            <div class="pedestal-backdrop ${item.backdropBg} pt-8 pb-11 px-4 sm:px-5 mx-2.5 sm:mx-3 relative z-10">
+              <div class="bg-[#151130] text-white rounded-2xl p-3.5 sm:p-4 border-2 border-slate-900 shadow-xl">
+                <div class="flex items-center justify-between text-[11px] sm:text-xs font-mono-code text-cyan-300 mb-2">
+                  <span class="font-bold">PERSPECTIVE</span>
                   <span class="px-2.5 py-0.5 rounded-full bg-white/15 text-amber-300 font-bold">${item.hours}</span>
                 </div>
-                <p class="text-[13.5px] text-slate-100 leading-relaxed min-h-[58px]">
+                <p class="text-xs sm:text-[13.5px] text-slate-100 leading-relaxed min-h-[54px]">
                   ${item.description}
                 </p>
-                <ul class="mt-3 space-y-1.5 border-t border-white/15 pt-3">
+                <ul class="mt-2.5 space-y-1.5 border-t border-white/15 pt-2.5">
                   ${item.highlights.map((h) => `
-                    <li class="text-xs text-slate-100 flex items-start gap-2 leading-snug">
+                    <li class="text-[11.5px] sm:text-xs text-slate-100 flex items-start gap-1.5 leading-snug">
                       <span class="text-amber-300 font-bold shrink-0">✦</span>
                       <span>${h}</span>
                     </li>
@@ -244,19 +244,19 @@
             </div>
 
             <!-- Cuerpo Nube Blanco de Máximo Contraste -->
-            <div class="pedestal-cloud-body -mt-7 mx-2 px-5 py-5 text-center relative z-20">
+            <div class="pedestal-cloud-body -mt-6 mx-1.5 sm:mx-2 px-4 sm:px-5 py-4 sm:py-5 text-center relative z-20">
               <div class="relative z-10">
-                <h3 class="font-display font-bold text-xl sm:text-[22px] text-slate-950 tracking-tight leading-snug">
+                <h3 class="font-display font-bold text-lg sm:text-[22px] text-slate-950 tracking-tight leading-snug">
                   ${item.title}
                 </h3>
-                <div class="inline-block mt-2 mb-2.5 px-4 py-1 rounded-full text-xs font-extrabold border border-slate-900/15 ${item.pillBg}">
+                <div class="inline-block mt-1.5 mb-2 px-3.5 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs font-extrabold border border-slate-900/15 ${item.pillBg}">
                   ${item.subtitle}
                 </div>
                 <div class="font-tech font-extrabold text-2xl sm:text-[26px] text-slate-950 flex items-baseline justify-center gap-1">
                   ${oldPriceHtml}
                   <span>${mainPriceHtml}</span>
                 </div>
-                <p class="text-xs text-slate-600 font-semibold mt-1">
+                <p class="text-[11px] sm:text-xs text-slate-600 font-semibold mt-1">
                   ${item.priceNote}
                 </p>
               </div>
@@ -264,14 +264,14 @@
           </div>
 
           <!-- Botón Cápsula Inferior -->
-          <div class="mt-4 px-4 relative z-20">
+          <div class="mt-3.5 px-3 sm:px-4 relative z-20">
             <button
               type="button"
               data-add-id="${item.id}"
               data-add-title="${item.title} (${item.subtitle})"
               data-add-price="${item.price}"
               data-add-custom="${item.customPriceLabel || ""}"
-              class="pedestal-cta-btn w-full py-3.5 px-5 text-sm flex items-center justify-center gap-2 cursor-pointer"
+              class="pedestal-cta-btn w-full py-3 sm:py-3.5 px-4 text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>${item.ctaText}</span>
             </button>
@@ -311,8 +311,8 @@
         tabBtns.forEach((b) => {
           const active = b === btn;
           b.className = active
-            ? "px-5 py-2.5 rounded-full text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-md transition cursor-pointer"
-            : "px-5 py-2.5 rounded-full text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition cursor-pointer";
+            ? "shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-md transition cursor-pointer"
+            : "shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition cursor-pointer";
         });
         renderPedestalCarousel();
         if (track) track.scrollTo({ left: 0, behavior: "smooth" });
@@ -320,10 +320,10 @@
     });
 
     prevBtn?.addEventListener("click", () => {
-      track?.scrollBy({ left: -350, behavior: "smooth" });
+      track?.scrollBy({ left: -320, behavior: "smooth" });
     });
     nextBtn?.addEventListener("click", () => {
-      track?.scrollBy({ left: 350, behavior: "smooth" });
+      track?.scrollBy({ left: 320, behavior: "smooth" });
     });
 
     if (track) {
@@ -348,28 +348,38 @@
   }
 
   // ==========================================================================
-  // 4. CATÁLOGO INTERACTIVO DE LAS 17 VERTICALES OFICIALES
+  // 4. CATÁLOGO DE 17 SERVICIOS AGRUPADO DE 4 EN 4 POR FILA HORIZONTAL
+  //    En móvil: filas horizontales deslizables (evita bajar 17 tarjetas)
+  //    En PC (lg): filas horizontales de 4 columnas limpias
   // ==========================================================================
   function getCategoryMeta(cat) {
     if (cat === "Desarrollo") {
       return {
-        label: "Desarrollo • $799/h",
+        label: "Desarrollo",
         badgeClass: "bg-cyan-400/20 text-cyan-200 border-cyan-300/40",
         accentText: "text-cyan-300"
       };
     }
     if (cat === "Diseno") {
       return {
-        label: "Diseño & Arte • $699/h",
+        label: "Diseño & Arte",
         badgeClass: "bg-fuchsia-400/20 text-fuchsia-200 border-fuchsia-300/40",
         accentText: "text-fuchsia-300"
       };
     }
     return {
-      label: "Estrategia Ops • $999/h",
+      label: "Estrategia Ops",
       badgeClass: "bg-amber-400/20 text-amber-200 border-amber-300/40",
       accentText: "text-amber-300"
     };
+  }
+
+  function chunkArray(arr, size) {
+    const chunks = [];
+    for (let i = 0; i < arr.length; i += size) {
+      chunks.push(arr.slice(i, i + size));
+    }
+    return chunks;
   }
 
   function renderVerticals() {
@@ -386,15 +396,15 @@
     });
 
     if (countLabel) {
-      countLabel.textContent = `Mostrando ${filtered.length} de ${totalCount} líneas de servicio tecnológico y digital`;
+      countLabel.textContent = `Mostrando ${filtered.length} de ${totalCount} servicios (organizados de 4 en 4 por fila)`;
     }
 
     if (filtered.length === 0) {
       grid.innerHTML = `
-        <div class="col-span-full text-center py-12 bento-tech-card p-8">
-          <p class="text-xl font-display font-bold text-white mb-2">No encontramos servicios con ese término</p>
-          <p class="text-base text-slate-200 mb-5">Prueba buscando "Web", "IA", "Cloud", "Logística", "Apps" o "E-commerce".</p>
-          <button id="reset-verticals-btn" class="px-6 py-3 rounded-full bg-amber-300 text-slate-950 text-sm font-extrabold border-2 border-slate-950 cursor-pointer">Ver todos los servicios</button>
+        <div class="text-center py-10 bento-tech-card p-6 sm:p-8">
+          <p class="text-lg sm:text-xl font-display font-bold text-white mb-2">No encontramos servicios con ese término</p>
+          <p class="text-sm sm:text-base text-slate-200 mb-5">Prueba buscando "Web", "IA", "Cloud", "Logística", "Apps" o "E-commerce".</p>
+          <button id="reset-verticals-btn" class="px-6 py-2.5 rounded-full bg-amber-300 text-slate-950 text-sm font-extrabold border-2 border-slate-950 cursor-pointer">Ver los 17 servicios</button>
         </div>
       `;
       document.getElementById("reset-verticals-btn")?.addEventListener("click", () => {
@@ -408,57 +418,86 @@
       return;
     }
 
-    grid.innerHTML = filtered.map((v) => {
-      const meta = getCategoryMeta(v.category);
-      const numStr = String(v.num).padStart(2, "0");
-      return `
-        <article class="bento-tech-card p-6 sm:p-7 flex flex-col justify-between group">
-          <div>
-            <div class="flex items-center justify-between gap-2 mb-4">
-              <span class="font-mono-code text-xs font-bold px-3 py-1 rounded-xl bg-white/10 text-white border border-white/15">
-                #${numStr}
-              </span>
-              <span class="text-xs font-extrabold px-3.5 py-1 rounded-full border ${meta.badgeClass}">
-                ${meta.label}
-              </span>
-            </div>
+    // Agrupar estrictamente de 4 en 4 servicios por fila horizontal
+    const rowsOfFour = chunkArray(filtered, 4);
 
-            <div class="flex items-start gap-3.5 mb-3.5">
-              <div class="w-12 h-12 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:border-cyan-300 transition">
-                <i data-lucide="${v.icon}" class="w-6 h-6 ${meta.accentText}"></i>
-              </div>
-              <h3 class="font-display font-bold text-xl text-white leading-snug group-hover:text-cyan-200 transition">
-                ${v.name}
-              </h3>
-            </div>
+    grid.innerHTML = rowsOfFour.map((rowItems, rowIndex) => {
+      const firstNum = String(rowItems[0].num).padStart(2, "0");
+      const lastNum = String(rowItems[rowItems.length - 1].num).padStart(2, "0");
 
-            <p class="text-[15px] text-slate-100/95 leading-relaxed mb-6">
-              ${v.desc}
-            </p>
-          </div>
-
-          <div class="pt-4 border-t border-white/15 flex items-center justify-between gap-3">
+      const cardsHtml = rowItems.map((v) => {
+        const meta = getCategoryMeta(v.category);
+        const numStr = String(v.num).padStart(2, "0");
+        return `
+          <article class="bento-tech-card snap-start shrink-0 w-[252px] sm:w-[275px] lg:w-auto p-4 sm:p-5 flex flex-col justify-between group">
             <div>
-              <span class="block text-xs uppercase tracking-wider text-slate-300 font-semibold">Tarifa por Hora</span>
-              <span class="font-tech font-extrabold text-2xl text-white">${formatMXN(v.price)} <small class="text-xs font-semibold text-slate-300">MXN/h</small></span>
+              <div class="flex items-center justify-between gap-1.5 mb-3">
+                <span class="font-mono-code text-[11px] font-bold px-2.5 py-0.5 rounded-lg bg-white/10 text-white border border-white/15">
+                  #${numStr}
+                </span>
+                <span class="text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border ${meta.badgeClass}">
+                  ${meta.label}
+                </span>
+              </div>
+
+              <div class="flex items-start gap-2.5 mb-2.5">
+                <div class="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:border-cyan-300 transition">
+                  <i data-lucide="${v.icon}" class="w-5 h-5 ${meta.accentText}"></i>
+                </div>
+                <h3 class="font-display font-bold text-base sm:text-lg text-white leading-snug group-hover:text-cyan-200 transition">
+                  ${v.name}
+                </h3>
+              </div>
+
+              <p data-toggle-desc class="text-xs sm:text-[13.5px] text-slate-200 leading-relaxed line-clamp-3 lg:line-clamp-4 mb-4 cursor-pointer" title="Toca para expandir">
+                ${v.desc}
+              </p>
             </div>
-            <button
-              type="button"
-              data-vert-id="vert-${v.num}"
-              data-vert-name="Servicio #${numStr}: ${v.name} (5h base)"
-              data-vert-price="${v.price * 5}"
-              class="px-4 py-2.5 rounded-full bg-white text-slate-950 hover:bg-amber-300 text-xs sm:text-sm font-extrabold border-2 border-slate-950 shadow transition cursor-pointer"
-            >
-              + Cotizar 5h
-            </button>
+
+            <div class="pt-3 border-t border-white/15 flex items-center justify-between gap-2">
+              <div>
+                <span class="block text-[10px] uppercase tracking-wider text-slate-300 font-semibold">Por Hora</span>
+                <span class="font-tech font-extrabold text-lg sm:text-xl text-white">${formatMXN(v.price)} <small class="text-[11px] font-semibold text-slate-300">MXN</small></span>
+              </div>
+              <button
+                type="button"
+                data-vert-id="vert-${v.num}"
+                data-vert-name="Servicio #${numStr}: ${v.name} (5h base)"
+                data-vert-price="${v.price * 5}"
+                class="px-3.5 py-2 rounded-full bg-white text-slate-950 hover:bg-amber-300 text-xs font-extrabold border-2 border-slate-950 shadow transition cursor-pointer shrink-0"
+              >
+                + Cotizar 5h
+              </button>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      return `
+        <div class="space-y-2">
+          <!-- Indicador compacto de fila en móvil para guiar el deslizamiento lateral -->
+          <div class="flex lg:hidden items-center justify-between px-1 text-[11px] font-mono-code text-cyan-200/90">
+            <span class="font-bold">Bloque ${rowIndex + 1} (#${firstNum}–#${lastNum})</span>
+            ${rowItems.length > 1 ? `<span class="text-amber-300">Desliza → (${rowItems.length} servicios)</span>` : ""}
           </div>
-        </article>
+          <!-- Fila Horizontal: deslizable en móvil, 4 columnas exactas en escritorio -->
+          <div class="flex lg:grid lg:grid-cols-4 gap-3.5 sm:gap-4 overflow-x-auto lg:overflow-visible snap-x snap-mandatory no-scrollbar pb-2 lg:pb-0 -mx-1 px-1">
+            ${cardsHtml}
+          </div>
+        </div>
       `;
     }).join("");
 
     if (typeof window.lucide !== "undefined") {
       window.lucide.createIcons();
     }
+
+    // Permitir expandir descripción en móvil al tocar el párrafo
+    grid.querySelectorAll("[data-toggle-desc]").forEach((p) => {
+      p.addEventListener("click", () => {
+        p.classList.toggle("line-clamp-3");
+      });
+    });
 
     grid.querySelectorAll("[data-vert-id]").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -479,8 +518,8 @@
     document.querySelectorAll("[data-vert-filter]").forEach((b) => {
       const active = b.getAttribute("data-vert-filter") === state.activeVerticalCategory;
       b.className = active
-        ? "px-4 py-2.5 rounded-full text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-md transition cursor-pointer"
-        : "px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white border border-white/15 hover:bg-white/20 transition cursor-pointer";
+        ? "shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-md transition cursor-pointer"
+        : "shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white border border-white/15 hover:bg-white/20 transition cursor-pointer";
     });
   }
 
@@ -501,7 +540,7 @@
   }
 
   // ==========================================================================
-  // 5. PROMO BANNER $2,000 MXN/MES & CALCULADORA GAMIFICADA DE ROI
+  // 5. PROMO BANNER $2,000 MXN/MES & CALCULADORA GAMIFICADA (MÓVIL + PC)
   // ==========================================================================
   function initPromoSectionEvents() {
     const promoAddBtn = document.getElementById("btn-add-web-promo");
@@ -529,21 +568,22 @@
   }
 
   function getTierByHours(totalHours) {
-    if (totalHours >= 120) return { name: "Enterprise Custom (120h+)", discount: 0.20, anticipation: "50% anticipo / 50% contra avances", mood: "🚀 ¡Modo Full Hub Activado! (20% OFF)" };
-    if (totalHours >= 80) return { name: "Business Partner (80h+)", discount: 0.15, anticipation: "50% anticipo / 50% contra avances", mood: "🛸 ¡Célula Tecnológica Dedicada! (15% OFF)" };
-    if (totalHours >= 40) return { name: "Pro Scale (40h+)", discount: 0.12, anticipation: "50% anticipo / 50% contra avances", mood: "⚡ ¡Escalamiento Digital Acelerado! (12% OFF)" };
-    if (totalHours >= 20) return { name: "Growth Pack (20h+)", discount: 0.08, anticipation: "100% anticipo • Arranque inmediato", mood: "✨ ¡Impulso & Automatización! (8% OFF)" };
-    if (totalHours >= 5) return { name: "Starter / Jumpstart (5h+)", discount: 0.05, anticipation: "100% anticipo • Arranque inmediato", mood: "🎯 ¡Validación Rápida Jumpstart! (5% OFF)" };
-    return { name: "Horas Sueltas (<5h)", discount: 0, anticipation: "100% anticipo", mood: "💡 Elige 5+ horas para activar descuento Starter (5% OFF)" };
+    if (totalHours >= 120) return { name: "Enterprise Custom (120h+)", short: "20% OFF", discount: 0.20, anticipation: "50% anticipo / 50% contra avances", mood: "🚀 ¡Modo Full Hub Activado! (20% OFF)" };
+    if (totalHours >= 80) return { name: "Business Partner (80h+)", short: "15% OFF", discount: 0.15, anticipation: "50% anticipo / 50% contra avances", mood: "🛸 ¡Célula Tecnológica Dedicada! (15% OFF)" };
+    if (totalHours >= 40) return { name: "Pro Scale (40h+)", short: "12% OFF", discount: 0.12, anticipation: "50% anticipo / 50% contra avances", mood: "⚡ ¡Escalamiento Digital Acelerado! (12% OFF)" };
+    if (totalHours >= 20) return { name: "Growth Pack (20h+)", short: "8% OFF", discount: 0.08, anticipation: "100% anticipo • Arranque inmediato", mood: "✨ ¡Impulso & Automatización! (8% OFF)" };
+    if (totalHours >= 5) return { name: "Starter / Jumpstart (5h+)", short: "5% OFF", discount: 0.05, anticipation: "100% anticipo • Arranque inmediato", mood: "🎯 ¡Validación Rápida Jumpstart! (5% OFF)" };
+    return { name: "Horas Sueltas (<5h)", short: "0% OFF", discount: 0, anticipation: "100% anticipo", mood: "💡 Elige 5+ horas para activar descuento Starter (5% OFF)" };
   }
 
   function updateCalculatorUI() {
     const { devHours, designHours, stratHours, retWebPromo, retTech, retEco } = state.calc;
     const totalHours = devHours + designHours + stratHours;
-    const rawHoursSubtotal =
-      devHours * DATA.hourlyRates.Desarrollo +
-      designHours * DATA.hourlyRates.Diseno +
-      stratHours * DATA.hourlyRates.Estrategicas;
+
+    const devSubtotal = devHours * DATA.hourlyRates.Desarrollo;
+    const designSubtotal = designHours * DATA.hourlyRates.Diseno;
+    const stratSubtotal = stratHours * DATA.hourlyRates.Estrategicas;
+    const rawHoursSubtotal = devSubtotal + designSubtotal + stratSubtotal;
 
     const tier = getTierByHours(totalHours);
     const discountAmount = rawHoursSubtotal * tier.discount;
@@ -562,9 +602,23 @@
       if (el) el.textContent = txt;
     };
 
+    // Etiquetas en cada slider
     setTxt("val-dev-hours", `${devHours} h`);
     setTxt("val-design-hours", `${designHours} h`);
     setTxt("val-strat-hours", `${stratHours} h`);
+    setTxt("val-dev-mxn", formatMXN(devSubtotal));
+    setTxt("val-design-mxn", formatMXN(designSubtotal));
+    setTxt("val-strat-mxn", formatMXN(stratSubtotal));
+
+    // Sincronizar valor de los inputs range cuando se usan botones +/- móviles
+    const sDev = document.getElementById("slider-dev");
+    const sDes = document.getElementById("slider-design");
+    const sStr = document.getElementById("slider-strat");
+    if (sDev && Number(sDev.value) !== devHours) sDev.value = devHours;
+    if (sDes && Number(sDes.value) !== designHours) sDes.value = designHours;
+    if (sStr && Number(sStr.value) !== stratHours) sStr.value = stratHours;
+
+    // Panel Resumen Principal (PC + Móvil inferior)
     setTxt("calc-total-hours", `${totalHours} hrs`);
     setTxt("calc-tier-badge", tier.name);
     setTxt("calc-subtotal", formatMXN(rawHoursSubtotal));
@@ -575,10 +629,42 @@
     setTxt("calc-hidden-savings", formatMXN(estimatedSavings30));
     setTxt("calc-mascot-mood", tier.mood);
 
+    // Marcador Flotante en Vivo Exclusivo Móvil (para ver el precio mientras ajustas sliders)
+    setTxt("mobile-calc-hours", `${totalHours} hrs`);
+    setTxt("mobile-calc-tier", tier.short);
+    setTxt("mobile-calc-price", formatMXN(grandTotal));
+
     const capBar = document.getElementById("calc-cap-bar");
     const capPct = Math.min(100, Math.round((totalHours / DATA.brand.monthlyCapHours) * 100));
     if (capBar) capBar.style.width = `${capPct}%`;
-    setTxt("calc-cap-label", `${totalHours} / 120 hrs mensuales disponibles (${capPct}%)`);
+    setTxt("calc-cap-label", `${totalHours} / 120 hrs (${capPct}%)`);
+  }
+
+  function addCurrentCalculatorToCart() {
+    const { devHours, designHours, stratHours, retWebPromo, retTech, retEco } = state.calc;
+    const totalHours = devHours + designHours + stratHours;
+    if (totalHours === 0 && !retWebPromo && !retTech && !retEco) return;
+
+    if (totalHours > 0) {
+      const raw =
+        devHours * DATA.hourlyRates.Desarrollo +
+        designHours * DATA.hourlyRates.Diseno +
+        stratHours * DATA.hourlyRates.Estrategicas;
+      const tier = getTierByHours(totalHours);
+      const finalBagPrice = Math.round(raw * (1 - tier.discount));
+
+      addToCart({
+        id: `custom-bag-${devHours}-${designHours}-${stratHours}`,
+        title: `Bolsa a Medida ${totalHours}h (${devHours}h Dev / ${designHours}h Diseño / ${stratHours}h Estrategia Ops) • ${tier.name}`,
+        price: finalBagPrice,
+        qty: 1
+      });
+    }
+    if (retWebPromo) addToCart({ id: "ret-web-promo", title: "Promo Mantenimiento Mensual Páginas Web", price: 2000, qty: 1 });
+    if (retTech) addToCart({ id: "ret-tech-support", title: "Soporte Servidores TI (95% Uptime)", price: 499, qty: 1 });
+    if (retEco) addToCart({ id: "ret-ecosystem", title: "Gestión Ecosistema Digital", price: 999, qty: 1 });
+
+    openCartDrawer();
   }
 
   function initCalculator() {
@@ -593,6 +679,17 @@
     bindSlider("slider-design", "designHours");
     bindSlider("slider-strat", "stratHours");
 
+    // Botones táctiles +/-5h para facilitar ajuste fino en pantallas móviles
+    document.querySelectorAll("[data-step-target]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const key = btn.getAttribute("data-step-target");
+        const delta = Number(btn.getAttribute("data-step-delta")) || 0;
+        const max = Number(btn.getAttribute("data-step-max")) || 80;
+        state.calc[key] = Math.min(max, Math.max(0, (state.calc[key] || 0) + delta));
+        updateCalculatorUI();
+      });
+    });
+
     const bindCheck = (id, key) => {
       document.getElementById(id)?.addEventListener("change", (e) => {
         state.calc[key] = e.target.checked;
@@ -604,32 +701,8 @@
     bindCheck("chk-ret-tech", "retTech");
     bindCheck("chk-ret-eco", "retEco");
 
-    document.getElementById("btn-add-custom-bag")?.addEventListener("click", () => {
-      const { devHours, designHours, stratHours, retWebPromo, retTech, retEco } = state.calc;
-      const totalHours = devHours + designHours + stratHours;
-      if (totalHours === 0 && !retWebPromo && !retTech && !retEco) return;
-
-      if (totalHours > 0) {
-        const raw =
-          devHours * DATA.hourlyRates.Desarrollo +
-          designHours * DATA.hourlyRates.Diseno +
-          stratHours * DATA.hourlyRates.Estrategicas;
-        const tier = getTierByHours(totalHours);
-        const finalBagPrice = Math.round(raw * (1 - tier.discount));
-
-        addToCart({
-          id: `custom-bag-${devHours}-${designHours}-${stratHours}`,
-          title: `Bolsa a Medida ${totalHours}h (${devHours}h Dev / ${designHours}h Diseño / ${stratHours}h Estrategia Ops) • ${tier.name}`,
-          price: finalBagPrice,
-          qty: 1
-        });
-      }
-      if (retWebPromo) addToCart({ id: "ret-web-promo", title: "Promo Mantenimiento Mensual Páginas Web", price: 2000, qty: 1 });
-      if (retTech) addToCart({ id: "ret-tech-support", title: "Soporte Servidores TI (95% Uptime)", price: 499, qty: 1 });
-      if (retEco) addToCart({ id: "ret-ecosystem", title: "Gestión Ecosistema Digital", price: 999, qty: 1 });
-
-      openCartDrawer();
-    });
+    document.getElementById("btn-add-custom-bag")?.addEventListener("click", addCurrentCalculatorToCart);
+    document.getElementById("btn-mobile-quick-add")?.addEventListener("click", addCurrentCalculatorToCart);
 
     updateCalculatorUI();
   }
@@ -647,15 +720,15 @@
     btnPersp.addEventListener("click", () => {
       panelPersp.classList.remove("hidden");
       panelTrad.classList.add("hidden");
-      btnPersp.className = "px-5 py-2.5 rounded-full text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-lg cursor-pointer transition";
-      btnTrad.className = "px-5 py-2.5 rounded-full text-sm font-bold text-slate-200 hover:text-white cursor-pointer transition";
+      btnPersp.className = "px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-lg cursor-pointer transition";
+      btnTrad.className = "px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-slate-200 hover:text-white cursor-pointer transition";
     });
 
     btnTrad.addEventListener("click", () => {
       panelTrad.classList.remove("hidden");
       panelPersp.classList.add("hidden");
-      btnTrad.className = "px-5 py-2.5 rounded-full text-sm font-extrabold bg-rose-500 text-white border-2 border-slate-950 shadow-lg cursor-pointer transition";
-      btnPersp.className = "px-5 py-2.5 rounded-full text-sm font-bold text-slate-200 hover:text-white cursor-pointer transition";
+      btnTrad.className = "px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-extrabold bg-rose-500 text-white border-2 border-slate-950 shadow-lg cursor-pointer transition";
+      btnPersp.className = "px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-slate-200 hover:text-white cursor-pointer transition";
     });
   }
 
@@ -711,9 +784,9 @@
     }
 
     listEl.innerHTML = state.cart.map((item) => `
-      <div class="p-4 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-between gap-3">
+      <div class="p-3.5 sm:p-4 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-between gap-3">
         <div class="min-w-0 flex-1">
-          <p class="text-sm font-bold text-white leading-snug">${item.title}</p>
+          <p class="text-xs sm:text-sm font-bold text-white leading-snug">${item.title}</p>
           <p class="text-xs text-cyan-300 font-mono-code font-bold mt-1">
             ${item.customLabel ? item.customLabel : formatMXN(item.price * item.qty) + " MXN"}
           </p>
@@ -825,8 +898,8 @@
     document.querySelectorAll("[data-policy-tab]").forEach((btn) => {
       const isAct = btn.getAttribute("data-policy-tab") === tabKey;
       btn.className = isAct
-        ? "px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 cursor-pointer transition"
-        : "px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white/10 text-slate-200 hover:bg-white/20 cursor-pointer transition";
+        ? "px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 cursor-pointer transition"
+        : "px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white/10 text-slate-200 hover:bg-white/20 cursor-pointer transition";
     });
   }
 
@@ -875,6 +948,7 @@
 
     function openCmd() {
       if (!cmdModal) return;
+      document.getElementById("mobile-menu-panel")?.classList.add("hidden");
       cmdModal.classList.add("open");
       renderCmdResults("");
       setTimeout(() => cmdInput?.focus(), 60);
@@ -899,6 +973,7 @@
         closePolicyModal();
         closeCartDrawer();
         document.getElementById("crt-bot-popover")?.classList.add("hidden");
+        document.getElementById("mobile-menu-panel")?.classList.add("hidden");
       }
     });
 
@@ -923,11 +998,11 @@
           data-cmd-idx="${idx}"
           data-cmd-href="${m.href || ""}"
           data-cmd-policy="${m.policy || ""}"
-          class="w-full text-left px-4 py-3 rounded-xl hover:bg-white/10 flex items-center justify-between gap-3 transition cursor-pointer"
+          class="w-full text-left px-3.5 py-3 rounded-xl hover:bg-white/10 flex items-center justify-between gap-3 transition cursor-pointer"
         >
-          <div>
-            <span class="text-xs font-mono-code uppercase px-2.5 py-0.5 rounded bg-violet-500/25 text-violet-200 mr-2 font-bold">${m.type}</span>
-            <span class="text-sm font-bold text-white">${m.title}</span>
+          <div class="min-w-0">
+            <span class="text-[10px] sm:text-xs font-mono-code uppercase px-2 py-0.5 rounded bg-violet-500/25 text-violet-200 mr-1.5 font-bold">${m.type}</span>
+            <span class="text-xs sm:text-sm font-bold text-white">${m.title}</span>
           </div>
           <span class="text-xs font-mono-code text-cyan-300 font-bold shrink-0">${m.sub}</span>
         </button>
@@ -992,6 +1067,14 @@
     });
     mobilePanel?.querySelectorAll("a").forEach((a) => {
       a.addEventListener("click", () => mobilePanel.classList.add("hidden"));
+    });
+
+    // Cerrar menú móvil al tocar fuera
+    document.addEventListener("click", (e) => {
+      if (!mobilePanel || mobilePanel.classList.contains("hidden")) return;
+      if (!mobilePanel.contains(e.target) && !mobileBtn?.contains(e.target)) {
+        mobilePanel.classList.add("hidden");
+      }
     });
 
     const form = document.getElementById("perspective-contact-form");

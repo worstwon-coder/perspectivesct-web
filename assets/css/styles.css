@@ -1,7 +1,7 @@
 /* ==========================================================================
    PERSPECTIVE SCT — PLAYFUL CYBER-FACTORY & HIGH-LEGIBILITY STYLESHEET
    Inspiración dinámica: paranice.co (bloque continuo vivo, pedestales, mascotas)
-   Estética: Cartoon-Tech De Lujo + Alto Contraste + Tipografía Ultra Legible
+   Estética: Cartoon-Tech De Lujo + Alto Contraste + Optimización Móvil Integral
    ========================================================================== */
 
 :root {
@@ -111,19 +111,19 @@ body {
   -webkit-backdrop-filter: blur(18px);
   border: 2.5px solid #18123b;
   box-shadow:
-    0 6px 0 rgba(14, 11, 32, 0.55),
-    0 14px 28px -8px rgba(10, 8, 26, 0.45);
+    0 5px 0 rgba(14, 11, 32, 0.55),
+    0 12px 24px -8px rgba(10, 8, 26, 0.45);
   color: var(--ink-dark);
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 header.is-scrolled .nav-pill-glass {
-  background: rgba(23, 19, 48, 0.94);
+  background: rgba(23, 19, 48, 0.95);
   color: #ffffff;
   border-color: rgba(34, 238, 252, 0.55);
   box-shadow:
-    0 5px 0 rgba(8, 6, 20, 0.8),
-    0 14px 32px -8px rgba(0, 0, 0, 0.65);
+    0 4px 0 rgba(8, 6, 20, 0.8),
+    0 12px 28px -8px rgba(0, 0, 0, 0.65);
 }
 
 header.is-scrolled .nav-link-item {
@@ -133,6 +133,10 @@ header.is-scrolled .nav-link-item:hover,
 header.is-scrolled .nav-link-item.active {
   color: #22eefc;
   background: rgba(255, 255, 255, 0.12);
+}
+
+header.is-scrolled .nav-cart-icon {
+  color: #22eefc;
 }
 
 .nav-link-item {
@@ -169,14 +173,16 @@ header.is-scrolled .nav-link-item.active {
   position: relative;
   transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.pedestal-card:hover {
-  transform: translateY(-10px);
+@media (min-width: 1024px) {
+  .pedestal-card:hover {
+    transform: translateY(-10px);
+  }
 }
 
 .pedestal-backdrop {
-  border-radius: 36px 36px 28px 28px;
+  border-radius: 34px 34px 26px 26px;
   border: 2.5px solid #18123b;
-  box-shadow: 0 8px 0 rgba(15, 11, 35, 0.45);
+  box-shadow: 0 7px 0 rgba(15, 11, 35, 0.45);
   transition: all 0.35s ease;
 }
 
@@ -184,11 +190,11 @@ header.is-scrolled .nav-link-item.active {
   position: relative;
   background: #ffffff;
   color: var(--ink-dark);
-  border-radius: 32px;
+  border-radius: 30px;
   border: 2.5px solid #18123b;
   box-shadow:
-    0 8px 0 #18123b,
-    0 18px 34px -10px rgba(11, 8, 28, 0.5);
+    0 7px 0 #18123b,
+    0 16px 30px -10px rgba(11, 8, 28, 0.5);
 }
 
 /* Orejas de nube laterales características de Paranice */
@@ -226,7 +232,7 @@ header.is-scrolled .nav-link-item.active {
 .pedestal-cta-btn:hover {
   background: linear-gradient(90deg, #ff3b94, #7c3aed, #06b6d4);
   border-color: #ffffff;
-  transform: translateY(-2px) scale(1.03);
+  transform: translateY(-2px) scale(1.02);
 }
 .pedestal-cta-btn:active {
   transform: translateY(2px);
@@ -237,25 +243,25 @@ header.is-scrolled .nav-link-item.active {
 .promo-cartoon-box {
   background: linear-gradient(135deg, rgba(46, 31, 94, 0.96) 0%, rgba(24, 20, 56, 0.98) 100%);
   border: 3px solid #ffd166;
-  border-radius: 38px;
+  border-radius: 36px;
   box-shadow:
-    0 12px 0 #110d29,
-    0 26px 55px -12px rgba(0, 0, 0, 0.65),
-    0 0 40px -10px rgba(255, 209, 102, 0.25);
+    0 10px 0 #110d29,
+    0 24px 50px -12px rgba(0, 0, 0, 0.65),
+    0 0 36px -10px rgba(255, 209, 102, 0.25);
 }
 
 .toon-btn-primary {
   border: 2.5px solid #14102c;
-  box-shadow: 0 6px 0 #14102c;
+  box-shadow: 0 5px 0 #14102c;
   transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .toon-btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 9px 0 #14102c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #14102c;
 }
 .toon-btn-primary:active {
   transform: translateY(2px);
-  box-shadow: 0 3px 0 #14102c;
+  box-shadow: 0 2px 0 #14102c;
 }
 
 /* ==========================================================================
@@ -263,12 +269,12 @@ header.is-scrolled .nav-link-item.active {
    ========================================================================== */
 @keyframes floatSlow {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-9px) rotate(1.5deg); }
+  50% { transform: translateY(-8px) rotate(1.2deg); }
 }
 
 @keyframes floatReverse {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(8px) rotate(-1.5deg); }
+  50% { transform: translateY(7px) rotate(-1.2deg); }
 }
 
 @keyframes conveyorDash {
@@ -277,7 +283,7 @@ header.is-scrolled .nav-link-item.active {
 
 @keyframes mascotBounce {
   0%, 100% { transform: translateY(0) scaleY(1); }
-  50% { transform: translateY(-7px) scaleY(1.03); }
+  50% { transform: translateY(-6px) scaleY(1.03); }
 }
 
 @keyframes blinkEyes {
@@ -316,23 +322,25 @@ header.is-scrolled .nav-link-item.active {
   pointer-events: none;
 }
 
-/* Tarjetas Bento con Mayor Contraste y Toque Caricaturesco Suave */
+/* Tarjetas Bento con Mayor Contraste */
 .bento-tech-card {
-  background: rgba(29, 24, 61, 0.88);
+  background: rgba(29, 24, 61, 0.9);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 2px solid rgba(255, 255, 255, 0.16);
-  border-radius: 28px;
-  box-shadow: 0 8px 0 rgba(11, 8, 26, 0.65);
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  border-radius: 26px;
+  box-shadow: 0 7px 0 rgba(11, 8, 26, 0.65);
+  transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.bento-tech-card:hover {
-  transform: translateY(-6px);
-  background: rgba(39, 32, 82, 0.96);
-  border-color: rgba(34, 238, 252, 0.6);
-  box-shadow:
-    0 12px 0 rgba(11, 8, 26, 0.8),
-    0 20px 38px -12px rgba(0, 0, 0, 0.6);
+@media (min-width: 1024px) {
+  .bento-tech-card:hover {
+    transform: translateY(-5px);
+    background: rgba(39, 32, 82, 0.96);
+    border-color: rgba(34, 238, 252, 0.6);
+    box-shadow:
+      0 11px 0 rgba(11, 8, 26, 0.8),
+      0 18px 34px -12px rgba(0, 0, 0, 0.6);
+  }
 }
 
 /* Sliders Interactivos */
@@ -346,6 +354,7 @@ input[type="range"].prism-slider {
   border: 2px solid rgba(245, 185, 53, 0.45);
   outline: none;
   cursor: pointer;
+  touch-action: pan-y;
 }
 input[type="range"].prism-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -362,7 +371,7 @@ input[type="range"].prism-slider::-webkit-slider-thumb:hover {
   transform: scale(1.16);
 }
 
-/* Ocultar Barra Horizontal en Carrusel */
+/* Ocultar Barra Horizontal en Carruseles y Filas */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -374,7 +383,7 @@ input[type="range"].prism-slider::-webkit-slider-thumb:hover {
 /* Botón Monitor CRT Esquina Inferior Derecha */
 .crt-assistant-btn {
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
-  filter: drop-shadow(0 12px 20px rgba(8, 6, 22, 0.7));
+  filter: drop-shadow(0 10px 18px rgba(8, 6, 22, 0.7));
 }
 .crt-assistant-btn:hover {
   transform: scale(1.08) rotate(-3deg);
@@ -387,28 +396,28 @@ input[type="range"].prism-slider::-webkit-slider-thumb:hover {
   background: #ffffff;
   color: #14102c;
   border: 3px solid #14102c;
-  border-radius: 22px;
-  padding: 11px 22px;
+  border-radius: 20px;
+  padding: 10px 18px;
   font-weight: 800;
-  box-shadow: 0 6px 0 #14102c;
+  box-shadow: 0 5px 0 #14102c;
   transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   cursor: pointer;
 }
 .speech-bubble::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -9px;
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   background: #ffffff;
   border-right: 3px solid #14102c;
   border-bottom: 3px solid #14102c;
 }
 .speech-bubble:hover {
   background: #ffe07d;
-  transform: translateY(-5px) scale(1.05);
+  transform: translateY(-4px) scale(1.04);
 }
 .speech-bubble:hover::after {
   background: #ffe07d;
@@ -442,10 +451,59 @@ input[type="range"].prism-slider::-webkit-slider-thumb:hover {
   animation: cartPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-@media (max-width: 768px) {
+/* ==========================================================================
+   OPTIMIZACIONES ESPECÍFICAS PARA MÓVIL (< 1024px y < 640px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+  /* Unificación visual de la Calculadora en Móvil: Controles + Resumen conectados */
+  .calc-controls-panel {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-width: 0 !important;
+    border-color: rgba(34, 238, 252, 0.5) !important;
+  }
+  .calc-summary-panel {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-top: 2px dashed rgba(255, 224, 125, 0.35) !important;
+    position: relative !important;
+    top: 0 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-pill-glass {
+    border-width: 2px;
+    box-shadow: 0 3px 0 rgba(14, 11, 32, 0.55), 0 8px 16px -6px rgba(10, 8, 26, 0.4);
+  }
   .pedestal-cloud-body::before,
   .pedestal-cloud-body::after {
-    width: 16px;
-    height: 48px;
+    width: 14px;
+    height: 44px;
+  }
+  .pedestal-cloud-body::before {
+    left: -7px;
+  }
+  .pedestal-cloud-body::after {
+    right: -7px;
+  }
+  .promo-cartoon-box {
+    border-radius: 26px;
+    border-width: 2.5px;
+    box-shadow: 0 7px 0 #110d29, 0 18px 34px -10px rgba(0, 0, 0, 0.6);
+  }
+  .speech-bubble {
+    padding: 7px 8px;
+    border-radius: 14px;
+    border-width: 2px;
+    box-shadow: 0 3px 0 #14102c;
+    line-height: 1.2;
+  }
+  .speech-bubble::after {
+    width: 10px;
+    height: 10px;
+    bottom: -6px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
   }
 }

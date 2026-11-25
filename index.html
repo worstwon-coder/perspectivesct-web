@@ -53,7 +53,7 @@
   <canvas id="prism-canvas" aria-hidden="true"></canvas>
 
   <!-- ========================================================================
-       DOCK LATERAL IZQUIERDO FIJO (ACCESOS RÁPIDOS TECNOLÓGICOS)
+       DOCK LATERAL IZQUIERDO FIJO (SOLO ESCRITORIO XL)
        ======================================================================== -->
   <aside aria-label="Accesos rápidos laterales" class="hidden xl:flex fixed left-0 top-1/2 -translate-y-1/2 z-40 flex-col gap-2.5">
     <a href="mailto:perspectivesct.shop@gmail.com" title="Escribir a perspectivesct.shop@gmail.com" class="w-12 h-12 rounded-r-2xl bg-slate-950/95 border-2 border-l-0 border-amber-400/60 flex items-center justify-center text-amber-300 hover:w-14 hover:bg-violet-700 hover:text-white transition-all shadow-lg">
@@ -71,12 +71,12 @@
   </aside>
 
   <!-- ========================================================================
-       NAVBAR FLOTANTE EN CÁPSULAS (ESTILO PARANICE + ALTA LEGIBILIDAD)
+       NAVBAR FLOTANTE EN CÁPSULAS (CUADRADO Y PROPORCIONADO EN MÓVIL Y PC)
        ======================================================================== -->
-  <header id="main-header" class="fixed top-0 inset-x-0 z-50 px-4 sm:px-6 lg:px-10 pt-4 pb-2 transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+  <header id="main-header" class="fixed top-0 inset-x-0 z-50 px-2.5 sm:px-6 lg:px-10 pt-2.5 sm:pt-4 pb-2 transition-all duration-300">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-1.5 sm:gap-3">
 
-      <!-- Cápsula Izquierda: Navegación Principal -->
+      <!-- Cápsula Izquierda: Navegación Principal (PC) -->
       <nav aria-label="Navegación principal" class="hidden lg:flex items-center gap-1 px-3 py-2 rounded-full nav-pill-glass">
         <a href="#inicio" class="nav-link-item px-3.5 py-1.5 text-sm">Home</a>
         <a href="#productos" class="nav-link-item px-3.5 py-1.5 text-sm">Paquetes</a>
@@ -86,60 +86,86 @@
         <a href="#metodologia" class="nav-link-item px-3.5 py-1.5 text-sm">Proceso</a>
       </nav>
 
-      <!-- Botón Menú Móvil -->
-      <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" class="lg:hidden px-4 py-2.5 rounded-full nav-pill-glass flex items-center gap-2 cursor-pointer">
-        <i data-lucide="menu" class="w-5 h-5"></i>
-        <span class="text-xs font-extrabold">Menú</span>
+      <!-- Botón Menú Móvil (Compacto y perfectamente alineado sin recortes) -->
+      <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" class="lg:hidden shrink-0 h-10 px-3 sm:px-4 rounded-full nav-pill-glass flex items-center justify-center gap-1.5 cursor-pointer">
+        <i data-lucide="menu" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0"></i>
+        <span class="text-xs font-extrabold hidden min-[380px]:inline">Menú</span>
       </button>
 
       <!-- Emblema Central: Identidad Oficial Perspective SCT -->
-      <a href="#inicio" class="group flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-950/95 border-2 border-amber-400/60 shadow-xl hover:border-cyan-300 transition">
+      <a href="#inicio" class="group min-w-0 flex items-center gap-2 sm:gap-2.5 px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-slate-950/95 border-2 border-amber-400/65 shadow-xl hover:border-cyan-300 transition">
         <img
           src="assets/img/Icono%20Favicon.jpg"
           alt="Icono Prisma y Engranaje Perspective SCT"
-          class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover ring-2 ring-amber-400/70 group-hover:rotate-12 transition duration-500"
+          class="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover ring-2 ring-amber-400/70 shrink-0 group-hover:rotate-12 transition duration-500"
         />
-        <div class="leading-none pr-1">
-          <span class="font-display font-bold text-base sm:text-lg tracking-wide text-prism block">
+        <div class="leading-none min-w-0 pr-0.5 sm:pr-1">
+          <span class="font-display font-bold text-sm sm:text-lg tracking-wide text-prism block truncate">
             PERSPECTIVE
           </span>
-          <span class="font-mono-code text-[10px] tracking-[0.2em] text-amber-200 font-bold block mt-0.5">
+          <span class="font-mono-code text-[8.5px] sm:text-[10px] tracking-[0.14em] sm:tracking-[0.2em] text-amber-200 font-bold block mt-0.5 truncate">
             SCT • HUB TECH & ARTE
           </span>
         </div>
       </a>
 
-      <!-- Cápsulas Derechas: Región, Buscador Ctrl+K y Bolsa de Innovación -->
-      <div class="flex items-center gap-2">
-        <a href="#contacto" title="Bajío México & Proyectos Remotos" class="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-full nav-pill-glass text-xs font-extrabold">
+      <!-- Cápsulas Derechas: Región, Buscador y Bolsa (Sin desbordes en móvil) -->
+      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+        <a href="#contacto" title="Bajío México & Proyectos Remotos" class="hidden md:flex items-center gap-1.5 px-3.5 py-2 rounded-full nav-pill-glass text-xs font-extrabold">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
           <span>MX • Bajío</span>
         </a>
 
-        <button type="button" data-open-cmd aria-label="Buscar servicios (Ctrl+K)" title="Buscar servicios o paquetes (Ctrl+K)" class="w-10 h-10 sm:w-auto sm:px-3.5 sm:py-2 rounded-full nav-pill-glass flex items-center justify-center gap-1.5 cursor-pointer">
+        <button type="button" data-open-cmd aria-label="Buscar servicios" title="Buscar servicios o paquetes (Ctrl+K)" class="w-10 h-10 sm:w-auto sm:px-3.5 sm:py-2 rounded-full nav-pill-glass flex items-center justify-center gap-1.5 cursor-pointer shrink-0">
           <i data-lucide="search" class="w-4 h-4"></i>
           <span class="hidden xl:inline text-xs font-mono-code font-bold">Ctrl+K</span>
         </button>
 
-        <button type="button" data-open-cart aria-label="Abrir Bolsa de Cotización" class="relative px-4 py-2 rounded-full nav-pill-glass flex items-center gap-2 font-extrabold text-xs sm:text-sm cursor-pointer">
-          <i data-lucide="briefcase-business" class="w-4 h-4 text-violet-700"></i>
+        <button type="button" data-open-cart aria-label="Abrir Bolsa de Cotización" class="relative h-10 px-2.5 sm:px-4 rounded-full nav-pill-glass flex items-center justify-center gap-1.5 sm:gap-2 font-extrabold text-xs sm:text-sm cursor-pointer shrink-0">
+          <i data-lucide="briefcase-business" class="nav-cart-icon w-4 h-4 text-violet-700 shrink-0"></i>
           <span class="hidden sm:inline">Mi Bolsa</span>
-          <span class="cart-count-badge w-5 h-5 rounded-full bg-slate-950 text-cyan-300 font-mono-code text-xs font-bold flex items-center justify-center shadow">
+          <span class="cart-count-badge w-5 h-5 rounded-full bg-slate-950 text-cyan-300 font-mono-code text-[11px] font-bold flex items-center justify-center shadow">
             0
           </span>
         </button>
       </div>
     </div>
 
-    <!-- Panel Desplegable Móvil -->
-    <div id="mobile-menu-panel" class="hidden lg:hidden mt-3 max-w-md mx-auto rounded-3xl bg-slate-950/95 backdrop-blur-xl border-2 border-amber-400/50 p-5 shadow-2xl space-y-2">
-      <a href="#inicio" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-base text-white">Home • Fábrica Digital</a>
-      <a href="#productos" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-base text-cyan-300">Paquetes y Precios</a>
-      <a href="#promo-mantenimiento" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-base text-amber-300">🔥 Promo Mantenimiento Web ($2,000)</a>
-      <a href="#verticales" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-base text-white">Catálogo de Servicios</a>
-      <a href="#calculadora" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-base text-fuchsia-300">Calculadora Interactiva</a>
-      <a href="#metodologia" class="block px-4 py-2.5 rounded-xl hover:bg-white/10 font-bold text-base text-white">Proceso, SLAs y Equipo</a>
-      <a href="#contacto" class="block px-4 py-3 rounded-xl bg-amber-300 text-slate-950 font-extrabold text-base text-center mt-2">Solicitar Diagnóstico Gratis</a>
+    <!-- Panel Desplegable Móvil (Encuadrado con márgenes seguros y diseño atractivo) -->
+    <div id="mobile-menu-panel" class="hidden lg:hidden mt-2.5 w-full max-w-md mx-auto rounded-3xl bg-slate-950/98 backdrop-blur-xl border-2 border-amber-400/60 p-4 shadow-2xl max-h-[82vh] overflow-y-auto">
+      <div class="grid grid-cols-2 gap-2 mb-3">
+        <a href="#promo-mantenimiento" class="p-3 rounded-2xl bg-amber-400/15 border border-amber-300/45 text-center">
+          <span class="block text-xs font-extrabold text-amber-300">🔥 Promo Web</span>
+          <span class="block text-[11px] text-slate-200 mt-0.5">$2,000 / mes</span>
+        </a>
+        <a href="#calculadora" class="p-3 rounded-2xl bg-cyan-400/15 border border-cyan-300/45 text-center">
+          <span class="block text-xs font-extrabold text-cyan-300">⚡ Cotizador</span>
+          <span class="block text-[11px] text-slate-200 mt-0.5">Arma tu Bolsa</span>
+        </a>
+      </div>
+
+      <div class="space-y-1">
+        <a href="#inicio" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-white/10 font-bold text-sm text-white">
+          <span>Home • Fábrica Digital</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="#productos" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-white/10 font-bold text-sm text-cyan-200">
+          <span>Paquetes y Planes Mensuales</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="#verticales" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-white/10 font-bold text-sm text-white">
+          <span>Catálogo de 17 Servicios</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="#metodologia" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-white/10 font-bold text-sm text-white">
+          <span>Proceso, SLAs y Equipo</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+      </div>
+
+      <a href="#contacto" class="toon-btn-primary block w-full py-3 rounded-2xl bg-amber-300 text-slate-950 font-extrabold text-sm text-center mt-3">
+        Solicitar Diagnóstico Gratis ($0 MXN)
+      </a>
     </div>
   </header>
 
@@ -149,7 +175,7 @@
        ======================================================================== -->
   <main class="relative z-10">
 
-    <section id="inicio" data-stage-bg="#181430" class="relative pt-28 sm:pt-32 pb-10 overflow-hidden deco-grid-overlay">
+    <section id="inicio" data-stage-bg="#181430" class="relative pt-20 sm:pt-32 pb-8 sm:pb-10 overflow-hidden deco-grid-overlay">
       <!-- Resplandores Cósmicos de Fondo -->
       <div class="absolute top-16 left-1/2 -translate-x-1/2 w-[680px] h-[380px] bg-violet-600/25 blur-[130px] rounded-full pointer-events-none"></div>
       <div class="absolute top-40 right-10 w-72 h-72 bg-cyan-500/15 blur-[110px] rounded-full pointer-events-none"></div>
@@ -157,17 +183,17 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Píldora Editorial Superior -->
-        <div class="text-center mb-5">
-          <span class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-950/80 border-2 border-amber-400/50 text-xs sm:text-sm font-extrabold text-amber-200 shadow-lg">
-            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
-            HUB DE INGENIERÍA, ARTE, SOFTWARE Y SOLUCIONES DIGITALES • EST. 2026
+        <div class="text-center mb-3 sm:mb-5">
+          <span class="inline-flex items-center justify-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-2xl sm:rounded-full bg-slate-950/85 border-2 border-amber-400/50 text-[11px] sm:text-sm font-extrabold text-amber-200 shadow-lg leading-snug">
+            <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-cyan-400 animate-ping shrink-0"></span>
+            <span>HUB DE INGENIERÍA, ARTE, SOFTWARE Y SOLUCIONES DIGITALES • EST. 2026</span>
           </span>
         </div>
 
         <!-- ESCENA ILUSTRADA INTERACTIVA: LA FÁBRICA VIVA DE PERSPECTIVE SCT -->
-        <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-6 items-center mt-2">
+        <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-6 items-center mt-1 sm:mt-2">
 
-          <!-- Columna Izquierda Ilustrada: Banda Transportadora Digital + Ingeniero Bot -->
+          <!-- Columna Izquierda Ilustrada (PC) -->
           <div class="hidden lg:flex lg:col-span-3 flex-col gap-5 items-center">
             <div class="w-full rounded-[32px] bg-indigo-950/85 border-2 border-violet-400/45 p-4 shadow-2xl anim-float">
               <div class="flex items-center justify-between text-xs font-mono-code font-bold text-cyan-300 mb-2">
@@ -194,7 +220,6 @@
               </svg>
             </div>
 
-            <!-- Consola de Telemetría Operativa con Personaje Cyber -->
             <div class="w-full rounded-[32px] bg-slate-950/90 border-2 border-amber-400/45 p-4 shadow-2xl anim-float-delay">
               <svg viewBox="0 0 230 130" class="w-full h-auto">
                 <rect x="85" y="14" width="130" height="82" rx="16" fill="#1e1b4b" stroke="#ffe07d" stroke-width="2.8"/>
@@ -213,63 +238,72 @@
             </div>
           </div>
 
-          <!-- Columna Central Monumental: Logo Oficial + Título Principal Limpio (Arte e Ingeniería) -->
+          <!-- Columna Central Monumental: Proporcionada para Móvil y Escritorio -->
           <div class="lg:col-span-6 text-center flex flex-col items-center">
 
-            <p class="font-tech uppercase tracking-[0.22em] text-xs sm:text-sm text-cyan-300 font-extrabold mb-2">
+            <p class="font-tech uppercase tracking-[0.18em] sm:tracking-[0.22em] text-[11px] sm:text-sm text-cyan-300 font-extrabold mb-1.5 sm:mb-2">
               WELCOME TO THE PRISM TECH FACTORY
             </p>
 
             <!-- Logo Principal Oficial Integrado -->
-            <div class="relative w-full max-w-[490px] mx-auto my-1 group">
-              <div class="absolute inset-6 bg-gradient-to-r from-amber-500/20 via-fuchsia-500/25 to-cyan-400/20 blur-2xl rounded-full"></div>
+            <div class="relative w-full max-w-[290px] sm:max-w-[490px] mx-auto my-1 group">
+              <div class="absolute inset-4 sm:inset-6 bg-gradient-to-r from-amber-500/20 via-fuchsia-500/25 to-cyan-400/20 blur-2xl rounded-full"></div>
               <img
                 src="assets/img/LOGO%20Super%20GOD.jpg"
                 alt="Perspective SCT — Soluciones Tecnológicas, Arte e Ingeniería"
-                class="relative z-10 w-full h-auto rounded-3xl logo-screen-blend mx-auto select-none"
+                class="relative z-10 w-full h-auto rounded-2xl sm:rounded-3xl logo-screen-blend mx-auto select-none"
               />
             </div>
 
             <!-- TÍTULO PRINCIPAL SUPERIOR: Convergencia de Arte e Ingeniería -->
-            <h1 class="font-display font-bold text-3xl sm:text-5xl lg:text-[52px] leading-[1.12] tracking-normal text-white mt-3">
+            <h1 class="font-display font-bold text-[27px] sm:text-5xl lg:text-[52px] leading-[1.15] sm:leading-[1.12] tracking-normal text-white mt-2 sm:mt-3">
               Donde el <span class="text-prism">Arte y la Ingeniería</span> impulsan la evolución digital de tu empresa.
             </h1>
 
-            <p class="text-slate-100 text-base sm:text-lg max-w-2xl mx-auto mt-4 leading-relaxed font-medium">
+            <p class="text-slate-100 text-sm sm:text-lg max-w-2xl mx-auto mt-3 sm:mt-4 leading-relaxed font-medium px-1">
               Creamos <strong class="text-cyan-300">software a la medida, páginas web, automatizaciones e infraestructura cloud</strong>, sumando recomendaciones prácticas para optimizar tu logística y reducir costos operativos.
             </p>
 
-            <!-- Botones CTA Principales Táctiles -->
-            <div class="flex flex-wrap items-center justify-center gap-4 mt-7">
-              <a href="#productos" class="toon-btn-primary px-7 py-4 rounded-full bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 text-slate-950 font-extrabold text-sm sm:text-base flex items-center gap-2">
+            <!-- Mini-Píldoras de Estado de Fábrica en Móvil -->
+            <div class="flex lg:hidden flex-wrap items-center justify-center gap-2 mt-4">
+              <span class="px-3 py-1 rounded-full bg-indigo-950/90 border border-cyan-400/40 text-[11px] font-mono-code font-bold text-cyan-200">● 95%+ Uptime</span>
+              <span class="px-3 py-1 rounded-full bg-indigo-950/90 border border-amber-400/40 text-[11px] font-mono-code font-bold text-amber-200">⚡ Respuesta 1–2h</span>
+              <span class="px-3 py-1 rounded-full bg-indigo-950/90 border border-emerald-400/40 text-[11px] font-mono-code font-bold text-emerald-200">🔒 AES-256 + NDA</span>
+            </div>
+
+            <!-- Botones CTA Principales (Full-width limpio en móviles pequeños) -->
+            <div class="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-7 px-2 sm:px-0">
+              <a href="#productos" class="toon-btn-primary px-6 sm:px-7 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 text-slate-950 font-extrabold text-sm sm:text-base flex items-center justify-center gap-2">
                 <span>Ver Paquetes y Precios</span>
                 <i data-lucide="arrow-down-right" class="w-5 h-5"></i>
               </a>
-              <a href="#promo-mantenimiento" class="toon-btn-primary px-7 py-4 rounded-full bg-white text-slate-950 hover:bg-amber-200 font-extrabold text-sm sm:text-base flex items-center gap-2">
+              <a href="#promo-mantenimiento" class="toon-btn-primary px-6 sm:px-7 py-3.5 sm:py-4 rounded-full bg-white text-slate-950 hover:bg-amber-200 font-extrabold text-sm sm:text-base flex items-center justify-center gap-2">
                 <i data-lucide="sparkles" class="w-5 h-5 text-fuchsia-600"></i>
                 <span>Promo Web $2,000/mes</span>
               </a>
             </div>
 
-            <!-- Pedestal Central Destacado del Hero -->
-            <div class="mt-9 w-full max-w-md rounded-[30px] bg-slate-950/90 border-2 border-amber-400/65 p-5 shadow-2xl relative overflow-hidden">
+            <!-- Pedestal Central Destacado del Hero (Adaptado para lectura perfecta en móvil) -->
+            <div class="mt-7 sm:mt-9 w-full max-w-md rounded-3xl bg-slate-950/90 border-2 border-amber-400/65 p-4 sm:p-5 shadow-2xl relative overflow-hidden">
               <div class="absolute -right-8 -top-8 w-28 h-28 bg-emerald-400/20 blur-2xl rounded-full"></div>
-              <div class="flex items-center justify-between gap-3">
-                <div class="text-left">
-                  <span class="inline-block px-3 py-0.5 rounded-full bg-emerald-400 text-slate-950 font-extrabold text-xs uppercase tracking-wider">
+              <div class="flex flex-col min-[410px]:flex-row items-center justify-between gap-3.5 text-center min-[410px]:text-left">
+                <div>
+                  <span class="inline-block px-3 py-0.5 rounded-full bg-emerald-400 text-slate-950 font-extrabold text-[11px] uppercase tracking-wider">
                     Sesión Inicial B2B
                   </span>
-                  <h2 class="font-display font-bold text-xl text-white mt-1.5">
+                  <h2 class="font-display font-bold text-lg sm:text-xl text-white mt-1.5">
                     Diagnóstico Técnico & Operativo
                   </h2>
-                  <p class="text-sm text-slate-200 mt-1 leading-snug">
+                  <p class="text-xs sm:text-sm text-slate-200 mt-1 leading-snug">
                     Detectamos cuellos de botella, procesos automatizables y mejoras para tu web o sistema.
                   </p>
                 </div>
-                <div class="text-right shrink-0">
-                  <span class="block text-xs line-through text-slate-400 font-mono-code">$2,999</span>
-                  <span class="font-tech font-extrabold text-2xl text-emerald-400 block">$0 MXN</span>
-                  <a href="#contacto" class="inline-block mt-2 px-4 py-1.5 rounded-full bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-extrabold text-xs border-2 border-slate-950 transition">
+                <div class="min-[410px]:text-right shrink-0 flex min-[410px]:block items-center gap-3 pt-2 min-[410px]:pt-0 border-t min-[410px]:border-t-0 border-white/10 w-full min-[410px]:w-auto justify-between">
+                  <div>
+                    <span class="block text-xs line-through text-slate-400 font-mono-code">$2,999</span>
+                    <span class="font-tech font-extrabold text-2xl text-emerald-400 block leading-none">$0 MXN</span>
+                  </div>
+                  <a href="#contacto" class="inline-block min-[410px]:mt-2 px-4 py-2 min-[410px]:py-1.5 rounded-full bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-extrabold text-xs border-2 border-slate-950 transition">
                     Agendar →
                   </a>
                 </div>
@@ -277,7 +311,7 @@
             </div>
           </div>
 
-          <!-- Columna Derecha Ilustrada: Bóveda de Código AES-256 + Monitores de Estado -->
+          <!-- Columna Derecha Ilustrada (PC) -->
           <div class="hidden lg:flex lg:col-span-3 flex-col gap-5 items-center">
             <div class="w-full rounded-[32px] bg-indigo-950/85 border-2 border-cyan-400/45 p-4 shadow-2xl anim-float-delay">
               <div class="flex items-center justify-between text-xs font-mono-code font-bold text-amber-300 mb-2">
@@ -299,7 +333,6 @@
               </svg>
             </div>
 
-            <!-- Pantallas Flotantes: Uptime 95% & Promo Mantenimiento Web -->
             <div class="w-full rounded-[32px] bg-slate-950/90 border-2 border-fuchsia-400/45 p-4 shadow-2xl anim-float">
               <div class="space-y-3">
                 <div class="flex items-center gap-3 p-3 rounded-2xl bg-white/10 border border-white/15">
@@ -327,9 +360,9 @@
         </div>
       </div>
 
-      <!-- Cinta Infinita de Capacidades Tecnológicas (Marquee Legible) -->
-      <div class="mt-12 py-4 bg-slate-950/90 border-y-2 border-amber-400/35 overflow-hidden">
-        <div class="marquee-track items-center gap-8 text-sm font-mono-code font-bold tracking-wider uppercase text-white">
+      <!-- Cinta Infinita de Capacidades Tecnológicas -->
+      <div class="mt-9 sm:mt-12 py-3.5 sm:py-4 bg-slate-950/90 border-y-2 border-amber-400/35 overflow-hidden">
+        <div class="marquee-track items-center gap-6 sm:gap-8 text-xs sm:text-sm font-mono-code font-bold tracking-wider uppercase text-white">
           <span class="text-amber-300">✦ DESARROLLO DE SOFTWARE Y WEB $799/H</span>
           <span>•</span>
           <span class="text-fuchsia-300">✦ DISEÑO DIGITAL, ARTE & VIDEO $699/H</span>
@@ -361,38 +394,44 @@
     <!-- ======================================================================
          CAPÍTULO 2: ESCAPARATE DE PRODUCTOS Y PROMOCIÓN ESTRELLA DE MANTENIMIENTO
          ====================================================================== -->
-    <section id="productos" data-stage-bg="#221b47" class="relative py-16 sm:py-24">
+    <section id="productos" data-stage-bg="#221b47" class="relative py-12 sm:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- Encabezado y Pestañas de Categoría -->
-        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 reveal-up">
+        <!-- Encabezado y Pestañas Deslizables en Móvil -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 mb-7 sm:mb-10 reveal-up">
           <div>
-            <span class="inline-block px-4 py-1 rounded-full bg-amber-400/20 border border-amber-300/50 text-amber-200 font-mono-code text-xs font-bold mb-3">
+            <span class="inline-block px-3.5 py-1 rounded-full bg-amber-400/20 border border-amber-300/50 text-amber-200 font-mono-code text-[11px] sm:text-xs font-bold mb-2.5">
               PRODUCTOS CLAROS • PRECIOS DEFINIDOS EN MXN
             </span>
-            <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-normal">
+            <h2 class="font-display font-bold text-2xl sm:text-5xl text-white tracking-normal leading-tight">
               Soluciones Digitales listas para <span class="text-prism">Impulsar tu Negocio</span>
             </h2>
-            <p class="text-slate-100 text-base sm:text-lg mt-3 max-w-2xl leading-relaxed">
+            <p class="text-slate-100 text-sm sm:text-lg mt-2.5 max-w-2xl leading-relaxed">
               Elige una bolsa de horas con descuento escalonado, mantén tu sitio siempre al día con nuestros planes mensuales o cotiza por hora exacta.
             </p>
           </div>
 
-          <!-- Selector de Pestañas del Escaparate -->
-          <div class="flex flex-wrap items-center gap-2 bg-slate-950/75 p-2 rounded-full border-2 border-white/15 self-start lg:self-auto">
-            <button type="button" data-carousel-tab="paquetes" class="px-5 py-2.5 rounded-full text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-md transition cursor-pointer">
+          <!-- Selector de Pestañas en una sola fila deslizable en móvil -->
+          <div class="w-full lg:w-auto flex items-center gap-2 overflow-x-auto no-scrollbar bg-slate-950/75 p-1.5 sm:p-2 rounded-2xl sm:rounded-full border-2 border-white/15">
+            <button type="button" data-carousel-tab="paquetes" class="shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-md transition cursor-pointer">
               Bolsas de Horas (5%–20% OFF)
             </button>
-            <button type="button" data-carousel-tab="retainers" class="px-5 py-2.5 rounded-full text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition cursor-pointer">
+            <button type="button" data-carousel-tab="retainers" class="shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition cursor-pointer">
               Planes Mensuales & Promo Web
             </button>
-            <button type="button" data-carousel-tab="tarifas" class="px-5 py-2.5 rounded-full text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition cursor-pointer">
+            <button type="button" data-carousel-tab="tarifas" class="shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition cursor-pointer">
               Por Hora & Diagnóstico $0
             </button>
           </div>
         </div>
 
-        <!-- Contenedor Carrusel con Flechas Laterales Estilo Paranice -->
+        <!-- Guía visual de deslizamiento en móvil -->
+        <div class="flex md:hidden items-center justify-between text-xs font-mono-code text-cyan-200 mb-2 px-1">
+          <span>Toca o desliza los paquetes</span>
+          <span class="text-amber-300 font-bold">Desliza →</span>
+        </div>
+
+        <!-- Contenedor Carrusel con Snap Táctil -->
         <div class="relative group">
           <button
             id="carousel-prev"
@@ -405,7 +444,7 @@
 
           <div
             id="pedestal-track"
-            class="flex items-stretch gap-6 overflow-x-auto no-scrollbar py-4 px-2 scroll-smooth cursor-grab active:cursor-grabbing"
+            class="flex items-stretch gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar py-3 sm:py-4 px-2 scroll-smooth cursor-grab active:cursor-grabbing"
           >
             <!-- Renderizado dinámicamente por assets/js/main.js -->
           </div>
@@ -421,80 +460,75 @@
         </div>
 
         <!-- ==================================================================
-             NUEVA PROMOCIÓN DESTACADA: MANTENIMIENTO MENSUAL PÁGINAS WEB ($2,000)
-             + NOTA DE MANTENIMIENTO PARA OTROS SERVICIOS DIGITALES
+             PROMOCIÓN DESTACADA: MANTENIMIENTO MENSUAL PÁGINAS WEB ($2,000)
              ================================================================== -->
-        <div id="promo-mantenimiento" class="mt-16 promo-cartoon-box p-6 sm:p-10 relative overflow-hidden reveal-up">
+        <div id="promo-mantenimiento" class="mt-12 sm:mt-16 promo-cartoon-box p-5 sm:p-10 relative overflow-hidden reveal-up">
           <div class="absolute -top-20 -right-20 w-72 h-72 bg-fuchsia-500/20 blur-3xl rounded-full pointer-events-none"></div>
           <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-cyan-400/15 blur-3xl rounded-full pointer-events-none"></div>
 
-          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-8 items-center">
 
-            <!-- Columna Izquierda: Mascota Pintora Web + Oferta Principal -->
-            <div class="lg:col-span-7 space-y-5">
-              <div class="flex flex-wrap items-center gap-3">
-                <span class="px-4 py-1.5 rounded-full bg-amber-300 text-slate-950 font-extrabold text-xs sm:text-sm border-2 border-slate-950 shadow">
+            <!-- Oferta Principal -->
+            <div class="lg:col-span-7 space-y-4 sm:space-y-5">
+              <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+                <span class="px-3.5 py-1 rounded-full bg-amber-300 text-slate-950 font-extrabold text-xs sm:text-sm border-2 border-slate-950 shadow">
                   🔥 PROMOCIÓN MENSUAL DESTACADA
                 </span>
-                <span class="px-3.5 py-1 rounded-full bg-emerald-400/20 border border-emerald-300/40 text-emerald-200 font-mono-code text-xs font-bold">
-                  TU PÁGINA SIEMPRE VIVA Y ACTUALIZADA
+                <span class="px-3 py-1 rounded-full bg-emerald-400/20 border border-emerald-300/40 text-emerald-200 font-mono-code text-[11px] sm:text-xs font-bold">
+                  TU PÁGINA SIEMPRE VIVA
                 </span>
               </div>
 
-              <h3 class="font-display font-bold text-3xl sm:text-4xl lg:text-[42px] text-white leading-tight">
+              <h3 class="font-display font-bold text-2xl sm:text-4xl lg:text-[42px] text-white leading-tight">
                 Mantenimiento Mensual para Páginas Web por <span class="text-gold-deco">$2,000 MXN / mes</span>
               </h3>
 
-              <p class="text-base sm:text-lg text-slate-100 leading-relaxed">
-                Olvídate de tener una página estática o desactualizada. Nos encargamos de mantener tu sitio impecable, fresco en cada temporada comercial y funcionando al 100%:
+              <p class="text-sm sm:text-lg text-slate-100 leading-relaxed">
+                Olvídate de tener una página estática o desactualizada. Mantenemos tu sitio impecable, fresco en cada temporada comercial y funcionando al 100%:
               </p>
 
-              <!-- Lista Clara de Beneficios Incluidos -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
-                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-white/10 border border-white/15">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <div class="flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/10 border border-white/15">
                   <i data-lucide="refresh-cw" class="w-5 h-5 text-cyan-300 shrink-0 mt-0.5"></i>
-                  <span class="text-sm sm:text-[15px] text-white font-semibold"><strong>Modificaciones continuas</strong> de textos, imágenes, precios y secciones.</span>
+                  <span class="text-xs sm:text-[15px] text-white font-semibold"><strong>Modificaciones continuas</strong> de textos, imágenes, precios y secciones.</span>
                 </div>
-                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-white/10 border border-white/15">
+                <div class="flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/10 border border-white/15">
                   <i data-lucide="party-popper" class="w-5 h-5 text-amber-300 shrink-0 mt-0.5"></i>
-                  <span class="text-sm sm:text-[15px] text-white font-semibold"><strong>Cambios temáticos completos</strong> para eventos, campañas y festividades.</span>
+                  <span class="text-xs sm:text-[15px] text-white font-semibold"><strong>Cambios temáticos completos</strong> para eventos, campañas y festividades.</span>
                 </div>
-                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-white/10 border border-white/15">
+                <div class="flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/10 border border-white/15">
                   <i data-lucide="wrench" class="w-5 h-5 text-emerald-300 shrink-0 mt-0.5"></i>
-                  <span class="text-sm sm:text-[15px] text-white font-semibold"><strong>Solución rápida de errores</strong> y ajustes visuales en móvil y escritorio.</span>
+                  <span class="text-xs sm:text-[15px] text-white font-semibold"><strong>Solución rápida de errores</strong> y ajustes visuales en móvil y escritorio.</span>
                 </div>
-                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-white/10 border border-white/15">
+                <div class="flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/10 border border-white/15">
                   <i data-lucide="plus-circle" class="w-5 h-5 text-fuchsia-300 shrink-0 mt-0.5"></i>
-                  <span class="text-sm sm:text-[15px] text-white font-semibold"><strong>Agregados puntuales</strong> y <strong>soporte técnico directo</strong> todo el mes.</span>
+                  <span class="text-xs sm:text-[15px] text-white font-semibold"><strong>Agregados puntuales</strong> y <strong>soporte técnico directo</strong> todo el mes.</span>
                 </div>
               </div>
 
-              <!-- Botones de Acción de la Promo -->
-              <div class="flex flex-wrap items-center gap-4 pt-2">
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
                 <button
                   id="btn-add-web-promo"
                   type="button"
-                  class="toon-btn-primary px-7 py-4 rounded-full bg-amber-300 hover:bg-amber-200 text-slate-950 font-extrabold text-sm sm:text-base flex items-center gap-2 cursor-pointer"
+                  class="toon-btn-primary px-6 py-3.5 sm:py-4 rounded-full bg-amber-300 hover:bg-amber-200 text-slate-950 font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <i data-lucide="sparkles" class="w-5 h-5"></i>
-                  <span>¡Agregar Promo $2,000/mes a mi Bolsa!</span>
+                  <i data-lucide="sparkles" class="w-5 h-5 shrink-0"></i>
+                  <span>¡Agregar Promo $2,000/mes!</span>
                 </button>
                 <a
                   href="mailto:perspectivesct.shop@gmail.com?subject=Contratar%20Promoci%C3%B3n%20Mantenimiento%20Web%20(%242%2C000%20MXN%2Fmes)"
-                  class="px-6 py-4 rounded-full bg-white/15 hover:bg-white/25 border-2 border-white/30 text-white font-extrabold text-sm sm:text-base transition flex items-center gap-2"
+                  class="px-6 py-3.5 sm:py-4 rounded-full bg-white/15 hover:bg-white/25 border-2 border-white/30 text-white font-extrabold text-sm sm:text-base transition flex items-center justify-center gap-2"
                 >
-                  <i data-lucide="mail" class="w-4 h-4 text-cyan-300"></i>
+                  <i data-lucide="mail" class="w-4 h-4 text-cyan-300 shrink-0"></i>
                   <span>Solicitar por Correo</span>
                 </a>
               </div>
             </div>
 
-            <!-- Columna Derecha: Ilustración Mascota Creativa + Bloque "Otros Servicios Digitales" -->
-            <div class="lg:col-span-5 flex flex-col gap-5">
-              <!-- Tarjeta Pedestal Visual de Precio + Mascota -->
-              <div class="rounded-3xl bg-white text-slate-950 border-[3px] border-slate-950 p-6 text-center shadow-xl relative">
-                <svg viewBox="0 0 180 110" class="w-36 h-24 mx-auto -mt-2 mb-1 anim-mascot">
-                  <!-- Ventana Web + Bot Creativo Carismático -->
+            <!-- Tarjeta Mascota + Otros Servicios Digitales -->
+            <div class="lg:col-span-5 flex flex-col gap-4 sm:gap-5">
+              <div class="rounded-3xl bg-white text-slate-950 border-[3px] border-slate-950 p-5 sm:p-6 text-center shadow-xl relative">
+                <svg viewBox="0 0 180 110" class="w-32 h-20 sm:w-36 sm:h-24 mx-auto -mt-1 mb-1 anim-mascot">
                   <rect x="20" y="18" width="92" height="68" rx="12" fill="#ede9fe" stroke="#14102c" stroke-width="3.5"/>
                   <line x1="20" y1="34" x2="112" y2="34" stroke="#14102c" stroke-width="3"/>
                   <circle cx="32" cy="26" r="3" fill="#ff3b94"/>
@@ -502,7 +536,6 @@
                   <circle cx="52" cy="26" r="3" fill="#34d399"/>
                   <rect x="32" y="44" width="68" height="14" rx="5" fill="#a78bfa"/>
                   <rect x="32" y="64" width="42" height="10" rx="4" fill="#22eefc"/>
-                  <!-- Bot Artista Festivo -->
                   <circle cx="132" cy="58" r="26" fill="#fbbf24" stroke="#14102c" stroke-width="3.5"/>
                   <polygon points="132,16 116,36 148,36" fill="#ff3b94" stroke="#14102c" stroke-width="3" stroke-linejoin="round"/>
                   <circle cx="124" cy="55" r="3.5" fill="#14102c" class="anim-blink"/>
@@ -510,39 +543,38 @@
                   <path d="M124 65 Q132 72 140 65" stroke="#14102c" stroke-width="3" fill="none" stroke-linecap="round"/>
                 </svg>
 
-                <span class="text-xs font-extrabold uppercase tracking-wider text-violet-700 bg-violet-100 px-3 py-1 rounded-full">
+                <span class="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-violet-700 bg-violet-100 px-3 py-1 rounded-full">
                   Precio Promocional Mensual
                 </span>
                 <div class="mt-2 flex items-baseline justify-center gap-2">
-                  <span class="text-base line-through text-slate-400 font-bold">$2,800</span>
-                  <span class="font-tech font-extrabold text-4xl text-slate-950">$2,000</span>
-                  <span class="text-sm font-extrabold text-slate-700">MXN / mes</span>
+                  <span class="text-sm sm:text-base line-through text-slate-400 font-bold">$2,800</span>
+                  <span class="font-tech font-extrabold text-3xl sm:text-4xl text-slate-950">$2,000</span>
+                  <span class="text-xs sm:text-sm font-extrabold text-slate-700">MXN / mes</span>
                 </div>
                 <p class="text-xs sm:text-sm text-slate-600 font-semibold mt-1">
                   Ideal para sitios corporativos, landing pages y catálogos web.
                 </p>
               </div>
 
-              <!-- Nota Clara para Mantenimiento de Otros Servicios Digitales -->
-              <div class="rounded-3xl bg-slate-950/90 border-2 border-cyan-400/55 p-6 space-y-3 shadow-xl">
-                <div class="flex items-center gap-2 text-cyan-300 font-display font-bold text-lg">
+              <div class="rounded-3xl bg-slate-950/90 border-2 border-cyan-400/55 p-5 sm:p-6 space-y-3 shadow-xl">
+                <div class="flex items-center gap-2 text-cyan-300 font-display font-bold text-base sm:text-lg">
                   <i data-lucide="layers" class="w-5 h-5 shrink-0"></i>
                   <span>¿Tienes otro servicio o plataforma digital?</span>
                 </div>
-                <p class="text-sm text-slate-100 leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-100 leading-relaxed">
                   Pregunta por nuestros <strong>planes de mantenimiento para otros servicios digitales</strong> (aplicaciones móviles, tiendas e-commerce avanzadas, software logístico, automatizaciones o servidores cloud). <span class="text-amber-300 font-semibold">La cotización varía según el tipo de servicio o plataforma que requieras.</span>
                 </p>
-                <div class="flex flex-wrap gap-2.5 pt-1">
+                <div class="flex flex-col sm:flex-row flex-wrap gap-2.5 pt-1">
                   <button
                     id="btn-ask-other-maint"
                     type="button"
-                    class="px-4 py-2.5 rounded-full bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-extrabold text-xs sm:text-sm border-2 border-slate-950 transition cursor-pointer"
+                    class="px-4 py-2.5 rounded-full bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-extrabold text-xs sm:text-sm border-2 border-slate-950 transition cursor-pointer text-center"
                   >
                     Cotizar mi Plataforma →
                   </button>
                   <a
                     href="mailto:perspectivesct.shop@gmail.com?subject=Informaci%C3%B3n%20Mantenimiento%20para%20Otros%20Servicios%20Digitales"
-                    class="px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 transition"
+                    class="px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 transition text-center break-all"
                   >
                     perspectivesct.shop@gmail.com
                   </a>
@@ -554,12 +586,12 @@
         </div>
 
         <!-- Nota de Transparencia Comercial -->
-        <div class="mt-8 flex flex-wrap items-center justify-between gap-4 px-6 py-4 rounded-2xl bg-slate-950/70 border border-white/15 text-sm text-slate-200">
-          <div class="flex items-center gap-2.5">
-            <i data-lucide="badge-check" class="w-5 h-5 text-amber-300 shrink-0"></i>
+        <div class="mt-7 sm:mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-5 py-4 rounded-2xl bg-slate-950/70 border border-white/15 text-xs sm:text-sm text-slate-200">
+          <div class="flex items-start sm:items-center gap-2.5">
+            <i data-lucide="badge-check" class="w-5 h-5 text-amber-300 shrink-0 mt-0.5 sm:mt-0"></i>
             <span><strong>Transparencia Total:</strong> Promociones no acumulables. Entregamos el 100% de la titularidad de tu código y diseño al liquidar tu proyecto.</span>
           </div>
-          <div class="flex items-center gap-4 font-mono-code text-xs sm:text-sm text-cyan-300 font-bold">
+          <div class="flex items-center gap-3 font-mono-code text-xs text-cyan-300 font-bold shrink-0">
             <span>Alcance SOW Claro</span>
             <span>•</span>
             <span>Confidencialidad NDA</span>
@@ -575,37 +607,37 @@
     </svg>
 
     <!-- ======================================================================
-         CAPÍTULO 3: CATÁLOGO MAESTRO DE SERVICIOS TECNOLÓGICOS Y OPERATIVOS
+         CAPÍTULO 3: CATÁLOGO DE 17 SERVICIOS (DE 4 EN 4 POR FILA HORIZONTAL)
          ====================================================================== -->
-    <section id="verticales" data-stage-bg="#15203f" class="relative py-16 sm:py-24">
+    <section id="verticales" data-stage-bg="#15203f" class="relative py-12 sm:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div class="text-center max-w-3xl mx-auto mb-10 reveal-up">
-          <span class="inline-block px-4 py-1 rounded-full bg-cyan-400/20 border border-cyan-300/45 text-cyan-200 font-mono-code text-xs font-bold mb-3">
+        <div class="text-center max-w-3xl mx-auto mb-7 sm:mb-10 reveal-up">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-400/20 border border-cyan-300/45 text-cyan-200 font-mono-code text-[11px] sm:text-xs font-bold mb-2.5">
             CATÁLOGO DE SOLUCIONES DIGITALES • 17 LÍNEAS ESPECIALIZADAS
           </span>
-          <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-normal">
+          <h2 class="font-display font-bold text-2xl sm:text-5xl text-white tracking-normal leading-tight">
             Tecnología, Diseño Digital y <span class="text-gold-deco">Mejora Operativa</span>
           </h2>
-          <p class="text-slate-100 text-base sm:text-lg mt-3 leading-relaxed">
-            Nuestro giro principal es construir tecnología que funcione y venda: desde desarrollo web, software e infraestructura cloud hasta recomendaciones prácticas de logística y ahorro operativo.
+          <p class="text-slate-100 text-sm sm:text-lg mt-2.5 leading-relaxed">
+            Explora nuestros servicios organizados en bloques ágiles de 4 en 4: desde desarrollo web, software e infraestructura cloud hasta optimización logística y ahorro operativo.
           </p>
         </div>
 
-        <!-- Barra de Filtros y Búsqueda en Vivo -->
-        <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-8 p-4 rounded-3xl bg-slate-950/75 border-2 border-white/15">
-          <div class="flex flex-wrap items-center gap-2">
-            <button type="button" data-vert-filter="all" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-md transition cursor-pointer">
+        <!-- Barra de Filtros (1 fila horizontal limpia en móvil) y Buscador -->
+        <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3.5 mb-6 p-3.5 sm:p-4 rounded-3xl bg-slate-950/75 border-2 border-white/15">
+          <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-0.5 lg:pb-0">
+            <button type="button" data-vert-filter="all" class="shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-md transition cursor-pointer">
               Todos (17)
             </button>
-            <button type="button" data-vert-filter="Desarrollo" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white border border-white/15 hover:bg-white/20 transition cursor-pointer">
+            <button type="button" data-vert-filter="Desarrollo" class="shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white border border-white/15 hover:bg-white/20 transition cursor-pointer">
               Desarrollo & Cloud • $799/h (8)
             </button>
-            <button type="button" data-vert-filter="Diseno" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white border border-white/15 hover:bg-white/20 transition cursor-pointer">
-              Diseño, Arte & Video • $699/h (5)
+            <button type="button" data-vert-filter="Diseno" class="shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white border border-white/15 hover:bg-white/20 transition cursor-pointer">
+              Diseño & Video • $699/h (5)
             </button>
-            <button type="button" data-vert-filter="Estrategicas" class="px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white border border-white/15 hover:bg-white/20 transition cursor-pointer">
-              Estrategia & Operación • $999/h (4)
+            <button type="button" data-vert-filter="Estrategicas" class="shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/10 text-white border border-white/15 hover:bg-white/20 transition cursor-pointer">
+              Operación & Negocio • $999/h (4)
             </button>
           </div>
 
@@ -620,12 +652,12 @@
           </div>
         </div>
 
-        <p id="verticals-count" class="text-sm font-mono-code text-slate-200 mb-5 px-1">
-          Mostrando 17 de 17 líneas de servicio tecnológico y digital
+        <p id="verticals-count" class="text-xs sm:text-sm font-mono-code text-slate-200 mb-4 px-1">
+          Mostrando 17 de 17 servicios (organizados de 4 en 4 por fila)
         </p>
 
-        <!-- Grid Bento de Servicios -->
-        <div id="verticals-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Contenedor de Filas Horizontales de 4 en 4 Servicios -->
+        <div id="verticals-grid" class="space-y-5 sm:space-y-6">
           <!-- Renderizado dinámicamente por assets/js/main.js -->
         </div>
 
@@ -638,58 +670,107 @@
     </svg>
 
     <!-- ======================================================================
-         CAPÍTULO 4: CALCULADORA GAMIFICADA DE BOLSAS DE HORAS & AHORRO OPERATIVO
+         CAPÍTULO 4: CALCULADORA DE BOLSA A MEDIDA
+         PC (lg): 2 columnas intactas.
+         Móvil (<lg): Marcador en vivo pegajoso + panel unificado 100% comprensible.
          ====================================================================== -->
-    <section id="calculadora" data-stage-bg="#1f173b" class="relative py-16 sm:py-24">
+    <section id="calculadora" data-stage-bg="#1f173b" class="relative py-12 sm:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- MARCADOR DE PRECIO EN VIVO FIJO EXCLUSIVO PARA MÓVIL (lg:hidden) -->
+        <div class="lg:hidden sticky top-[58px] z-30 mb-3 rounded-2xl bg-slate-950/95 backdrop-blur-xl border-2 border-cyan-400 px-3.5 py-2.5 shadow-2xl flex items-center justify-between gap-2">
+          <div class="min-w-0">
+            <div class="flex items-center gap-1.5">
+              <span class="text-[10px] font-mono-code uppercase text-slate-300 font-bold">Tu Bolsa:</span>
+              <span id="mobile-calc-hours" class="font-mono-code font-extrabold text-xs text-cyan-300">40 hrs</span>
+              <span id="mobile-calc-tier" class="px-2 py-0.5 rounded-full bg-emerald-400/20 text-emerald-300 font-mono-code text-[10px] font-extrabold">12% OFF</span>
+            </div>
+            <div class="flex items-baseline gap-1 mt-0.5">
+              <span class="text-xs text-slate-300 font-semibold">Total:</span>
+              <span id="mobile-calc-price" class="font-tech font-extrabold text-xl text-amber-300 leading-none">$29,005</span>
+              <span class="text-[10px] font-mono-code text-slate-400">MXN</span>
+            </div>
+          </div>
+          <button
+            id="btn-mobile-quick-add"
+            type="button"
+            class="shrink-0 px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-amber-300 to-cyan-300 text-slate-950 font-extrabold text-xs border-2 border-slate-950 shadow cursor-pointer"
+          >
+            + Agregar Bolsa
+          </button>
+        </div>
+
+        <!-- Grid Principal: Unificado sin separación en móvil (gap-0), 2 columnas en PC (lg:gap-8) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 items-start">
 
           <!-- Controles Interactivos de Horas y Planes Mensuales -->
-          <div class="lg:col-span-7 rounded-[32px] bg-slate-950/85 border-2 border-amber-400/45 p-6 sm:p-9 shadow-2xl reveal-up">
-            <span class="inline-block px-3.5 py-1 rounded-full bg-fuchsia-500/25 text-fuchsia-200 font-mono-code text-xs font-bold mb-3">
+          <div class="calc-controls-panel lg:col-span-7 rounded-[28px] lg:rounded-[32px] bg-slate-950/90 border-2 border-amber-400/45 p-5 sm:p-9 shadow-2xl reveal-up">
+            <span class="inline-block px-3.5 py-1 rounded-full bg-fuchsia-500/25 text-fuchsia-200 font-mono-code text-[11px] sm:text-xs font-bold mb-2.5">
               SIMULADOR INTERACTIVO EN TIEMPO REAL
             </span>
-            <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">
+            <h2 class="font-display font-bold text-2xl sm:text-4xl text-white leading-tight">
               Arma tu <span class="text-prism">Bolsa Tecnológica a Medida</span>
             </h2>
-            <p class="text-base text-slate-200 mt-2 mb-7 leading-relaxed">
-              Combina horas de Desarrollo, Diseño Digital y Estrategia Operativa. El cotizador aplica automáticamente tu descuento oficial por volumen (5% a 20% OFF).
+            <p class="text-sm sm:text-base text-slate-200 mt-2 mb-5 sm:mb-7 leading-relaxed">
+              Ajusta las horas que necesitas por área y observa arriba tu descuento automático (5% a 20% OFF) y tu inversión en tiempo real.
             </p>
 
+            <!-- Etiqueta guía en móvil -->
+            <div class="lg:hidden mb-3 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono-code font-bold text-cyan-200">
+              PASO 1 • Ajusta tus horas con la barra o botones (- / +)
+            </div>
+
             <!-- Sliders por Rama -->
-            <div class="space-y-7">
-              <div>
-                <div class="flex justify-between items-center mb-2">
-                  <label for="slider-dev" class="text-base font-extrabold text-white flex items-center gap-2">
-                    <span class="w-3 h-3 rounded-full bg-cyan-400"></span>
-                    Ingeniería & Desarrollo <span class="text-xs font-mono-code text-cyan-200">($799 MXN/h)</span>
+            <div class="space-y-6 sm:space-y-7">
+              <!-- Slider 1: Desarrollo -->
+              <div class="p-3.5 sm:p-0 rounded-2xl bg-white/[0.04] sm:bg-transparent border border-white/10 sm:border-0">
+                <div class="flex flex-wrap justify-between items-center gap-2 mb-2.5">
+                  <label for="slider-dev" class="text-sm sm:text-base font-extrabold text-white flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-cyan-400 shrink-0"></span>
+                    <span>Ingeniería & Desarrollo <small class="font-mono-code text-cyan-200 font-bold">($799/h)</small></span>
                   </label>
-                  <span id="val-dev-hours" class="font-mono-code font-bold text-cyan-300 text-lg">20 h</span>
+                  <div class="flex items-center gap-1.5 ml-auto">
+                    <button type="button" data-step-target="devHours" data-step-delta="-5" data-step-max="80" class="lg:hidden w-7 h-7 rounded-lg bg-white/15 text-white font-extrabold text-sm flex items-center justify-center cursor-pointer">-</button>
+                    <span id="val-dev-hours" class="font-mono-code font-bold text-cyan-300 text-base sm:text-lg min-w-[44px] text-center">20 h</span>
+                    <button type="button" data-step-target="devHours" data-step-delta="5" data-step-max="80" class="lg:hidden w-7 h-7 rounded-lg bg-white/15 text-white font-extrabold text-sm flex items-center justify-center cursor-pointer">+</button>
+                    <span id="val-dev-mxn" class="lg:hidden text-xs font-mono-code text-slate-300 ml-1">$15,980</span>
+                  </div>
                 </div>
                 <input id="slider-dev" type="range" min="0" max="80" step="5" value="20" class="prism-slider" />
                 <p class="text-xs sm:text-sm text-slate-300 mt-1.5">Páginas Web, E-commerce, Software logístico, Apps móviles, IA, Cloud y APIs.</p>
               </div>
 
-              <div>
-                <div class="flex justify-between items-center mb-2">
-                  <label for="slider-design" class="text-base font-extrabold text-white flex items-center gap-2">
-                    <span class="w-3 h-3 rounded-full bg-fuchsia-400"></span>
-                    Diseño Digital, Arte & Video <span class="text-xs font-mono-code text-fuchsia-200">($699 MXN/h)</span>
+              <!-- Slider 2: Diseño -->
+              <div class="p-3.5 sm:p-0 rounded-2xl bg-white/[0.04] sm:bg-transparent border border-white/10 sm:border-0">
+                <div class="flex flex-wrap justify-between items-center gap-2 mb-2.5">
+                  <label for="slider-design" class="text-sm sm:text-base font-extrabold text-white flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-fuchsia-400 shrink-0"></span>
+                    <span>Diseño Digital, Arte & Video <small class="font-mono-code text-fuchsia-200 font-bold">($699/h)</small></span>
                   </label>
-                  <span id="val-design-hours" class="font-mono-code font-bold text-fuchsia-300 text-lg">10 h</span>
+                  <div class="flex items-center gap-1.5 ml-auto">
+                    <button type="button" data-step-target="designHours" data-step-delta="-5" data-step-max="60" class="lg:hidden w-7 h-7 rounded-lg bg-white/15 text-white font-extrabold text-sm flex items-center justify-center cursor-pointer">-</button>
+                    <span id="val-design-hours" class="font-mono-code font-bold text-fuchsia-300 text-base sm:text-lg min-w-[44px] text-center">10 h</span>
+                    <button type="button" data-step-target="designHours" data-step-delta="5" data-step-max="60" class="lg:hidden w-7 h-7 rounded-lg bg-white/15 text-white font-extrabold text-sm flex items-center justify-center cursor-pointer">+</button>
+                    <span id="val-design-mxn" class="lg:hidden text-xs font-mono-code text-slate-300 ml-1">$6,990</span>
+                  </div>
                 </div>
                 <input id="slider-design" type="range" min="0" max="60" step="5" value="10" class="prism-slider" />
                 <p class="text-xs sm:text-sm text-slate-300 mt-1.5">Interfaces UX/UI, visualización 2D/3D, activos con IA, edición de video y campañas web.</p>
               </div>
 
-              <div>
-                <div class="flex justify-between items-center mb-2">
-                  <label for="slider-strat" class="text-base font-extrabold text-white flex items-center gap-2">
-                    <span class="w-3 h-3 rounded-full bg-amber-400"></span>
-                    Estrategia Operativa & Logística <span class="text-xs font-mono-code text-amber-200">($999 MXN/h)</span>
+              <!-- Slider 3: Estrategia Operativa -->
+              <div class="p-3.5 sm:p-0 rounded-2xl bg-white/[0.04] sm:bg-transparent border border-white/10 sm:border-0">
+                <div class="flex flex-wrap justify-between items-center gap-2 mb-2.5">
+                  <label for="slider-strat" class="text-sm sm:text-base font-extrabold text-white flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-400 shrink-0"></span>
+                    <span>Estrategia Operativa & Logística <small class="font-mono-code text-amber-200 font-bold">($999/h)</small></span>
                   </label>
-                  <span id="val-strat-hours" class="font-mono-code font-bold text-amber-300 text-lg">10 h</span>
+                  <div class="flex items-center gap-1.5 ml-auto">
+                    <button type="button" data-step-target="stratHours" data-step-delta="-5" data-step-max="60" class="lg:hidden w-7 h-7 rounded-lg bg-white/15 text-white font-extrabold text-sm flex items-center justify-center cursor-pointer">-</button>
+                    <span id="val-strat-hours" class="font-mono-code font-bold text-amber-300 text-base sm:text-lg min-w-[44px] text-center">10 h</span>
+                    <button type="button" data-step-target="stratHours" data-step-delta="5" data-step-max="60" class="lg:hidden w-7 h-7 rounded-lg bg-white/15 text-white font-extrabold text-sm flex items-center justify-center cursor-pointer">+</button>
+                    <span id="val-strat-mxn" class="lg:hidden text-xs font-mono-code text-slate-300 ml-1">$9,990</span>
+                  </div>
                 </div>
                 <input id="slider-strat" type="range" min="0" max="60" step="5" value="10" class="prism-slider" />
                 <p class="text-xs sm:text-sm text-slate-300 mt-1.5">Optimización logística, reducción de costos operativos, consejos financieros básicos prácticos, CRM y protección de datos.</p>
@@ -697,69 +778,79 @@
             </div>
 
             <!-- Add-ons de Planes Mensuales -->
-            <div class="mt-8 pt-6 border-t border-white/15">
+            <div class="mt-7 sm:mt-8 pt-6 border-t border-white/15">
               <p class="text-xs sm:text-sm font-mono-code uppercase tracking-wider text-amber-300 font-bold mb-3.5">
-                + Sumar Mantenimiento o Soporte Mensual Opcional
+                <span class="lg:hidden">PASO 2 • </span>+ Sumar Mantenimiento o Soporte Mensual Opcional
               </p>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
-                <label class="p-4 rounded-2xl bg-amber-400/15 hover:bg-amber-400/25 border-2 border-amber-300/50 flex items-start gap-2.5 cursor-pointer transition">
-                  <input id="chk-ret-web-promo" type="checkbox" class="mt-1 accent-amber-400 w-4 h-4" />
-                  <span class="text-xs sm:text-sm">
-                    <strong class="block text-white">Promo Mant. Web</strong>
-                    <span class="text-amber-300 font-mono-code font-bold">$2,000/mes</span>
-                    <span class="block text-xs text-slate-200 mt-0.5">Cambios + Eventos</span>
-                  </span>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <label class="p-3.5 sm:p-4 rounded-2xl bg-amber-400/15 hover:bg-amber-400/25 border-2 border-amber-300/50 flex items-center sm:items-start justify-between sm:justify-start gap-2.5 cursor-pointer transition">
+                  <div class="flex items-center sm:items-start gap-2.5">
+                    <input id="chk-ret-web-promo" type="checkbox" class="sm:mt-1 accent-amber-400 w-4 h-4 shrink-0" />
+                    <span class="text-xs sm:text-sm">
+                      <strong class="block text-white">Promo Mant. Web</strong>
+                      <span class="block text-xs text-slate-200">Cambios + Eventos</span>
+                    </span>
+                  </div>
+                  <span class="text-amber-300 font-mono-code font-bold text-xs sm:text-sm shrink-0">$2,000/mes</span>
                 </label>
 
-                <label class="p-4 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/20 flex items-start gap-2.5 cursor-pointer transition">
-                  <input id="chk-ret-tech" type="checkbox" class="mt-1 accent-cyan-400 w-4 h-4" />
-                  <span class="text-xs sm:text-sm">
-                    <strong class="block text-white">Servidores TI</strong>
-                    <span class="text-cyan-300 font-mono-code font-bold">$499/mes</span>
-                    <span class="block text-xs text-slate-300 mt-0.5">95% Uptime</span>
-                  </span>
+                <label class="p-3.5 sm:p-4 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/20 flex items-center sm:items-start justify-between sm:justify-start gap-2.5 cursor-pointer transition">
+                  <div class="flex items-center sm:items-start gap-2.5">
+                    <input id="chk-ret-tech" type="checkbox" class="sm:mt-1 accent-cyan-400 w-4 h-4 shrink-0" />
+                    <span class="text-xs sm:text-sm">
+                      <strong class="block text-white">Servidores TI</strong>
+                      <span class="block text-xs text-slate-300">95% Uptime</span>
+                    </span>
+                  </div>
+                  <span class="text-cyan-300 font-mono-code font-bold text-xs sm:text-sm shrink-0">$499/mes</span>
                 </label>
 
-                <label class="p-4 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/20 flex items-start gap-2.5 cursor-pointer transition">
-                  <input id="chk-ret-eco" type="checkbox" class="mt-1 accent-violet-400 w-4 h-4" />
-                  <span class="text-xs sm:text-sm">
-                    <strong class="block text-white">Ecosistema Cloud</strong>
-                    <span class="text-violet-300 font-mono-code font-bold">$999/mes</span>
-                    <span class="block text-xs text-slate-300 mt-0.5">Web + Apps + Cloud</span>
-                  </span>
+                <label class="p-3.5 sm:p-4 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/20 flex items-center sm:items-start justify-between sm:justify-start gap-2.5 cursor-pointer transition">
+                  <div class="flex items-center sm:items-start gap-2.5">
+                    <input id="chk-ret-eco" type="checkbox" class="sm:mt-1 accent-violet-400 w-4 h-4 shrink-0" />
+                    <span class="text-xs sm:text-sm">
+                      <strong class="block text-white">Ecosistema Cloud</strong>
+                      <span class="block text-xs text-slate-300">Web + Apps + Cloud</span>
+                    </span>
+                  </div>
+                  <span class="text-violet-300 font-mono-code font-bold text-xs sm:text-sm shrink-0">$999/mes</span>
                 </label>
               </div>
             </div>
 
             <!-- Medidor de Capacidad Mensual Controlada (120h) -->
-            <div class="mt-6 p-4 rounded-2xl bg-indigo-950/80 border border-indigo-300/30">
-              <div class="flex justify-between text-xs sm:text-sm mb-2">
-                <span class="font-bold text-indigo-100">Capacidad Mensual Dedicada del Hub</span>
-                <span id="calc-cap-label" class="font-mono-code font-bold text-cyan-300">40 / 120 hrs mensuales disponibles (33%)</span>
+            <div class="mt-6 p-3.5 sm:p-4 rounded-2xl bg-indigo-950/80 border border-indigo-300/30">
+              <div class="flex justify-between items-center gap-2 text-xs sm:text-sm mb-2">
+                <span class="font-bold text-indigo-100">Capacidad Mensual del Hub</span>
+                <span id="calc-cap-label" class="font-mono-code font-bold text-cyan-300 shrink-0">40 / 120 hrs (33%)</span>
               </div>
-              <div class="w-full h-3 rounded-full bg-slate-900 overflow-hidden">
+              <div class="w-full h-2.5 sm:h-3 rounded-full bg-slate-900 overflow-hidden">
                 <div id="calc-cap-bar" class="h-full bg-gradient-to-r from-cyan-400 via-violet-500 to-amber-400 transition-all duration-300" style="width: 33%"></div>
               </div>
             </div>
           </div>
 
-          <!-- Tarjeta Resumen de Inversión y Ahorro Operativo -->
-          <div class="lg:col-span-5 rounded-[32px] bg-slate-950/95 border-2 border-cyan-400/55 p-6 sm:p-8 shadow-2xl sticky top-24 reveal-up">
+          <!-- Tarjeta Resumen de Inversión: Conectada como cierre directo en Móvil, Columna Derecha Sticky en PC -->
+          <div class="calc-summary-panel lg:col-span-5 rounded-[28px] lg:rounded-[32px] bg-slate-950/95 border-2 border-cyan-400/55 p-5 sm:p-8 shadow-2xl lg:sticky lg:top-24 reveal-up">
+            <div class="lg:hidden mb-3 px-3 py-1.5 rounded-xl bg-cyan-400/15 border border-cyan-300/35 text-xs font-mono-code font-bold text-cyan-200 text-center">
+              PASO 3 • Desglose Completo de tu Inversión
+            </div>
+
             <div class="flex items-center justify-between gap-3 pb-4 border-b border-white/15">
               <div>
                 <span class="text-xs font-mono-code text-slate-300 block font-bold">NIVEL DESBLOQUEADO</span>
-                <span id="calc-tier-badge" class="font-display font-bold text-xl text-amber-300">Pro Scale (40h+)</span>
+                <span id="calc-tier-badge" class="font-display font-bold text-lg sm:text-xl text-amber-300">Pro Scale (40h+)</span>
               </div>
-              <div class="px-4 py-1.5 rounded-full bg-cyan-400/20 border border-cyan-300/45 font-mono-code font-extrabold text-sm text-cyan-200" id="calc-total-hours">
+              <div class="px-3.5 py-1.5 rounded-full bg-cyan-400/20 border border-cyan-300/45 font-mono-code font-extrabold text-xs sm:text-sm text-cyan-200 shrink-0" id="calc-total-hours">
                 40 hrs
               </div>
             </div>
 
-            <div class="my-4 px-4 py-3 rounded-2xl bg-white/10 border border-white/15 text-sm font-bold text-fuchsia-200 text-center" id="calc-mascot-mood">
+            <div class="my-4 px-3.5 py-2.5 rounded-2xl bg-white/10 border border-white/15 text-xs sm:text-sm font-bold text-fuchsia-200 text-center" id="calc-mascot-mood">
               ⚡ ¡Escalamiento Digital Acelerado! (12% OFF)
             </div>
 
-            <div class="space-y-3 text-base">
+            <div class="space-y-2.5 sm:space-y-3 text-sm sm:text-base">
               <div class="flex justify-between text-slate-200">
                 <span>Subtotal horas tabulador:</span>
                 <span id="calc-subtotal" class="font-mono-code font-bold">$32,960</span>
@@ -773,19 +864,19 @@
                 <span id="calc-retainers-sum" class="font-mono-code font-bold">$0 / mes</span>
               </div>
               <div class="pt-3 border-t border-white/20 flex justify-between items-baseline">
-                <span class="font-display font-bold text-white text-lg">Inversión Estimada:</span>
+                <span class="font-display font-bold text-white text-base sm:text-lg">Inversión Estimada:</span>
                 <div class="text-right">
                   <span id="calc-final-price" class="font-tech font-extrabold text-3xl sm:text-4xl text-prism block">$29,005</span>
-                  <span class="text-xs text-slate-300 font-mono-code">MXN • Precios Claros</span>
+                  <span class="text-[11px] sm:text-xs text-slate-300 font-mono-code">MXN • Precios Claros</span>
                 </div>
               </div>
             </div>
 
             <!-- Indicador de Ahorro del 30% en Costos Operativos Ocultos -->
-            <div class="mt-5 p-4 rounded-2xl bg-emerald-500/15 border border-emerald-400/40">
+            <div class="mt-5 p-3.5 sm:p-4 rounded-2xl bg-emerald-500/15 border border-emerald-400/40">
               <div class="flex items-center justify-between gap-2">
                 <span class="text-xs sm:text-sm font-bold text-emerald-200">Ahorro estimado en costos operativos (30%):</span>
-                <span id="calc-hidden-savings" class="font-mono-code font-extrabold text-emerald-300 text-base">$14,126</span>
+                <span id="calc-hidden-savings" class="font-mono-code font-extrabold text-emerald-300 text-sm sm:text-base shrink-0">$14,126</span>
               </div>
               <p class="text-xs text-slate-200 mt-1.5 leading-relaxed">
                 Al centralizar desarrollo, automatización y mejoras logísticas en un mismo equipo evitas retrabajos, tiempos muertos y gastos duplicados.
@@ -799,7 +890,7 @@
             <button
               id="btn-add-custom-bag"
               type="button"
-              class="toon-btn-primary mt-5 w-full py-4 px-6 rounded-full bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 text-slate-950 font-extrabold text-sm sm:text-base cursor-pointer"
+              class="toon-btn-primary mt-4 sm:mt-5 w-full py-3.5 sm:py-4 px-6 rounded-full bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 text-slate-950 font-extrabold text-sm sm:text-base cursor-pointer"
             >
               + Cargar esta Bolsa a mi Cotización
             </button>
@@ -812,155 +903,154 @@
     <!-- ======================================================================
          CAPÍTULO 5: DIFERENCIADORES TECNOLÓGICOS, PROCESO Y EQUIPO DIRECTIVO
          ====================================================================== -->
-    <section id="metodologia" data-stage-bg="#15122b" class="relative py-16 sm:py-24">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+    <section id="metodologia" data-stage-bg="#15122b" class="relative py-12 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14 sm:space-y-20">
 
-        <!-- 5A. Comparador Interactivo UVP: Perspective SCT vs Proveedores Tradicionales -->
-        <div class="rounded-[36px] bg-slate-950/85 border-2 border-white/15 p-6 sm:p-10 reveal-up">
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+        <!-- 5A. Comparador Interactivo UVP -->
+        <div class="rounded-[28px] sm:rounded-[36px] bg-slate-950/85 border-2 border-white/15 p-5 sm:p-10 reveal-up">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-5 mb-6 sm:mb-8">
             <div>
               <span class="text-xs font-mono-code uppercase text-amber-300 font-bold">VENTAJA COMPETITIVA REAL</span>
-              <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-1">
+              <h2 class="font-display font-bold text-2xl sm:text-4xl text-white mt-1 leading-tight">
                 ¿Cómo optimizamos hasta un <span class="text-emerald-400">30% tu operación digital</span>?
               </h2>
             </div>
             <div class="inline-flex p-1.5 rounded-full bg-white/10 border border-white/15 self-start">
-              <button id="uvp-btn-perspective" type="button" class="px-5 py-2.5 rounded-full text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-lg cursor-pointer transition">
+              <button id="uvp-btn-perspective" type="button" class="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 shadow-lg cursor-pointer transition">
                 Hub Perspective SCT
               </button>
-              <button id="uvp-btn-traditional" type="button" class="px-5 py-2.5 rounded-full text-sm font-bold text-slate-200 hover:text-white cursor-pointer transition">
+              <button id="uvp-btn-traditional" type="button" class="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-slate-200 hover:text-white cursor-pointer transition">
                 Proveedores Separados
               </button>
             </div>
           </div>
 
-          <!-- Panel Perspective SCT -->
-          <div id="uvp-panel-perspective" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="p-6 rounded-3xl bg-gradient-to-br from-cyan-500/15 to-blue-600/10 border-2 border-cyan-400/35">
-              <i data-lucide="cpu" class="w-8 h-8 text-cyan-300 mb-3"></i>
-              <h3 class="font-display font-bold text-xl text-white mb-2">Ingeniería, Software & Cloud</h3>
-              <p class="text-[15px] text-slate-100 leading-relaxed">Construimos sistemas rápidos, escalables y automatizados, con repositorios privados cifrados y entrega del 100% de tu código al liquidar.</p>
+          <div id="uvp-panel-perspective" class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div class="p-5 sm:p-6 rounded-3xl bg-gradient-to-br from-cyan-500/15 to-blue-600/10 border-2 border-cyan-400/35">
+              <i data-lucide="cpu" class="w-7 h-7 sm:w-8 sm:h-8 text-cyan-300 mb-2.5"></i>
+              <h3 class="font-display font-bold text-lg sm:text-xl text-white mb-1.5">Ingeniería, Software & Cloud</h3>
+              <p class="text-sm sm:text-[15px] text-slate-100 leading-relaxed">Construimos sistemas rápidos, escalables y automatizados, con repositorios privados cifrados y entrega del 100% de tu código al liquidar.</p>
             </div>
-            <div class="p-6 rounded-3xl bg-gradient-to-br from-fuchsia-500/15 to-violet-600/10 border-2 border-fuchsia-400/35">
-              <i data-lucide="sparkles" class="w-8 h-8 text-fuchsia-300 mb-3"></i>
-              <h3 class="font-display font-bold text-xl text-white mb-2">Arte Digital & UX Nivel Gaming</h3>
-              <p class="text-[15px] text-slate-100 leading-relaxed">Diseñamos experiencias visuales memorables, dinámicas e intuitivas que capturan la atención de tus clientes y elevan tus conversiones.</p>
+            <div class="p-5 sm:p-6 rounded-3xl bg-gradient-to-br from-fuchsia-500/15 to-violet-600/10 border-2 border-fuchsia-400/35">
+              <i data-lucide="sparkles" class="w-7 h-7 sm:w-8 sm:h-8 text-fuchsia-300 mb-2.5"></i>
+              <h3 class="font-display font-bold text-lg sm:text-xl text-white mb-1.5">Arte Digital & UX Nivel Gaming</h3>
+              <p class="text-sm sm:text-[15px] text-slate-100 leading-relaxed">Diseñamos experiencias visuales memorables, dinámicas e intuitivas que capturan la atención de tus clientes y elevan tus conversiones.</p>
             </div>
-            <div class="p-6 rounded-3xl bg-gradient-to-br from-amber-500/15 to-emerald-600/10 border-2 border-amber-400/35">
-              <i data-lucide="trending-up" class="w-8 h-8 text-amber-300 mb-3"></i>
-              <h3 class="font-display font-bold text-xl text-white mb-2">Visión Operativa y Logística</h3>
-              <p class="text-[15px] text-slate-100 leading-relaxed">Al analizar tu operación diaria para digitalizarla, te compartimos recomendaciones prácticas de logística, ahorro operativo y consejos financieros básicos.</p>
+            <div class="p-5 sm:p-6 rounded-3xl bg-gradient-to-br from-amber-500/15 to-emerald-600/10 border-2 border-amber-400/35">
+              <i data-lucide="trending-up" class="w-7 h-7 sm:w-8 sm:h-8 text-amber-300 mb-2.5"></i>
+              <h3 class="font-display font-bold text-lg sm:text-xl text-white mb-1.5">Visión Operativa y Logística</h3>
+              <p class="text-sm sm:text-[15px] text-slate-100 leading-relaxed">Al analizar tu operación diaria para digitalizarla, te compartimos recomendaciones prácticas de logística, ahorro operativo y consejos financieros básicos.</p>
             </div>
           </div>
 
-          <!-- Panel Proveedores Separados -->
-          <div id="uvp-panel-traditional" class="hidden grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="p-6 rounded-3xl bg-rose-950/40 border-2 border-rose-500/40">
-              <h3 class="font-display font-bold text-xl text-rose-200 mb-2">✕ Equipos Desconectados</h3>
-              <p class="text-[15px] text-slate-200 leading-relaxed">El programador no se coordina con el diseñador ni conoce la operación real de tu almacén o tus ventas, provocando retrabajos constantes.</p>
+          <div id="uvp-panel-traditional" class="hidden grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div class="p-5 sm:p-6 rounded-3xl bg-rose-950/40 border-2 border-rose-500/40">
+              <h3 class="font-display font-bold text-lg sm:text-xl text-rose-200 mb-1.5">✕ Equipos Desconectados</h3>
+              <p class="text-sm sm:text-[15px] text-slate-200 leading-relaxed">El programador no se coordina con el diseñador ni conoce la operación real de tu almacén o tus ventas, provocando retrabajos constantes.</p>
             </div>
-            <div class="p-6 rounded-3xl bg-rose-950/40 border-2 border-rose-500/40">
-              <h3 class="font-display font-bold text-xl text-rose-200 mb-2">✕ Sitios Abandonados</h3>
-              <p class="text-[15px] text-slate-200 leading-relaxed">Te entregan una página y desaparecen: sin cambios temáticos para tus campañas, sin corrección rápida de errores ni evolución continua.</p>
+            <div class="p-5 sm:p-6 rounded-3xl bg-rose-950/40 border-2 border-rose-500/40">
+              <h3 class="font-display font-bold text-lg sm:text-xl text-rose-200 mb-1.5">✕ Sitios Abandonados</h3>
+              <p class="text-sm sm:text-[15px] text-slate-200 leading-relaxed">Te entregan una página y desaparecen: sin cambios temáticos para tus campañas, sin corrección rápida de errores ni evolución continua.</p>
             </div>
-            <div class="p-6 rounded-3xl bg-rose-950/40 border-2 border-rose-500/40">
-              <h3 class="font-display font-bold text-xl text-rose-200 mb-2">✕ Costos Impredecibles</h3>
-              <p class="text-[15px] text-slate-200 leading-relaxed">Cotizaciones cerradas sin desglose por hora ni tiempos de respuesta definidos cuando surge una urgencia técnica en tu negocio.</p>
+            <div class="p-5 sm:p-6 rounded-3xl bg-rose-950/40 border-2 border-rose-500/40">
+              <h3 class="font-display font-bold text-lg sm:text-xl text-rose-200 mb-1.5">✕ Costos Impredecibles</h3>
+              <p class="text-sm sm:text-[15px] text-slate-200 leading-relaxed">Cotizaciones cerradas sin desglose por hora ni tiempos de respuesta definidos cuando surge una urgencia técnica en tu negocio.</p>
             </div>
           </div>
         </div>
 
-        <!-- 5B. Metodología Ágil en 4 Etapas -->
+        <!-- 5B. Metodología Ágil en 4 Etapas (2x2 compacto en móvil, 4 en fila en PC) -->
         <div class="reveal-up">
-          <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <span class="text-xs font-mono-code uppercase text-cyan-300 font-bold">EJECUCIÓN ORDENADA Y SIN FRICCIÓN</span>
-            <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-1">
+            <h2 class="font-display font-bold text-2xl sm:text-4xl text-white mt-1">
               Cómo Construimos tus Soluciones Digitales
             </h2>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div class="bento-tech-card p-6 relative">
-              <span class="font-display font-bold text-4xl text-amber-300/45">01</span>
-              <h3 class="font-display font-bold text-xl text-white mt-2">Diagnóstico Gratis</h3>
-              <p class="text-[15px] text-slate-200 mt-2 leading-relaxed">Escuchamos tus objetivos bajo confidencialidad (NDA) y revisamos tu operación actual para detectar oportunidades tecnológicas claras.</p>
+          <div class="grid grid-cols-1 min-[420px]:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
+            <div class="bento-tech-card p-4 sm:p-6 relative">
+              <span class="font-display font-bold text-3xl sm:text-4xl text-amber-300/45">01</span>
+              <h3 class="font-display font-bold text-base sm:text-xl text-white mt-1 sm:mt-2">Diagnóstico Gratis</h3>
+              <p class="text-xs sm:text-[15px] text-slate-200 mt-1.5 leading-relaxed">Escuchamos tus objetivos bajo confidencialidad (NDA) y revisamos tu operación actual para detectar oportunidades tecnológicas claras.</p>
             </div>
-            <div class="bento-tech-card p-6 relative">
-              <span class="font-display font-bold text-4xl text-cyan-300/45">02</span>
-              <h3 class="font-display font-bold text-xl text-white mt-2">Alcance Claro & ROI</h3>
-              <p class="text-[15px] text-slate-200 mt-2 leading-relaxed">Definimos por escrito los entregables exactos (SOW), horas estimadas, cronograma de trabajo e impacto esperado en tiempos y ventas.</p>
+            <div class="bento-tech-card p-4 sm:p-6 relative">
+              <span class="font-display font-bold text-3xl sm:text-4xl text-cyan-300/45">02</span>
+              <h3 class="font-display font-bold text-base sm:text-xl text-white mt-1 sm:mt-2">Alcance Claro & ROI</h3>
+              <p class="text-xs sm:text-[15px] text-slate-200 mt-1.5 leading-relaxed">Definimos por escrito los entregables exactos (SOW), horas estimadas, cronograma de trabajo e impacto esperado en tiempos y ventas.</p>
             </div>
-            <div class="bento-tech-card p-6 relative">
-              <span class="font-display font-bold text-4xl text-fuchsia-300/45">03</span>
-              <h3 class="font-display font-bold text-xl text-white mt-2">Sprints Ágiles</h3>
-              <p class="text-[15px] text-slate-200 mt-2 leading-relaxed">Desarrollamos por etapas quincenales (Scrum) para software, web y diseño, mostrando avances reales e interactivos en cada corte.</p>
+            <div class="bento-tech-card p-4 sm:p-6 relative">
+              <span class="font-display font-bold text-3xl sm:text-4xl text-fuchsia-300/45">03</span>
+              <h3 class="font-display font-bold text-base sm:text-xl text-white mt-1 sm:mt-2">Sprints Ágiles</h3>
+              <p class="text-xs sm:text-[15px] text-slate-200 mt-1.5 leading-relaxed">Desarrollamos por etapas quincenales (Scrum) para software, web y diseño, mostrando avances reales e interactivos en cada corte.</p>
             </div>
-            <div class="bento-tech-card p-6 relative">
-              <span class="font-display font-bold text-4xl text-emerald-300/45">04</span>
-              <h3 class="font-display font-bold text-xl text-white mt-2">QA, Lanzamiento & Soporte</h3>
-              <p class="text-[15px] text-slate-200 mt-2 leading-relaxed">Probamos todo a detalle, desplegamos en la nube, te entregamos el 100% de tu proyecto y activamos mantenimiento continuo si lo deseas.</p>
+            <div class="bento-tech-card p-4 sm:p-6 relative">
+              <span class="font-display font-bold text-3xl sm:text-4xl text-emerald-300/45">04</span>
+              <h3 class="font-display font-bold text-base sm:text-xl text-white mt-1 sm:mt-2">QA, Lanzamiento & Soporte</h3>
+              <p class="text-xs sm:text-[15px] text-slate-200 mt-1.5 leading-relaxed">Probamos todo a detalle, desplegamos en la nube, te entregamos el 100% de tu proyecto y activamos mantenimiento continuo si lo deseas.</p>
             </div>
           </div>
         </div>
 
         <!-- 5C. Liderazgo Directivo y Filosofía Institucional -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch reveal-up">
-          <div class="lg:col-span-5 rounded-[32px] bg-gradient-to-br from-indigo-950/95 to-slate-950/95 border-2 border-amber-400/45 p-7 flex flex-col justify-between">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch reveal-up">
+          <div class="lg:col-span-5 rounded-[28px] sm:rounded-[32px] bg-gradient-to-br from-indigo-950/95 to-slate-950/95 border-2 border-amber-400/45 p-5 sm:p-7 flex flex-col justify-between">
             <div>
               <span class="text-xs font-mono-code text-amber-300 font-bold uppercase">NUESTRA ESENCIA</span>
-              <h3 class="font-display font-bold text-2xl sm:text-3xl text-white mt-2">
+              <h3 class="font-display font-bold text-xl sm:text-3xl text-white mt-1.5">
                 "Piensa en el futuro desde el presente"
               </h3>
-              <p class="text-[15px] text-slate-100 mt-4 leading-relaxed">
+              <p class="text-sm sm:text-[15px] text-slate-100 mt-3.5 leading-relaxed">
                 <strong class="text-amber-200">Misión:</strong> Crear soluciones tecnológicas innovadoras para retos complejos mediante la convergencia del arte, la ingeniería y el software, impulsando el crecimiento real de nuestros clientes.
               </p>
-              <p class="text-[15px] text-slate-100 mt-3 leading-relaxed">
+              <p class="text-sm sm:text-[15px] text-slate-100 mt-3 leading-relaxed">
                 <strong class="text-cyan-200">Visión:</strong> Consolidarnos como referente nacional en tecnología, desarrollo interactivo y soluciones digitales, demostrando que la innovación nace cuando el arte y la ingeniería trabajan como una sola disciplina.
               </p>
             </div>
-            <div class="mt-6 pt-5 border-t border-white/15 flex flex-wrap gap-2">
-              <span class="px-3.5 py-1 rounded-full bg-white/10 text-xs font-bold text-amber-200">Innovación</span>
-              <span class="px-3.5 py-1 rounded-full bg-white/10 text-xs font-bold text-cyan-200">Creatividad con Propósito</span>
-              <span class="px-3.5 py-1 rounded-full bg-white/10 text-xs font-bold text-fuchsia-200">Excelencia</span>
-              <span class="px-3.5 py-1 rounded-full bg-white/10 text-xs font-bold text-emerald-200">Integridad</span>
-              <span class="px-3.5 py-1 rounded-full bg-white/10 text-xs font-bold text-white">Impacto</span>
+            <div class="mt-5 pt-4 border-t border-white/15 flex flex-wrap gap-1.5 sm:gap-2">
+              <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-amber-200">Innovación</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-cyan-200">Creatividad con Propósito</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-fuchsia-200">Excelencia</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-emerald-200">Integridad</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-white">Impacto</span>
             </div>
           </div>
 
-          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="bento-tech-card p-6 flex flex-col justify-between">
+          <!-- En móvil: carrusel horizontal o tarjetas compactas; en sm/PC: 3 columnas -->
+          <div class="lg:col-span-7 flex sm:grid sm:grid-cols-3 gap-3.5 sm:gap-4 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar pb-2 sm:pb-0">
+            <div class="bento-tech-card snap-center shrink-0 w-[255px] sm:w-auto p-5 sm:p-6 flex flex-col justify-between">
               <div>
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-300 to-orange-500 text-slate-950 font-display font-bold text-lg flex items-center justify-center border-2 border-slate-950 mb-4">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-amber-300 to-orange-500 text-slate-950 font-display font-bold text-base sm:text-lg flex items-center justify-center border-2 border-slate-950 mb-3.5">
                   AE
                 </div>
-                <span class="text-xs font-mono-code text-amber-300 font-bold">OPERACIÓN & NEGOCIO</span>
-                <h4 class="font-display font-bold text-xl text-white mt-1">Antonio Espinoza</h4>
-                <p class="text-xs sm:text-sm text-cyan-300 font-bold mb-3">Co-CEO • Estrategia Comercial y Operativa</p>
-                <p class="text-sm text-slate-200 leading-relaxed">Análisis de procesos de negocio, optimización logística, reducción de costos operativos y enfoque práctico en retorno de inversión.</p>
+                <span class="text-[11px] font-mono-code text-amber-300 font-bold">OPERACIÓN & NEGOCIO</span>
+                <h4 class="font-display font-bold text-lg sm:text-xl text-white mt-1">Antonio Espinoza</h4>
+                <p class="text-xs text-cyan-300 font-bold mb-2.5">Co-CEO • Estrategia Comercial y Operativa</p>
+                <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">Análisis de procesos de negocio, optimización logística, reducción de costos operativos y enfoque práctico en retorno de inversión.</p>
               </div>
             </div>
 
-            <div class="bento-tech-card p-6 flex flex-col justify-between">
+            <div class="bento-tech-card snap-center shrink-0 w-[255px] sm:w-auto p-5 sm:p-6 flex flex-col justify-between">
               <div>
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-300 to-blue-600 text-slate-950 font-display font-bold text-lg flex items-center justify-center border-2 border-slate-950 mb-4">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-cyan-300 to-blue-600 text-slate-950 font-display font-bold text-base sm:text-lg flex items-center justify-center border-2 border-slate-950 mb-3.5">
                   GV
                 </div>
-                <span class="text-xs font-mono-code text-cyan-300 font-bold">RAMA DE INGENIERÍA</span>
-                <h4 class="font-display font-bold text-xl text-white mt-1">Gael Villalobos</h4>
-                <p class="text-xs sm:text-sm text-cyan-300 font-bold mb-3">Líder de Software, Cloud & IA</p>
-                <p class="text-sm text-slate-200 leading-relaxed">Desarrollo de software a la medida, infraestructura en servidores cloud, integraciones API e inteligencia artificial aplicada.</p>
+                <span class="text-[11px] font-mono-code text-cyan-300 font-bold">RAMA DE INGENIERÍA</span>
+                <h4 class="font-display font-bold text-lg sm:text-xl text-white mt-1">Gael Villalobos</h4>
+                <p class="text-xs text-cyan-300 font-bold mb-2.5">Líder de Software, Cloud & IA</p>
+                <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">Desarrollo de software a la medida, infraestructura en servidores cloud, integraciones API e inteligencia artificial aplicada.</p>
               </div>
             </div>
 
-            <div class="bento-tech-card p-6 flex flex-col justify-between">
+            <div class="bento-tech-card snap-center shrink-0 w-[255px] sm:w-auto p-5 sm:p-6 flex flex-col justify-between">
               <div>
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-fuchsia-400 to-violet-600 text-white font-display font-bold text-lg flex items-center justify-center border-2 border-slate-950 mb-4">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-fuchsia-400 to-violet-600 text-white font-display font-bold text-base sm:text-lg flex items-center justify-center border-2 border-slate-950 mb-3.5">
                   MA
                 </div>
-                <span class="text-xs font-mono-code text-fuchsia-300 font-bold">RAMA CREATIVA</span>
-                <h4 class="font-display font-bold text-xl text-white mt-1">Marlen</h4>
-                <p class="text-xs sm:text-sm text-fuchsia-300 font-bold mb-3">Dirección Creativa, Arte & UX/UI</p>
-                <p class="text-sm text-slate-200 leading-relaxed">Diseño de experiencias interactivas, identidad visual moderna, visualización digital y sistemas UX/UI de alto impacto.</p>
+                <span class="text-[11px] font-mono-code text-fuchsia-300 font-bold">RAMA CREATIVA</span>
+                <h4 class="font-display font-bold text-lg sm:text-xl text-white mt-1">Marlen</h4>
+                <p class="text-xs text-fuchsia-300 font-bold mb-2.5">Dirección Creativa, Arte & UX/UI</p>
+                <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">Diseño de experiencias interactivas, identidad visual moderna, visualización digital y sistemas UX/UI de alto impacto.</p>
               </div>
             </div>
           </div>
@@ -970,32 +1060,32 @@
     </section>
 
     <!-- ======================================================================
-         CAPÍTULO 6: TRÍO DE PERSONAJES INTERACTIVOS + CONTACTO DIRECTO
+         CAPÍTULO 6: TRÍO DE PERSONAJES EN FILA (MÓVIL Y PC) + CONTACTO DIRECTO
          ====================================================================== -->
-    <section id="contacto" data-stage-bg="#1d163d" class="relative pt-16 pb-0 overflow-hidden">
+    <section id="contacto" data-stage-bg="#1d163d" class="relative pt-12 sm:pt-16 pb-0 overflow-hidden">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- Escena de los 3 Personajes Tecnológicos con Globos de Diálogo Súper Legibles -->
-        <div class="text-center mb-10 reveal-up">
-          <span class="inline-block px-4 py-1 rounded-full bg-white/15 text-cyan-200 font-mono-code text-xs font-bold mb-3">
-            HAZ CLIC EN CUALQUIER GLOBO PARA INICIAR TU MENSAJE
+        <!-- Escena de los 3 Personajes Juntos (3 columnas también en móvil como en Paranice) -->
+        <div class="text-center mb-8 sm:mb-10 reveal-up">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-white/15 text-cyan-200 font-mono-code text-[11px] sm:text-xs font-bold mb-2.5">
+            TOCA CUALQUIER GLOBO PARA INICIAR TU MENSAJE
           </span>
-          <h2 class="font-display font-bold text-3xl sm:text-5xl text-white">
+          <h2 class="font-display font-bold text-2xl sm:text-5xl text-white">
             ¿Qué construimos juntos hoy?
           </h2>
 
-          <div class="relative max-w-4xl mx-auto mt-10 grid grid-cols-1 sm:grid-cols-3 gap-8 items-end">
+          <div class="relative max-w-4xl mx-auto mt-7 sm:mt-10 grid grid-cols-3 gap-2 sm:gap-8 items-end">
 
-            <!-- Personaje 1: Engranaje Dorado (Promo Mantenimiento Web $2,000) -->
+            <!-- Personaje 1: Engranaje Dorado -->
             <div class="flex flex-col items-center">
               <button
                 type="button"
                 data-speech-topic="Hola Perspective SCT, me interesa contratar la Promoción de Mantenimiento Mensual para Páginas Web ($2,000 MXN/mes) para mantener mi sitio actualizado y con temáticas de temporada."
-                class="speech-bubble mb-5 text-xs sm:text-sm"
+                class="speech-bubble mb-3 sm:mb-5 text-[10.5px] sm:text-sm w-full sm:w-auto"
               >
-                ¿Promo Web $2,000/mes? ✨
+                ¿Promo Web $2K? ✨
               </button>
-              <svg viewBox="0 0 150 150" class="w-36 h-36 anim-float">
+              <svg viewBox="0 0 150 150" class="w-20 h-20 sm:w-36 sm:h-36 anim-float">
                 <path d="M35 80 Q15 60 28 42" stroke="#14102c" stroke-width="6" stroke-linecap="round" fill="none"/>
                 <path d="M115 76 Q135 55 122 38" stroke="#14102c" stroke-width="6" stroke-linecap="round" fill="none"/>
                 <path d="M58 118 L52 142 M92 118 L98 142" stroke="#14102c" stroke-width="6" stroke-linecap="round"/>
@@ -1007,16 +1097,16 @@
               </svg>
             </div>
 
-            <!-- Personaje 2: Prisma Neón Central (Desarrollo de Software, Web e IA) -->
+            <!-- Personaje 2: Prisma Neón Central -->
             <div class="flex flex-col items-center">
               <button
                 type="button"
                 data-speech-topic="Hola Perspective SCT, nos interesa cotizar un proyecto de Desarrollo de Software, Tienda en Línea, Automatización con IA o Infraestructura Cloud."
-                class="speech-bubble mb-5 text-xs sm:text-sm"
+                class="speech-bubble mb-3 sm:mb-5 text-[10.5px] sm:text-sm w-full sm:w-auto"
               >
-                ¿Software, Web o IA? 🚀
+                ¿Software o IA? 🚀
               </button>
-              <svg viewBox="0 0 160 155" class="w-40 h-40 anim-float-delay">
+              <svg viewBox="0 0 160 155" class="w-24 h-24 sm:w-40 sm:h-40 anim-float-delay">
                 <path d="M38 88 Q18 62 32 45" stroke="#14102c" stroke-width="6" stroke-linecap="round" fill="none"/>
                 <path d="M122 88 Q142 62 128 45" stroke="#14102c" stroke-width="6" stroke-linecap="round" fill="none"/>
                 <path d="M62 122 L56 146 M98 122 L104 146" stroke="#14102c" stroke-width="6" stroke-linecap="round"/>
@@ -1027,16 +1117,16 @@
               </svg>
             </div>
 
-            <!-- Personaje 3: Escudo Tecnológico (Optimización Logística y Operativa) -->
+            <!-- Personaje 3: Escudo Tecnológico -->
             <div class="flex flex-col items-center">
               <button
                 type="button"
                 data-speech-topic="Hola Perspective SCT, quiero agendar un Diagnóstico Técnico y Operativo Gratuito para optimizar nuestra logística, automatizar procesos y reducir costos."
-                class="speech-bubble mb-5 text-xs sm:text-sm"
+                class="speech-bubble mb-3 sm:mb-5 text-[10.5px] sm:text-sm w-full sm:w-auto"
               >
-                ¿Optimizar mi Operación? ⚡
+                ¿Optimizar Ops? ⚡
               </button>
-              <svg viewBox="0 0 150 150" class="w-36 h-36 anim-float">
+              <svg viewBox="0 0 150 150" class="w-20 h-20 sm:w-36 sm:h-36 anim-float">
                 <path d="M34 78 Q16 58 30 42" stroke="#14102c" stroke-width="6" stroke-linecap="round" fill="none"/>
                 <path d="M116 78 Q134 58 120 42" stroke="#14102c" stroke-width="6" stroke-linecap="round" fill="none"/>
                 <path d="M60 120 L55 143 M90 120 L95 143" stroke="#14102c" stroke-width="6" stroke-linecap="round"/>
@@ -1051,22 +1141,22 @@
         </div>
 
         <!-- Formulario Funcional de Contacto -->
-        <div class="rounded-[36px] bg-slate-950/95 border-2 border-amber-400/55 p-6 sm:p-10 shadow-2xl mb-14 reveal-up">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="rounded-[28px] sm:rounded-[36px] bg-slate-950/95 border-2 border-amber-400/55 p-5 sm:p-10 shadow-2xl mb-12 sm:mb-14 reveal-up">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-8">
 
-            <div class="lg:col-span-5 space-y-5">
+            <div class="lg:col-span-5 space-y-4 sm:space-y-5">
               <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-400/20 text-emerald-200 font-mono-code text-xs font-bold">
                 ATENCIÓN DIRECTA Y PERSONALIZADA
               </span>
               <h3 class="font-display font-bold text-2xl sm:text-3xl text-white leading-snug">
                 Cuéntanos tu idea o necesidad tecnológica.
               </h3>
-              <p class="text-[15px] text-slate-200 leading-relaxed">
+              <p class="text-sm sm:text-[15px] text-slate-200 leading-relaxed">
                 Trabajamos con empresas, negocios en crecimiento y emprendedores en el Corredor Industrial del Bajío, todo México y clientes internacionales.
               </p>
 
-              <div class="space-y-3 pt-2 text-sm">
-                <a href="mailto:perspectivesct.shop@gmail.com" class="flex items-center gap-3.5 p-4 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 transition">
+              <div class="space-y-2.5 sm:space-y-3 pt-1 text-sm">
+                <a href="mailto:perspectivesct.shop@gmail.com" class="flex items-center gap-3 p-3.5 sm:p-4 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 transition">
                   <i data-lucide="mail" class="w-5 h-5 text-cyan-300 shrink-0"></i>
                   <div class="min-w-0">
                     <span class="block text-xs text-slate-300 font-semibold">Correo Oficial de Contacto y Ventas</span>
@@ -1074,7 +1164,7 @@
                   </div>
                 </a>
 
-                <div class="flex items-center gap-3.5 p-4 rounded-2xl bg-white/10 border border-white/15">
+                <div class="flex items-center gap-3 p-3.5 sm:p-4 rounded-2xl bg-white/10 border border-white/15">
                   <i data-lucide="clock" class="w-5 h-5 text-amber-300 shrink-0"></i>
                   <div>
                     <span class="block text-xs text-slate-300 font-semibold">Tiempos de Respuesta (SLAs)</span>
@@ -1082,7 +1172,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center gap-3.5 p-4 rounded-2xl bg-white/10 border border-white/15">
+                <div class="flex items-center gap-3 p-3.5 sm:p-4 rounded-2xl bg-white/10 border border-white/15">
                   <i data-lucide="map-pin" class="w-5 h-5 text-fuchsia-300 shrink-0"></i>
                   <div>
                     <span class="block text-xs text-slate-300 font-semibold">Cobertura Operativa</span>
@@ -1095,22 +1185,22 @@
             <form id="perspective-contact-form" class="lg:col-span-7 space-y-4">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label for="contact-name" class="block text-sm font-bold text-slate-200 mb-1.5">Nombre y Cargo *</label>
+                  <label for="contact-name" class="block text-xs sm:text-sm font-bold text-slate-200 mb-1.5">Nombre y Cargo *</label>
                   <input id="contact-name" type="text" required placeholder="Ej. Ing. Roberto Méndez — Operaciones" class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:border-cyan-300" />
                 </div>
                 <div>
-                  <label for="contact-company" class="block text-sm font-bold text-slate-200 mb-1.5">Empresa o Marca</label>
+                  <label for="contact-company" class="block text-xs sm:text-sm font-bold text-slate-200 mb-1.5">Empresa o Marca</label>
                   <input id="contact-company" type="text" placeholder="Nombre de tu negocio o proyecto" class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:border-cyan-300" />
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label for="contact-email" class="block text-sm font-bold text-slate-200 mb-1.5">Tu Correo de Contacto *</label>
+                  <label for="contact-email" class="block text-xs sm:text-sm font-bold text-slate-200 mb-1.5">Tu Correo de Contacto *</label>
                   <input id="contact-email" type="email" required placeholder="contacto@tuempresa.com" class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:border-cyan-300" />
                 </div>
                 <div>
-                  <label for="contact-vertical" class="block text-sm font-bold text-slate-200 mb-1.5">Servicio o Promoción de Interés</label>
+                  <label for="contact-vertical" class="block text-xs sm:text-sm font-bold text-slate-200 mb-1.5">Servicio o Promoción de Interés</label>
                   <select id="contact-vertical" class="w-full px-4 py-3 rounded-2xl bg-slate-900 border border-white/20 text-sm text-white focus:outline-none focus:border-cyan-300">
                     <option value="Promo Mantenimiento Mensual Páginas Web ($2,000 MXN/mes)">🔥 Promo Mantenimiento Web ($2,000 MXN/mes)</option>
                     <option value="Mantenimiento de Otros Servicios Digitales (Cotización según plataforma)">Mantenimiento de Otros Servicios Digitales (Variable)</option>
@@ -1125,22 +1215,22 @@
               </div>
 
               <div>
-                <label for="contact-message" class="block text-sm font-bold text-slate-200 mb-1.5">Detalles de tu Proyecto, Mantenimiento o Bolsa *</label>
+                <label for="contact-message" class="block text-xs sm:text-sm font-bold text-slate-200 mb-1.5">Detalles de tu Proyecto, Mantenimiento o Bolsa *</label>
                 <textarea id="contact-message" rows="4" required placeholder="Platícanos qué deseas desarrollar, actualizar o automatizar en tu empresa..." class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:border-cyan-300"></textarea>
               </div>
 
               <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
-                <label class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200 cursor-pointer">
-                  <input id="contact-nda" type="checkbox" checked class="accent-emerald-400 w-4 h-4" />
+                <label class="flex items-start sm:items-center gap-2.5 text-xs sm:text-sm text-slate-200 cursor-pointer">
+                  <input id="contact-nda" type="checkbox" checked class="mt-0.5 sm:mt-0 accent-emerald-400 w-4 h-4 shrink-0" />
                   <span>Solicitar acuerdo de confidencialidad (NDA) y acepto la <button type="button" data-open-policy="privacidad" class="text-cyan-300 font-bold underline cursor-pointer">Política de Privacidad</button>.</span>
                 </label>
               </div>
 
-              <div class="flex flex-wrap items-center gap-3.5 pt-2">
-                <button type="submit" class="toon-btn-primary px-8 py-4 rounded-full bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 text-slate-950 font-extrabold text-sm sm:text-base cursor-pointer">
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+                <button type="submit" class="toon-btn-primary px-8 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 text-slate-950 font-extrabold text-sm sm:text-base cursor-pointer text-center">
                   Enviar Solicitud →
                 </button>
-                <button id="copy-brief-btn" type="button" class="px-5 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold border border-white/20 transition cursor-pointer">
+                <button id="copy-brief-btn" type="button" class="px-5 py-3.5 sm:py-4 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold border border-white/20 transition cursor-pointer text-center">
                   Copiar Resumen de Bolsa
                 </button>
               </div>
@@ -1161,29 +1251,27 @@
   </main>
 
   <!-- ========================================================================
-       FOOTER CORPORATIVO COMPLETO
+       FOOTER CORPORATIVO COMPLETO (ESPACIADO CÓMODO EN MÓVIL)
        ======================================================================== -->
-  <footer data-stage-bg="#0e0c1d" class="relative z-10 bg-[#0e0c1d] pt-12 pb-16 border-t border-white/10">
+  <footer data-stage-bg="#0e0c1d" class="relative z-10 bg-[#0e0c1d] pt-10 sm:pt-12 pb-24 sm:pb-16 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 pb-10 sm:pb-12 border-b border-white/10">
 
-        <!-- Identidad y Logo Oficial -->
         <div class="lg:col-span-4 space-y-4">
           <div class="flex items-center gap-3">
-            <img src="assets/img/Icono%20Favicon.jpg" alt="Icono Perspective SCT" class="w-12 h-12 rounded-2xl object-cover border-2 border-amber-400/60" />
+            <img src="assets/img/Icono%20Favicon.jpg" alt="Icono Perspective SCT" class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl object-cover border-2 border-amber-400/60" />
             <div>
-              <span class="font-display font-bold text-xl text-white block">PERSPECTIVE SCT</span>
+              <span class="font-display font-bold text-lg sm:text-xl text-white block">PERSPECTIVE SCT</span>
               <span class="font-mono-code text-xs text-amber-300 font-bold">Soluciones Tecnológicas • EST. 2026</span>
             </div>
           </div>
-          <p class="text-sm text-slate-300 leading-relaxed">
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
             Venta de servicios tecnológicos y soluciones digitales: desarrollo de software, páginas web, automatización, infraestructura cloud, arte digital y mejora operativa.
           </p>
-          <img src="assets/img/LOGO%20Super%20GOD.jpg" alt="Emblema Oficial Perspective SCT" class="w-56 h-auto rounded-xl logo-screen-blend opacity-90" />
+          <img src="assets/img/LOGO%20Super%20GOD.jpg" alt="Emblema Oficial Perspective SCT" class="w-48 sm:w-56 h-auto rounded-xl logo-screen-blend opacity-90" />
         </div>
 
-        <!-- Navegación y Soluciones -->
         <div class="lg:col-span-3 space-y-2.5 text-sm">
           <h4 class="font-display font-bold uppercase text-xs tracking-wider text-amber-300 mb-3">Servicios & Precios</h4>
           <a href="#promo-mantenimiento" class="block text-amber-200 font-bold hover:text-cyan-300 transition">🔥 Promo Mantenimiento Web ($2,000/mes)</a>
@@ -1194,7 +1282,6 @@
           <a href="#calculadora" class="block text-slate-300 hover:text-cyan-300 transition">Calculadora Interactiva</a>
         </div>
 
-        <!-- Políticas de Servicio y Privacidad -->
         <div class="lg:col-span-3 space-y-2.5 text-sm">
           <h4 class="font-display font-bold uppercase text-xs tracking-wider text-emerald-300 mb-3">Políticas de Servicio</h4>
           <button type="button" data-open-policy="privacidad" class="block text-left text-slate-300 hover:text-white transition cursor-pointer">Política de Privacidad y Datos (AES-256)</button>
@@ -1203,7 +1290,6 @@
           <button type="button" data-open-policy="sla" class="block text-left text-slate-300 hover:text-white transition cursor-pointer">SLAs de Soporte, QA y Confidencialidad</button>
         </div>
 
-        <!-- Contacto Directo -->
         <div class="lg:col-span-2 space-y-3 text-sm">
           <h4 class="font-display font-bold uppercase text-xs tracking-wider text-cyan-300 mb-3">Contacto Oficial</h4>
           <a href="mailto:perspectivesct.shop@gmail.com" class="block font-mono-code text-xs text-white font-bold hover:text-cyan-300 break-all">perspectivesct.shop@gmail.com</a>
@@ -1215,9 +1301,9 @@
 
       </div>
 
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-400">
+      <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-xs sm:text-sm text-slate-400">
         <p>© 2026 Perspective SCT. Todos los derechos reservados.</p>
-        <p class="font-mono-code text-xs text-slate-300">
+        <p class="font-mono-code text-[10px] sm:text-xs text-slate-300">
           MARKETING • PROGRAMACIÓN • DISEÑO & ANIMACIÓN • APPS • WEB • ENTRETENIMIENTO
         </p>
       </div>
@@ -1225,38 +1311,38 @@
   </footer>
 
   <!-- ========================================================================
-       WIDGET ESQUINA INFERIOR DERECHA: MONITOR CRT BOT (ASISTENTE RÁPIDO)
+       WIDGET ESQUINA INFERIOR DERECHA: MONITOR CRT BOT (ESCALADO EN MÓVIL)
        ======================================================================== -->
-  <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end">
-    <div id="crt-bot-popover" class="hidden mb-3 w-80 rounded-3xl bg-slate-950/95 backdrop-blur-xl border-2 border-amber-400/65 p-5 shadow-2xl">
-      <div class="flex items-center justify-between pb-3 border-b border-white/15">
+  <div class="fixed bottom-3 right-3 sm:bottom-5 sm:right-5 z-40 flex flex-col items-end">
+    <div id="crt-bot-popover" class="hidden mb-2.5 w-[calc(100vw-24px)] max-w-[310px] rounded-3xl bg-slate-950/95 backdrop-blur-xl border-2 border-amber-400/65 p-4 sm:p-5 shadow-2xl">
+      <div class="flex items-center justify-between pb-2.5 border-b border-white/15">
         <div class="flex items-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-          <strong class="font-display text-base text-white">Perspecti-Bot • Asistente</strong>
+          <strong class="font-display text-sm sm:text-base text-white">Perspecti-Bot • Asistente</strong>
         </div>
         <button id="close-crt-bot" type="button" class="text-slate-300 hover:text-white text-sm font-bold cursor-pointer">✕</button>
       </div>
-      <p class="text-xs sm:text-sm text-slate-200 mt-3 mb-3 leading-relaxed">
+      <p class="text-xs sm:text-sm text-slate-200 mt-2.5 mb-2.5 leading-relaxed">
         ¡Hola! Elige qué necesitas hoy y preparamos tu mensaje al instante:
       </p>
       <div class="space-y-2">
-        <button type="button" data-bot-prompt="Me interesa contratar la Promoción de Mantenimiento Mensual para Páginas Web por $2,000 MXN/mes." class="w-full text-left px-3.5 py-2.5 rounded-xl bg-amber-400/20 hover:bg-amber-400/35 border border-amber-300/45 text-xs sm:text-sm font-extrabold text-amber-200 transition cursor-pointer">
+        <button type="button" data-bot-prompt="Me interesa contratar la Promoción de Mantenimiento Mensual para Páginas Web por $2,000 MXN/mes." class="w-full text-left px-3 py-2.5 rounded-xl bg-amber-400/20 hover:bg-amber-400/35 border border-amber-300/45 text-xs font-extrabold text-amber-200 transition cursor-pointer">
           🔥 Promo Mantenimiento Web ($2,000/mes)
         </button>
-        <button type="button" data-bot-prompt="Necesito crear o modernizar una Página Web, Tienda E-commerce o Aplicación Móvil." class="w-full text-left px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-violet-600/45 border border-white/15 text-xs sm:text-sm font-bold text-white transition cursor-pointer">
+        <button type="button" data-bot-prompt="Necesito crear o modernizar una Página Web, Tienda E-commerce o Aplicación Móvil." class="w-full text-left px-3 py-2.5 rounded-xl bg-white/10 hover:bg-violet-600/45 border border-white/15 text-xs font-bold text-white transition cursor-pointer">
           🌐 Crear Web, E-commerce o App ($799/h)
         </button>
-        <button type="button" data-bot-prompt="Busco Automatización con IA, Software Logístico a Medida o Infraestructura Cloud." class="w-full text-left px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-cyan-600/45 border border-white/15 text-xs sm:text-sm font-bold text-white transition cursor-pointer">
+        <button type="button" data-bot-prompt="Busco Automatización con IA, Software Logístico a Medida o Infraestructura Cloud." class="w-full text-left px-3 py-2.5 rounded-xl bg-white/10 hover:bg-cyan-600/45 border border-white/15 text-xs font-bold text-white transition cursor-pointer">
           🤖 Automatizar con IA / Software Logístico
         </button>
-        <button type="button" data-bot-prompt="Me interesa cotizar mantenimiento mensual para otro servicio o plataforma digital." class="w-full text-left px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-fuchsia-600/45 border border-white/15 text-xs sm:text-sm font-bold text-white transition cursor-pointer">
+        <button type="button" data-bot-prompt="Me interesa cotizar mantenimiento mensual para otro servicio o plataforma digital." class="w-full text-left px-3 py-2.5 rounded-xl bg-white/10 hover:bg-fuchsia-600/45 border border-white/15 text-xs font-bold text-white transition cursor-pointer">
           🛠️ Mantenimiento para Otros Sistemas
         </button>
       </div>
     </div>
 
     <button id="crt-bot-trigger" type="button" aria-label="Abrir asistente rápido" class="crt-assistant-btn cursor-pointer relative group">
-      <svg viewBox="0 0 115 115" class="w-20 h-20 sm:w-24 sm:h-24">
+      <svg viewBox="0 0 115 115" class="w-16 h-16 sm:w-24 sm:h-24">
         <defs>
           <path id="curvedTextPath" d="M 16,56 A 42,42 0 0,1 100,56" />
         </defs>
@@ -1280,28 +1366,28 @@
        DRAWER LATERAL: BOLSA DE INNOVACIÓN / COTIZADOR
        ======================================================================== -->
   <div id="cart-backdrop" class="backdrop-fade fixed inset-0 bg-black/70 backdrop-blur-sm z-50"></div>
-  <aside id="cart-drawer" aria-label="Bolsa de cotización" class="drawer-slide fixed top-0 right-0 bottom-0 w-full max-w-md bg-slate-950 border-l-2 border-amber-400/50 z-50 flex flex-col justify-between p-6 shadow-2xl">
+  <aside id="cart-drawer" aria-label="Bolsa de cotización" class="drawer-slide fixed top-0 right-0 bottom-0 w-full max-w-md bg-slate-950 border-l-2 border-amber-400/50 z-50 flex flex-col justify-between p-5 sm:p-6 shadow-2xl">
     <div>
       <div class="flex items-center justify-between pb-4 border-b border-white/15">
         <div>
-          <h3 class="font-display font-bold text-2xl text-white">Tu Bolsa de Innovación</h3>
+          <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Tu Bolsa de Innovación</h3>
           <p class="text-xs sm:text-sm text-slate-300">Pre-cotización transparente • Perspective SCT</p>
         </div>
         <button id="close-cart-btn" type="button" class="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 text-white font-bold cursor-pointer">✕</button>
       </div>
 
-      <div id="cart-items-list" class="mt-5 space-y-3 max-h-[56vh] overflow-y-auto pr-1">
+      <div id="cart-items-list" class="mt-4 sm:mt-5 space-y-3 max-h-[55vh] overflow-y-auto pr-1">
         <!-- Renderizado por JS -->
       </div>
     </div>
 
     <div class="pt-4 border-t border-white/15 space-y-3">
       <div class="flex items-baseline justify-between">
-        <span class="text-base font-bold text-slate-200">Total Estimado:</span>
+        <span class="text-sm sm:text-base font-bold text-slate-200">Total Estimado:</span>
         <span id="cart-total-amount" class="font-tech font-extrabold text-2xl text-prism">$0 MXN</span>
       </div>
       <p class="text-xs text-slate-300 leading-relaxed">
-        Incluye alcance técnico claro por escrito (SOW), acuerdo de confidencialidad (NDA) y atención directa en <span class="text-cyan-300 font-mono-code">perspectivesct.shop@gmail.com</span>.
+        Incluye alcance técnico claro por escrito (SOW), acuerdo de confidencialidad (NDA) y atención directa en <span class="text-cyan-300 font-mono-code break-all">perspectivesct.shop@gmail.com</span>.
       </p>
       <button id="cart-to-contact-btn" type="button" class="toon-btn-primary w-full py-3.5 rounded-full bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 text-slate-950 font-extrabold text-sm cursor-pointer">
         Continuar a Solicitud de Proyecto →
@@ -1313,28 +1399,27 @@
   </aside>
 
   <!-- ========================================================================
-       MODAL: POLÍTICAS DE SERVICIO, PRIVACIDAD Y SLAs (4 PESTAÑAS CLARAS)
+       MODAL: POLÍTICAS DE SERVICIO, PRIVACIDAD Y SLAs
        ======================================================================== -->
-  <div id="policy-modal" class="backdrop-fade fixed inset-0 bg-black/75 backdrop-blur-md z-50 flex items-center justify-center p-4">
-    <div class="w-full max-w-3xl rounded-[32px] bg-slate-950 border-2 border-amber-400/55 p-6 sm:p-8 shadow-2xl max-h-[88vh] flex flex-col">
-      <div class="flex items-start justify-between gap-4 pb-4 border-b border-white/15">
+  <div id="policy-modal" class="backdrop-fade fixed inset-0 bg-black/75 backdrop-blur-md z-50 flex items-center justify-center p-3 sm:p-4">
+    <div class="w-full max-w-3xl rounded-3xl sm:rounded-[32px] bg-slate-950 border-2 border-amber-400/55 p-5 sm:p-8 shadow-2xl max-h-[88vh] flex flex-col">
+      <div class="flex items-start justify-between gap-3 pb-3.5 sm:pb-4 border-b border-white/15">
         <div>
-          <span class="text-xs font-mono-code text-emerald-300 font-bold uppercase">TRANSPARENCIA OPERATIVA Y SEGURIDAD DE DATOS</span>
-          <h3 id="policy-doc-title" class="font-display font-bold text-xl sm:text-2xl text-white mt-1">Política de Privacidad y Resguardo Técnico</h3>
+          <span class="text-[11px] font-mono-code text-emerald-300 font-bold uppercase">TRANSPARENCIA OPERATIVA Y SEGURIDAD DE DATOS</span>
+          <h3 id="policy-doc-title" class="font-display font-bold text-lg sm:text-2xl text-white mt-1">Política de Privacidad y Resguardo Técnico</h3>
           <p id="policy-doc-updated" class="text-xs sm:text-sm text-slate-300 mt-0.5"></p>
         </div>
         <button id="close-policy-btn" type="button" class="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 text-white font-bold shrink-0 cursor-pointer">✕</button>
       </div>
 
-      <!-- Pestañas de Políticas -->
-      <div class="flex flex-wrap gap-2 py-4 border-b border-white/15">
-        <button type="button" data-policy-tab="privacidad" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 cursor-pointer">Privacidad & Datos</button>
-        <button type="button" data-policy-tab="alcance" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white/10 text-slate-200 cursor-pointer">Alcance SOW & Pagos</button>
-        <button type="button" data-policy-tab="propiedad" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white/10 text-slate-200 cursor-pointer">Entrega 100% Código</button>
-        <button type="button" data-policy-tab="sla" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white/10 text-slate-200 cursor-pointer">SLAs, QA & Confidencialidad</button>
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-3.5 border-b border-white/15">
+        <button type="button" data-policy-tab="privacidad" class="shrink-0 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-amber-300 text-slate-950 border-2 border-slate-950 cursor-pointer">Privacidad & Datos</button>
+        <button type="button" data-policy-tab="alcance" class="shrink-0 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white/10 text-slate-200 cursor-pointer">Alcance SOW & Pagos</button>
+        <button type="button" data-policy-tab="propiedad" class="shrink-0 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white/10 text-slate-200 cursor-pointer">Entrega 100% Código</button>
+        <button type="button" data-policy-tab="sla" class="shrink-0 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white/10 text-slate-200 cursor-pointer">SLAs & Confidencialidad</button>
       </div>
 
-      <div id="policy-doc-body" class="py-5 overflow-y-auto pr-2 flex-1">
+      <div id="policy-doc-body" class="py-4 sm:py-5 overflow-y-auto pr-1 flex-1">
         <!-- Contenido dinámico -->
       </div>
     </div>
@@ -1343,27 +1428,27 @@
   <!-- ========================================================================
        MODAL: COMMAND PALETTE / BUSCADOR INSTANTÁNEO (CTRL + K)
        ======================================================================== -->
-  <div id="cmd-modal" class="backdrop-fade fixed inset-0 bg-black/75 backdrop-blur-md z-50 flex items-start justify-center pt-20 p-4">
-    <div class="w-full max-w-xl rounded-3xl bg-slate-950 border-2 border-cyan-400/55 p-5 shadow-2xl">
-      <div class="flex items-center gap-3 pb-3 border-b border-white/15">
-        <i data-lucide="terminal" class="w-5 h-5 text-cyan-300"></i>
-        <input id="cmd-input" type="text" placeholder="Busca un servicio, paquete o promoción (ej. Mantenimiento, Web, IA, Cloud)..." class="w-full bg-transparent text-sm sm:text-base text-white placeholder:text-slate-400 focus:outline-none" />
-        <button id="close-cmd-btn" type="button" class="text-xs font-mono-code font-bold px-2.5 py-1 rounded bg-white/15 text-slate-200 cursor-pointer">ESC</button>
+  <div id="cmd-modal" class="backdrop-fade fixed inset-0 bg-black/75 backdrop-blur-md z-50 flex items-start justify-center pt-16 sm:pt-20 p-3 sm:p-4">
+    <div class="w-full max-w-xl rounded-3xl bg-slate-950 border-2 border-cyan-400/55 p-4 sm:p-5 shadow-2xl">
+      <div class="flex items-center gap-2.5 pb-3 border-b border-white/15">
+        <i data-lucide="terminal" class="w-5 h-5 text-cyan-300 shrink-0"></i>
+        <input id="cmd-input" type="text" placeholder="Busca servicio, paquete o promo (ej. Web, IA, Cloud)..." class="w-full bg-transparent text-sm sm:text-base text-white placeholder:text-slate-400 focus:outline-none" />
+        <button id="close-cmd-btn" type="button" class="text-xs font-mono-code font-bold px-2.5 py-1 rounded bg-white/15 text-slate-200 cursor-pointer shrink-0">ESC</button>
       </div>
-      <div id="cmd-results" class="mt-3 space-y-1 max-h-80 overflow-y-auto"></div>
+      <div id="cmd-results" class="mt-3 space-y-1 max-h-72 sm:max-h-80 overflow-y-auto"></div>
     </div>
   </div>
 
   <!-- ========================================================================
-       BANNER DE PREFERENCIAS LOCALES
+       BANNER DE PREFERENCIAS LOCALES (SIN COLISIÓN CON EL BOT EN MÓVIL)
        ======================================================================== -->
-  <div id="cookie-banner" class="hidden fixed bottom-4 left-4 right-24 sm:right-auto sm:max-w-md z-40 rounded-2xl bg-slate-950/95 backdrop-blur-xl border-2 border-white/20 p-4 shadow-2xl">
+  <div id="cookie-banner" class="hidden fixed bottom-3 left-3 right-20 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-md z-40 rounded-2xl bg-slate-950/95 backdrop-blur-xl border-2 border-white/20 p-3.5 sm:p-4 shadow-2xl">
     <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
-      🔒 Usamos almacenamiento local en tu navegador únicamente para guardar tu <strong>Bolsa de Innovación</strong> conforme a nuestra <button type="button" data-open-policy="privacidad" class="text-cyan-300 font-bold underline cursor-pointer">Política de Privacidad</button>.
+      🔒 Usamos almacenamiento local únicamente para guardar tu <strong>Bolsa de Innovación</strong> conforme a nuestra <button type="button" data-open-policy="privacidad" class="text-cyan-300 font-bold underline cursor-pointer">Política de Privacidad</button>.
     </p>
-    <div class="flex items-center gap-2.5 mt-3">
-      <button id="cookie-accept-all" type="button" class="px-4 py-1.5 rounded-full bg-amber-300 text-slate-950 font-extrabold text-xs border-2 border-slate-950 cursor-pointer">Entendido</button>
-      <button id="cookie-essential" type="button" class="px-3.5 py-1.5 rounded-full bg-white/10 text-slate-200 font-bold text-xs cursor-pointer">Cerrar</button>
+    <div class="flex items-center gap-2 mt-2.5">
+      <button id="cookie-accept-all" type="button" class="px-3.5 py-1.5 rounded-full bg-amber-300 text-slate-950 font-extrabold text-xs border-2 border-slate-950 cursor-pointer">Entendido</button>
+      <button id="cookie-essential" type="button" class="px-3 py-1.5 rounded-full bg-white/10 text-slate-200 font-bold text-xs cursor-pointer">Cerrar</button>
     </div>
   </div>
 
